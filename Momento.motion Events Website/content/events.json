@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "location": "LONDON",
+    "subtext": "momento.motion creates music-led events shaped through rhythm, emotion, connection, and movement."
+  },
+  "philosophy": {
+    "line1": "Music is not background.",
+    "line2": "It is the journey.",
+    "body": "Every momento.motion event is mapped with intention — from the opening mood to the final release. The sound moves through rhythm, emotion, tension, connection, and collective energy."
+  },
+  "upcoming": {
+    "tag": "MOMENTO.MOTION 001 — LONDON",
+    "poster": "assets/poster-mj.jpg",
+    "title": "Bad in the House",
+    "date": "FRIDAY 10.07.2026",
+    "time": "22:30 — LATE",
+    "venue": "PALOMA",
+    "city": "LONDON",
+    "soundLabel": "SOUND",
+    "sound": ["MJ Remixes", "House", "Tech House"],
+    "residentAdvisorUrl": "https://ra.co/promoters/174470",
+    "eventbriteUrl": "https://www.eventbrite.com/"
+  },
+  "upcomingList": [
+    { "title": "Bad in the House", "meta": "FRI 10.07.2026 · PALOMA, LONDON", "image": "assets/poster-mj.jpg", "url": "https://ra.co/promoters/174470" },
+    { "title": "Secret Warehouse", "meta": "TBA 2026 · SECRET LOCATION", "image": "", "url": "#" },
+    { "title": "Momento Open Air", "meta": "SUMMER 2026 · TBA", "image": "", "url": "#" }
+  ],
+  "sound": {
+    "body": "Rooted in Afro House, Tech House and House, momento.motion blends deep percussion, hypnotic rhythms, warm grooves, melodic tension, and emotionally charged transitions.",
+    "tagline": "FEEL. CONNECT. MOVE."
+  },
+  "artists": {
+    "heading": "Resident sound meets selected artists",
+    "body1": "momento.motion features resident-led sets, B2B collaborations, emerging DJs, and occasional special guest performers from the Afro House, Tech House and House scene.",
+    "body2": "Each artist is chosen for their sound, taste, emotional range, and ability to move the room with intention.",
+    "tags": ["RESIDENT SETS", "B2B COLLABORATIONS", "EMERGING DJS", "SPECIAL GUESTS"]
+  },
+  "pastEvents": [
+    { "title": "Momento & Friends", "meta": "D8V! & WONK · DEAR DARLING · 04 JUN", "image": "assets/poster-friends.jpg", "type": "poster" },
+    { "title": "Past Event 02", "meta": "DJ BOOTH / MOTION BLUR", "image": "", "type": "photo" },
+    { "title": "Crowd Energy", "meta": "HANDS UP / HAZE", "image": "", "type": "photo" },
+    { "title": "Artist Moment", "meta": "MONOCHROME PORTRAIT", "image": "", "type": "photo" },
+    { "title": "Aftermovie", "meta": "", "image": "", "type": "video" }
+  ]
+}

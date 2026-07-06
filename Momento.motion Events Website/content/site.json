@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "genres": "Afro House / Tech House / House",
+    "descriptor": "Events & Production"
+  },
+  "social": [
+    { "label": "Instagram", "url": "https://www.instagram.com/momento.motion/" },
+    { "label": "SoundCloud", "url": "https://soundcloud.com/momento-motion" },
+    { "label": "Resident Advisor", "url": "https://ra.co/promoters/174470" }
+  ],
+  "ticketLinks": {
+    "residentAdvisor": "https://ra.co/promoters/174470",
+    "eventbrite": "https://www.eventbrite.com/"
+  },
+  "contact": {
+    "email": "bookings@momento.motion",
+    "instagram": "https://www.instagram.com/momento.motion/",
+    "residentAdvisor": "https://ra.co/promoters/174470",
+    "eventbrite": "https://www.eventbrite.com/",
+    "soundcloud": "https://soundcloud.com/momento-motion"
+  },
+  "legal": {
+    "copyright": "© W8V LTD. All rights reserved.",
+    "credit": "Created by SVG Group Limited."
+  }
+}

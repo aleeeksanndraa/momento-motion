@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "eyebrow": "FOR VENUES / PARTNERS / ARTISTS / PRESS — 2026",
+    "subtext": "momento.motion is an Afro House, Tech House and House music initiative, event organiser, and production company creating immersive sound-led experiences through curated DJ journeys, resident artists, B2B collaborations, and hand-selected talent.",
+    "epkPdf": "#"
+  },
+  "facts": [
+    { "label": "FORMAT", "value": "Music initiative / event organiser / production company" },
+    { "label": "GENRE", "value": "Afro House / Tech House / House" },
+    { "label": "FOCUS", "value": "Emotional music journeys" },
+    { "label": "ARTISTS", "value": "Resident DJ, B2B collaborations, emerging artists, guest performers" },
+    { "label": "PLATFORMS", "value": "Resident Advisor / Eventbrite / Instagram / SoundCloud" },
+    { "label": "COMPANY", "value": "W8V LTD — created by SVG Group Limited" }
+  ],
+  "about": {
+    "heading": "About momento.motion",
+    "body": [
+      "momento.motion is a music-first event platform focused on Afro House, Tech House and House.",
+      "The initiative brings together resident DJs, emerging artists, guest performers, and curated B2B sets to create events that feel like emotional journeys rather than ordinary nights out.",
+      "With a refined approach to sound, atmosphere, and production, momento.motion is building a new space for Afro House culture and music-led connection."
+    ]
+  },
+  "philosophy": {
+    "heading": "We create moments through music",
+    "body": [
+      "At the core of momento.motion is the belief that sound can shape emotion, memory, movement, and connection.",
+      "Every event is built as a journey, where rhythm and energy are carefully mapped to carry the room from atmosphere to intensity, from tension to release, from individual presence to collective experience."
+    ]
+  },
+  "pillars": [
+    {
+      "index": "04 / SOUND DIRECTION",
+      "title": "Sound Direction",
+      "body": [
+        "Rooted in Afro House, Tech House and House, blending deep percussion, hypnotic rhythm, warm grooves, melodic tension, and emotionally charged transitions.",
+        "Our sound is sophisticated, immersive, and movement-driven — designed for people who do not just attend events, but experience music fully."
+      ]
+    },
+    {
+      "index": "05 / CURATION",
+      "title": "Artist Curation / B2B Format",
+      "body": [
+        "A resident artist forms the core thread of the sound, alongside hand-selected emerging DJs, B2B collaborations, and occasional special guest performers.",
+        "The B2B format is central to our identity, allowing different artists to meet, respond, and build a shared sound journey in real time."
+      ]
+    },
+    {
+      "index": "06 / PRODUCTION",
+      "title": "Production",
+      "body": [
+        "momento.motion also operates as a production company, creating music-led events, artist showcases, cultural experiences, and curated nightlife concepts.",
+        "From sound direction and artist curation to atmosphere, programming, and event production — built with intention, quality, and emotional impact."
+      ]
+    }
+  ],
+  "media": [
+    { "code": "M-01 / VIDEO", "title": "Event Aftermovie", "icon": "▶", "url": "#" },
+    { "code": "M-02 / PHOTO", "title": "Photo Gallery", "icon": "↗", "url": "#" },
+    { "code": "M-03 / BRAND", "title": "Logo Assets", "icon": "↓", "url": "#" },
+    { "code": "M-04 / PHOTO", "title": "Artist Images", "icon": "↗", "url": "#" },
+    { "code": "M-05 / PRINT", "title": "Past Event Posters", "icon": "↗", "url": "#" },
+    { "code": "M-06 / AUDIO", "title": "Mixes / Radio / SoundCloud", "icon": "▶", "url": "https://soundcloud.com/momento-motion" },
+    { "code": "M-07 / PRESS", "title": "Press Images", "icon": "↗", "url": "#" },
+    { "code": "M-08 / PDF", "title": "Download PDF EPK", "icon": "↓", "url": "#", "highlight": true }
+  ],
+  "team": [
+    { "name": "Name Surname", "role": "FOUNDER / MUSIC DIRECTION", "bio": "Curates the sound identity and maps every event journey from open to close." },
+    { "name": "Name Surname", "role": "EVENT PRODUCTION", "bio": "Leads venues, logistics, and the physical atmosphere of each experience." },
+    { "name": "Name Surname", "role": "ARTIST RELATIONS", "bio": "Hand-selects residents, B2B pairings, and emerging talent for the platform." },
+    { "name": "Name Surname", "role": "CREATIVE / VISUALS", "bio": "Shapes the visual language — motion, grain, light, and brand worlds." }
+  ],
+  "contact": {
+    "body": "For bookings, partnerships, artist submissions, press, production enquiries, and collaborations, please contact the momento.motion team."
+  }
+}
