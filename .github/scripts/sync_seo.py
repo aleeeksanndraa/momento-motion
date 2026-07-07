@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-"""Sync title/meta-description into index.html and epk.html from content/*.json "seo" fields.
+"""Sync title/meta-description into index.html and epk.html from content/seo.json.
 
 The site's <helmet> block can't template meta/link/script tags (they're cloned into
 <head> once, verbatim, by support.js's helmet compile()), so this runs as a CI step
-instead: it reads the CMS-editable "seo" object out of each content file and rewrites
-the corresponding static tags in the matching HTML file.
+instead: it reads the CMS-editable content/seo.json and rewrites the corresponding
+static tags in the matching HTML file.
 """
 import json
 import re
 import sys
 
+SEO_JSON = "content/seo.json"
+
 PAGES = [
-    ("content/events.json", "index.html"),
-    ("content/epk.json", "epk.html"),
+    ("events", "index.html"),
+    ("epk", "epk.html"),
 ]
 
 TAG_PATTERNS = [
@@ -52,12 +54,13 @@ def sync_file(html_path, seo):
 
 
 def main():
+    with open(SEO_JSON, encoding="utf-8") as f:
+        data = json.load(f)
+
     changed_any = False
-    for json_path, html_path in PAGES:
-        with open(json_path, encoding="utf-8") as f:
-            data = json.load(f)
-        seo = data.get("seo") or {}
-        print(f"Syncing {json_path} -> {html_path}")
+    for page_key, html_path in PAGES:
+        seo = data.get(page_key) or {}
+        print(f"Syncing {SEO_JSON}:{page_key} -> {html_path}")
         if sync_file(html_path, seo):
             changed_any = True
     sys.exit(0)

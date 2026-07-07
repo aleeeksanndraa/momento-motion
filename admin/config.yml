@@ -74,6 +74,30 @@ collections:
               - { label: "Copyright", name: "copyright", widget: "string" }
               - { label: "Credit", name: "credit", widget: "string" }
 
+  # ---------- SEO ----------
+  # Kept in its own file/collection (rather than nested inside events.json or epk.json)
+  # since Decap CMS file collections can silently drop fields that aren't part of the
+  # collection's own schema on save. A separate content/seo.json avoids that risk.
+  - name: "seo"
+    label: "SEO"
+    files:
+      - name: "seo"
+        label: "SEO Settings"
+        file: "content/seo.json"
+        fields:
+          - label: "Events Page (index.html)"
+            name: "events"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string", hint: "Shown in Google search results and browser tabs. Synced into the site automatically after saving." }
+              - { label: "Meta Description", name: "description", widget: "text", hint: "Shown under the title in Google search results. Aim for under 160 characters." }
+          - label: "EPK Page (epk.html)"
+            name: "epk"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string", hint: "Shown in Google search results and browser tabs. Synced into the site automatically after saving." }
+              - { label: "Meta Description", name: "description", widget: "text", hint: "Shown under the title in Google search results. Aim for under 160 characters." }
+
   # ---------- EVENTS PAGE ----------
   - name: "events"
     label: "Events Page"
@@ -82,12 +106,6 @@ collections:
         label: "Events content"
         file: "content/events.json"
         fields:
-          - label: "SEO"
-            name: "seo"
-            widget: "object"
-            fields:
-              - { label: "Page Title", name: "title", widget: "string", hint: "Shown in Google search results and browser tabs. Synced into the site automatically after saving." }
-              - { label: "Meta Description", name: "description", widget: "text", hint: "Shown under the title in Google search results. Aim for under 160 characters." }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -162,12 +180,6 @@ collections:
         label: "EPK content"
         file: "content/epk.json"
         fields:
-          - label: "SEO"
-            name: "seo"
-            widget: "object"
-            fields:
-              - { label: "Page Title", name: "title", widget: "string", hint: "Shown in Google search results and browser tabs. Synced into the site automatically after saving." }
-              - { label: "Meta Description", name: "description", widget: "text", hint: "Shown under the title in Google search results. Aim for under 160 characters." }
           - label: "Hero"
             name: "hero"
             widget: "object"

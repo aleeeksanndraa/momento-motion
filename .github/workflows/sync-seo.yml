@@ -4,8 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "content/events.json"
-      - "content/epk.json"
+      - "content/seo.json"
   workflow_dispatch: {}
 
 permissions:
