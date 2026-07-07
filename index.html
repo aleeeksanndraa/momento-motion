@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,24 @@
 <body>
 <x-dc>
 <helmet>
-<title>momento.motion — Afro House / Tech House / House</title>
+<title>momento.motion — Afro House, Tech House & House Events in London</title>
+<meta name="description" content="momento.motion creates music-led Afro House, Tech House and House events in London — resident DJs, B2B sets, and curated lineups. Get tickets to our next event.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aleeeksanndraa.github.io/momento-motion/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="momento.motion">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://aleeeksanndraa.github.io/momento-motion/">
+<meta property="og:title" content="momento.motion — Afro House, Tech House & House Events in London">
+<meta property="og:description" content="momento.motion creates music-led Afro House, Tech House and House events in London — resident DJs, B2B sets, and curated lineups. Get tickets to our next event.">
+<meta property="og:image" content="https://aleeeksanndraa.github.io/momento-motion/assets/wordmark-clear.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="670">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="momento.motion — Afro House, Tech House & House Events in London">
+<meta name="twitter:description" content="momento.motion creates music-led Afro House, Tech House and House events in London — resident DJs, B2B sets, and curated lineups. Get tickets to our next event.">
+<meta name="twitter:image" content="https://aleeeksanndraa.github.io/momento-motion/assets/wordmark-clear.png">
+<meta name="theme-color" content="#0A0A0B">
 <link rel="icon" href="assets/symbol.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +44,53 @@ a:hover { color:#B8B8C4; }
 @keyframes mmEqBar { 0%,100%{transform:scaleY(0.18)} 50%{transform:scaleY(1)} }
 </style>
 <script src="https://w.soundcloud.com/player/api.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "momento.motion",
+  "url": "https://aleeeksanndraa.github.io/momento-motion/",
+  "logo": "https://aleeeksanndraa.github.io/momento-motion/assets/wordmark-clear.png",
+  "email": "bookings@momento.motion",
+  "sameAs": [
+    "https://www.instagram.com/momento.motion/",
+    "https://soundcloud.com/momento-motion",
+    "https://ra.co/promoters/174470"
+  ]
+}
+</script>
+<!-- Keep this MusicEvent block in sync by hand with content/events.json "upcoming" whenever that changes via the CMS — the helmet block does not support {{ }} template bindings. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicEvent",
+  "name": "Bad in the House — momento.motion",
+  "startDate": "2026-07-10T22:30:00+01:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "PALOMA",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "London",
+      "addressCountry": "GB"
+    }
+  },
+  "image": ["https://aleeeksanndraa.github.io/momento-motion/assets/poster-mj.jpg"],
+  "description": "momento.motion presents Bad in the House — an Afro House, Tech House and House music night at PALOMA, London.",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://ra.co/events/2466145",
+    "availability": "https://schema.org/InStock"
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "momento.motion",
+    "url": "https://aleeeksanndraa.github.io/momento-motion/"
+  }
+}
+</script>
 </helmet>
 
 <sc-if value="{{ grainOn }}" hint-placeholder-val="{{ true }}">
@@ -95,6 +159,8 @@ a:hover { color:#B8B8C4; }
 </sc-if>
 
 <main id="top" style="overflow-x:hidden; transition:opacity 0.9s ease, transform 0.9s ease; opacity:{{ pageOpacity }}; transform:{{ pageTransform }};">
+
+<h1 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">momento.motion — Afro House, Tech House &amp; House Events in London</h1>
 
 <!-- HERO -->
 <section data-screen-label="Hero" style="position:relative; min-height:100svh; overflow:hidden; background:#08080A;">
