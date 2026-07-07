@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aleeeksanndraa.github.io/momento-motion/sitemap.xml
+Sitemap: https://momento.w8v.org/sitemap.xml

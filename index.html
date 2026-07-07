@@ -9,22 +9,22 @@
 <x-dc>
 <helmet>
 <title>momento.motion — Afro House, Tech House & House Events in London</title>
-<meta name="description" content="momento.motion creates music-led Afro House, Tech House and House events in London — resident DJs, B2B sets, and curated lineups. Get tickets to our next event.">
+<meta name="description" content="momento.motion creates Afro House, Tech House and House music events in London, blending curated DJs, intimate venues, cinematic visuals and underground dancefloor energy.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://aleeeksanndraa.github.io/momento-motion/">
+<link rel="canonical" href="https://momento.w8v.org/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="momento.motion">
 <meta property="og:locale" content="en_GB">
-<meta property="og:url" content="https://aleeeksanndraa.github.io/momento-motion/">
+<meta property="og:url" content="https://momento.w8v.org/">
 <meta property="og:title" content="momento.motion — Afro House, Tech House & House Events in London">
-<meta property="og:description" content="momento.motion creates music-led Afro House, Tech House and House events in London — resident DJs, B2B sets, and curated lineups. Get tickets to our next event.">
-<meta property="og:image" content="https://aleeeksanndraa.github.io/momento-motion/assets/wordmark-clear.png">
+<meta property="og:description" content="London-based electronic music events shaped by curated DJs, intimate venues, cinematic visuals and underground dancefloor energy.">
+<meta property="og:image" content="https://momento.w8v.org/assets/wordmark-clear.png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="670">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="momento.motion — Afro House, Tech House & House Events in London">
-<meta name="twitter:description" content="momento.motion creates music-led Afro House, Tech House and House events in London — resident DJs, B2B sets, and curated lineups. Get tickets to our next event.">
-<meta name="twitter:image" content="https://aleeeksanndraa.github.io/momento-motion/assets/wordmark-clear.png">
+<meta name="twitter:description" content="London-based electronic music events shaped by curated DJs, intimate venues, cinematic visuals and underground dancefloor energy.">
+<meta name="twitter:image" content="https://momento.w8v.org/assets/wordmark-clear.png">
 <meta name="theme-color" content="#0A0A0B">
 <link rel="icon" href="assets/symbol.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,8 +49,8 @@ a:hover { color:#B8B8C4; }
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "momento.motion",
-  "url": "https://aleeeksanndraa.github.io/momento-motion/",
-  "logo": "https://aleeeksanndraa.github.io/momento-motion/assets/wordmark-clear.png",
+  "url": "https://momento.w8v.org/",
+  "logo": "https://momento.w8v.org/assets/wordmark-clear.png",
   "email": "bookings@momento.motion",
   "sameAs": [
     "https://www.instagram.com/momento.motion/",
@@ -77,7 +77,7 @@ a:hover { color:#B8B8C4; }
       "addressCountry": "GB"
     }
   },
-  "image": ["https://aleeeksanndraa.github.io/momento-motion/assets/poster-mj.jpg"],
+  "image": ["https://momento.w8v.org/assets/poster-mj.jpg"],
   "description": "momento.motion presents Bad in the House — an Afro House, Tech House and House music night at PALOMA, London.",
   "offers": {
     "@type": "Offer",
@@ -87,7 +87,7 @@ a:hover { color:#B8B8C4; }
   "organizer": {
     "@type": "Organization",
     "name": "momento.motion",
-    "url": "https://aleeeksanndraa.github.io/momento-motion/"
+    "url": "https://momento.w8v.org/"
   }
 }
 </script>
@@ -241,13 +241,14 @@ a:hover { color:#B8B8C4; }
 <!-- UPCOMING EVENT -->
 <section id="events" data-screen-label="Upcoming Event" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
   <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(32px,5vh,56px);">
+    <h2 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">Upcoming Events</h2>
     <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
       <span style="color:#C7C7D0;">02</span><span>/ UPCOMING EVENT</span><span style="flex:1; height:1px; background:#191920;"></span>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); border:1px solid #26262E;">
       <div style="position:relative; overflow:hidden; min-height:420px; background:#000;">
         <sc-if value="{{ upPoster }}" hint-placeholder-val="{{ false }}">
-          <img src="{{ upPoster }}" alt="{{ upTitle }} poster" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <img src="{{ upPoster }}" alt="{{ upTitle }} — momento.motion Afro House / Tech House event poster, London" style="width:100%; height:100%; object-fit:cover; display:block;">
         </sc-if>
         <div style="position:absolute; top:0; left:0; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#F2F2F5; padding:14px 16px; background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0));">{{ upTag }}</div>
       </div>
@@ -283,7 +284,7 @@ a:hover { color:#B8B8C4; }
     <sc-for list="{{ upcomingList }}" as="ev" hint-placeholder-count="3">
       <a href="{{ ev.url }}" target="_blank" rel="noopener" style="scroll-snap-align:start; flex:0 0 auto; width:min(78vw,320px); aspect-ratio:3/4; border:1px solid #26262E; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; gap:6px; padding:20px; box-sizing:border-box; background:radial-gradient(120% 100% at 60% 25%, rgba(170,170,176,0.22) 0%, rgba(70,70,76,0.12) 44%, #101013 78%);">
         <sc-if value="{{ ev.image }}" hint-placeholder-val="{{ false }}">
-          <img src="{{ ev.image }}" alt="{{ ev.title }}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+          <img src="{{ ev.image }}" alt="{{ ev.title }} — upcoming momento.motion event in London" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
         </sc-if>
         <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 42%, rgba(8,8,10,0.55) 68%, rgba(8,8,10,0.9) 100%); pointer-events:none;"></div>
         <span style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; color:#C7C7D0;">{{ ev.meta }}</span>
@@ -342,6 +343,7 @@ a:hover { color:#B8B8C4; }
 <!-- PAST MOMENTS -->
 <section data-screen-label="Past Moments" style="padding:clamp(72px,12vh,140px) 0;">
   <div style="max-width:1400px; margin:0 auto; padding:0 clamp(16px,4vw,48px); box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+    <h2 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">Past Moments</h2>
     <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
       <span style="color:#C7C7D0;">05</span><span>/ PAST MOMENTS</span>
     </div>
@@ -351,10 +353,10 @@ a:hover { color:#B8B8C4; }
     <sc-for list="{{ pastEvents }}" as="ev" hint-placeholder-count="5">
       <div style="scroll-snap-align:start; flex:0 0 auto; width:min(78vw,340px); aspect-ratio:3/4; border:1px solid #26262E; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; gap:6px; padding:20px; box-sizing:border-box; background:radial-gradient(120% 100% at 60% 25%, rgba(170,170,176,0.22) 0%, rgba(70,70,76,0.12) 44%, #101013 78%);">
         <sc-if value="{{ ev.image }}" hint-placeholder-val="{{ false }}">
-          <img src="{{ ev.image }}" alt="{{ ev.title }}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+          <img src="{{ ev.image }}" alt="{{ ev.title }} — underground House music event by momento.motion, London" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
         </sc-if>
         <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 42%, rgba(8,8,10,0.55) 68%, rgba(8,8,10,0.9) 100%); pointer-events:none;"></div>
-        <span style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#C7C7D0;">{{ ev.metaTag }}</span>
+        <span style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#C7C7D0;">{{ ev.meta }}</span>
         <span style="position:relative; font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; color:#F2F2F5;">{{ ev.title }}</span>
       </div>
     </sc-for>
