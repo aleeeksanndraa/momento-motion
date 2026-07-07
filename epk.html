@@ -274,11 +274,20 @@ a:hover { color:#B8B8C4; }
 
 <!-- FOOTER (centred, items stretched to sides) -->
 <footer data-screen-label="Footer" style="border-top:1px solid #191920; padding:clamp(32px,6vh,48px) clamp(16px,4vw,48px) clamp(96px,14vh,120px); background:#08080A;">
-  <div style="max-width:1400px; margin:0 auto; width:100%; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#5A5A64;">
-    <span style="flex:1; min-width:180px; text-align:left;">{{ legalCopyright }}</span>
-    <a href="index.html" style="flex:1; min-width:160px; text-align:center; color:#7C7C8C;" style-hover="color:#F2F2F5;">← BACK TO EVENTS</a>
-    <span style="flex:1; min-width:180px; text-align:right;">{{ legalCredit }}</span>
-  </div>
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:1400px; margin:0 auto; width:100%; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#5A5A64;">
+      <span style="flex:1; min-width:180px; text-align:left;">{{ legalCopyright }}</span>
+      <a href="index.html" style="flex:1; min-width:160px; text-align:center; color:#7C7C8C;" style-hover="color:#F2F2F5;">← BACK TO EVENTS</a>
+      <span style="flex:1; min-width:180px; text-align:right;">{{ legalCredit }}</span>
+    </div>
+  </sc-if>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ true }}">
+    <div style="max-width:1400px; margin:0 auto; width:100%; display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#5A5A64;">
+      <a href="index.html" style="color:#7C7C8C;" style-hover="color:#F2F2F5;">← BACK TO EVENTS</a>
+      <span>{{ legalCopyright }}</span>
+      <span>{{ legalCredit }}</span>
+    </div>
+  </sc-if>
 </footer>
 
 </main>
