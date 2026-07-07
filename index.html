@@ -24,6 +24,7 @@ a:hover { color:#B8B8C4; }
 @keyframes mmFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
 @keyframes mmMarquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 @keyframes mmSpin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes mmEqBar { 0%,100%{transform:scaleY(0.18)} 50%{transform:scaleY(1)} }
 </style>
 <script src="https://w.soundcloud.com/player/api.js"></script>
 </helmet>
@@ -31,6 +32,20 @@ a:hover { color:#B8B8C4; }
 <sc-if value="{{ grainOn }}" hint-placeholder-val="{{ true }}">
   <canvas class="mm-grain" style="position:fixed; inset:0; width:100%; height:100%; z-index:60; opacity:0.10; mix-blend-mode:overlay; pointer-events:none;"></canvas>
 </sc-if>
+
+<!-- LOADER -->
+<div style="position:fixed; inset:0; z-index:200; background:#0A0A0B; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:32px; transition:opacity 0.9s ease, transform 0.9s ease, filter 0.9s ease; opacity:{{ loaderOpacity }}; visibility:{{ loaderVis }}; pointer-events:{{ loaderPointer }}; transform:{{ loaderTransform }}; filter:{{ loaderBlur }};">
+  <div style="display:flex; align-items:flex-end; gap:6px; height:56px;">
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.9s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.2s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.6s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.35s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.75s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.1s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.5s;"></span>
+  </div>
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.34em; color:#7C7C8C;">SOUND IN MOTION</div>
+</div>
 
 <!-- NAV -->
 <header style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px clamp(16px,4vw,48px); background:rgba(10,10,11,0.55); -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px); border-bottom:1px solid #191920;">
@@ -79,7 +94,7 @@ a:hover { color:#B8B8C4; }
   </div>
 </sc-if>
 
-<main id="top" style="overflow-x:hidden;">
+<main id="top" style="overflow-x:hidden; transition:opacity 0.9s ease, transform 0.9s ease; opacity:{{ pageOpacity }}; transform:{{ pageTransform }};">
 
 <!-- HERO -->
 <section data-screen-label="Hero" style="position:relative; min-height:100svh; overflow:hidden; background:#08080A;">
@@ -106,7 +121,7 @@ a:hover { color:#B8B8C4; }
         <p style="margin:0; font-size:clamp(14px,1.7vw,16px); line-height:1.6; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
         <div style="display:flex; flex-wrap:wrap; gap:12px;">
           <a href="{{ raUrl }}" target="_blank" rel="noopener" style="background:#F2F2F5; color:#0A0A0B; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Get Tickets</a>
-          <a href="epk.html" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px)" style-hover="border-color:#F2F2F5;">View EPK</a>
+          <a href="epk.html" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);" style-hover="border-color:#F2F2F5;">View EPK</a>
         </div>
       </div>
       <div style="border:1px solid #2A2A32; background:rgba(12,12,14,0.5); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); padding:18px 20px; min-width:min(100%,300px); display:flex; flex-direction:column; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em;">
@@ -126,7 +141,7 @@ a:hover { color:#B8B8C4; }
     <p style="margin:0; max-width:34ch; font-size:14px; line-height:1.6; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
     <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:320px;">
       <a href="{{ raUrl }}" target="_blank" rel="noopener" style="background:#F2F2F5; color:#0A0A0B; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;">Get Tickets</a>
-      <a href="epk.html" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px)">View EPK</a>
+      <a href="epk.html" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);">View EPK</a>
     </div>
     <div style="border:1px solid #2A2A32; background:rgba(12,12,14,0.5); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); padding:16px 18px; width:100%; max-width:320px; display:flex; flex-direction:column; gap:9px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-align:left;">
       <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#7C7C8C;">NEXT EVENT</span><span>{{ upTitle }}</span></div>
@@ -194,7 +209,7 @@ a:hover { color:#B8B8C4; }
 <section data-screen-label="Upcoming Dates" style="padding:0 0 clamp(24px,4vh,40px);">
   <div style="max-width:1400px; margin:0 auto; padding:0 clamp(16px,4vw,48px); box-sizing:border-box; display:flex; align-items:center; gap:16px;">
     <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">02</span><span>/ MORE DATES</span>
+      <span style="color:#C7C7D0;">{{ moreDatesNum }}</span><span>/ {{ moreDatesTitle }}</span>
     </div>
     <span style="flex:1; height:1px; background:#191920;"></span>
   </div>
@@ -324,7 +339,7 @@ a:hover { color:#B8B8C4; }
   &quot;marquee&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Atmosphere&quot; }
 }">
 class Component extends DCLogic {
-  state = { isMobile: true, menuOpen: false, site: null, ev: null, ctaShown: false, playing: false, audioOn: false };
+  state = { isMobile: true, menuOpen: false, site: null, ev: null, ctaShown: false, playing: false, audioOn: false, loading: true };
 
   async componentDidMount() {
     this.mq = window.matchMedia('(max-width: 900px)');
@@ -347,6 +362,7 @@ class Component extends DCLogic {
       this.setState({ site, ev });
       setTimeout(() => { this.startEq(); this.tryInitSC(); this.observeSound(); }, 60);
     } catch (e) { console.warn('content load failed', e); }
+    this.loadT = setTimeout(() => this.setState({ loading: false }), 900);
   }
 
   tryInitSC(attempt = 0) {
@@ -511,6 +527,13 @@ class Component extends DCLogic {
       ctaTransform: this.state.ctaShown ? 'translateY(0)' : 'translateY(120%)',
       ctaOpacity: this.state.ctaShown ? 1 : 0,
       ctaPointer: this.state.ctaShown ? 'auto' : 'none',
+      loaderOpacity: this.state.loading ? 1 : 0,
+      loaderVis: this.state.loading ? 'visible' : 'hidden',
+      loaderPointer: this.state.loading ? 'auto' : 'none',
+      loaderTransform: this.state.loading ? 'scale(1)' : 'scale(1.1)',
+      loaderBlur: this.state.loading ? 'blur(0px)' : 'blur(12px)',
+      pageOpacity: this.state.loading ? 0 : 1,
+      pageTransform: this.state.loading ? 'translateY(14px)' : 'translateY(0)',
       raUrl: t.residentAdvisor || '#',
       ebUrl: t.eventbrite || '#',
       instagramUrl: (site.contact && site.contact.instagram) || '#',
@@ -537,6 +560,8 @@ class Component extends DCLogic {
       artistsTags: (ev.artists && ev.artists.tags) || [],
       pastEvents: past,
       upcomingList: ev.upcomingList || [],
+      moreDatesNum: (ev.moreDates && ev.moreDates.number) || '02',
+      moreDatesTitle: (ev.moreDates && ev.moreDates.title) || 'MORE DATES',
       legalCopyright: (site.legal && site.legal.copyright) || '',
       legalCredit: (site.legal && site.legal.credit) || '',
     };

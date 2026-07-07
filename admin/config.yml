@@ -110,6 +110,12 @@ collections:
               - { label: "Sound / genres", name: "sound", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
               - { label: "Resident Advisor URL", name: "residentAdvisorUrl", widget: "string" }
               - { label: "Eventbrite URL", name: "eventbriteUrl", widget: "string" }
+          - label: "More dates label"
+            name: "moreDates"
+            widget: "object"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
           - label: "Sound identity"
             name: "sound"
             widget: "object"

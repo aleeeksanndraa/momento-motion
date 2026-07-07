@@ -20,12 +20,27 @@ a:hover { color:#B8B8C4; }
 ::selection { background:#3A3A44; color:#F2F2F5; }
 @keyframes mmDrift1 { 0%{transform:translate(-6%,4%) scale(1.15) rotate(0deg)} 50%{transform:translate(8%,-6%) scale(1.35) rotate(8deg)} 100%{transform:translate(-6%,4%) scale(1.15) rotate(0deg)} }
 @keyframes mmFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes mmEqBar { 0%,100%{transform:scaleY(0.18)} 50%{transform:scaleY(1)} }
 </style>
 </helmet>
 
 <sc-if value="{{ grainOn }}" hint-placeholder-val="{{ true }}">
   <canvas class="mm-grain" style="position:fixed; inset:0; width:100%; height:100%; z-index:60; opacity:0.09; mix-blend-mode:overlay; pointer-events:none;"></canvas>
 </sc-if>
+
+<!-- LOADER -->
+<div style="position:fixed; inset:0; z-index:200; background:#0A0A0B; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:32px; transition:opacity 0.9s ease, transform 0.9s ease, filter 0.9s ease; opacity:{{ loaderOpacity }}; visibility:{{ loaderVis }}; pointer-events:{{ loaderPointer }}; transform:{{ loaderTransform }}; filter:{{ loaderBlur }};">
+  <div style="display:flex; align-items:flex-end; gap:6px; height:56px;">
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.9s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.2s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.6s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.35s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.75s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.1s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.5s;"></span>
+  </div>
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.34em; color:#7C7C8C;">ELECTRONIC PRESS KIT</div>
+</div>
 
 <!-- NAV -->
 <header style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px clamp(16px,4vw,48px); background:rgba(10,10,11,0.55); -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px); border-bottom:1px solid #191920;">
@@ -73,7 +88,7 @@ a:hover { color:#B8B8C4; }
   </div>
 </sc-if>
 
-<main style="overflow-x:hidden;">
+<main style="overflow-x:hidden; transition:opacity 0.9s ease, transform 0.9s ease; opacity:{{ pageOpacity }}; transform:{{ pageTransform }};">
 
 <!-- EPK HERO -->
 <section data-screen-label="EPK Hero" style="position:relative; min-height:92svh; overflow:hidden; background:#08080A;">
@@ -93,7 +108,7 @@ a:hover { color:#B8B8C4; }
       <p style="margin:0; max-width:640px; font-size:clamp(15px,2vw,18px); line-height:1.7; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
       <div style="display:flex; flex-wrap:wrap; gap:12px;">
         <a href="{{ epkPdf }}" target="_blank" rel="noopener" style="background:#F2F2F5; color:#0A0A0B; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Download EPK ↓</a>
-        <a href="#contact" style="border:1px solid #4A4A54; color:#F2F2F5; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px)" style-hover="border-color:#F2F2F5;">Contact / Bookings</a>
+        <a href="#contact" style="border:1px solid #4A4A54; color:#F2F2F5; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);" style-hover="border-color:#F2F2F5;">Contact / Bookings</a>
       </div>
     </div>
   </div>
@@ -246,7 +261,7 @@ a:hover { color:#B8B8C4; }
   &quot;grain&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Atmosphere&quot; }
 }">
 class Component extends DCLogic {
-  state = { isMobile: true, menuOpen: false, site: null, epk: null, ctaShown: false };
+  state = { isMobile: true, menuOpen: false, site: null, epk: null, ctaShown: false, loading: true };
 
   async componentDidMount() {
     this.mq = window.matchMedia('(max-width: 900px)');
@@ -268,6 +283,7 @@ class Component extends DCLogic {
       ]);
       this.setState({ site, epk });
     } catch (e) { console.warn('content load failed', e); }
+    this.loadT = setTimeout(() => this.setState({ loading: false }), 900);
   }
 
   startGrain() {
@@ -319,6 +335,13 @@ class Component extends DCLogic {
       toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false }),
       grainOn: this.props.grain ?? true,
+      loaderOpacity: this.state.loading ? 1 : 0,
+      loaderVis: this.state.loading ? 'visible' : 'hidden',
+      loaderPointer: this.state.loading ? 'auto' : 'none',
+      loaderTransform: this.state.loading ? 'scale(1)' : 'scale(1.1)',
+      loaderBlur: this.state.loading ? 'blur(0px)' : 'blur(12px)',
+      pageOpacity: this.state.loading ? 0 : 1,
+      pageTransform: this.state.loading ? 'translateY(14px)' : 'translateY(0)',
       ctaTransform: this.state.ctaShown ? 'translateY(0)' : 'translateY(120%)',
       ctaOpacity: this.state.ctaShown ? 1 : 0,
       ctaPointer: this.state.ctaShown ? 'auto' : 'none',
