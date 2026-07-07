@@ -21,7 +21,7 @@
     "residentAdvisorUrl": "https://ra.co/events/2466145",
     "eventbriteUrl": "https://www.eventbrite.com/"
   },
-  "moreDates": { "number": "02", "title": "MORE DATES" },
+  "moreDates": { "number": "02", "title": "FUTURE EVENTS" },
   "upcomingList": [
     { "title": "Bad in the House", "meta": "FRI 10.07.2026 · PALOMA, LONDON", "image": "assets/poster-mj.jpg", "url": "https://ra.co/events/2466145" },
     { "title": "Secret Warehouse", "meta": "TBA 2026 · SECRET LOCATION", "image": "", "url": "#" },
