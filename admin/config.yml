@@ -130,6 +130,7 @@ collections:
             fields:
               - { label: "Body", name: "body", widget: "text" }
               - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Mix URL (SoundCloud track/set link)", name: "mixUrl", widget: "string" }
           - label: "Artists"
             name: "artists"
             widget: "object"
