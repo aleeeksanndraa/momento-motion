@@ -375,6 +375,7 @@ class Component extends DCLogic {
     this.widget.bind(window.SC.Widget.Events.READY, () => {
       this.widget.getDuration(d => { this.scDur = d || 0; });
       this.widget.setVolume(85);
+      if (this.pendingPlay) { this.pendingPlay = false; this.playMix(); }
     });
     this.widget.bind(window.SC.Widget.Events.PLAY, () => this.setState({ playing: true }));
     this.widget.bind(window.SC.Widget.Events.PAUSE, () => this.setState({ playing: false }));
@@ -389,7 +390,7 @@ class Component extends DCLogic {
   }
 
   playMix() {
-    if (!this.widget) return;
+    if (!this.widget) { this.pendingPlay = true; return; }
     this.seekRandom(() => this.widget.play());
   }
   pauseMix() { if (this.widget) this.widget.pause(); }
@@ -424,6 +425,7 @@ class Component extends DCLogic {
     const BPM = 123, beat = 60000 / BPM;
     const draw = (t) => {
       this.eqRaf = requestAnimationFrame(draw);
+      if (document.hidden) return;
       const r = canvas.getBoundingClientRect();
       const w = r.width, h = r.height, cx = w / 2, cy = h / 2;
       const R = Math.min(w, h) * 0.30;
@@ -465,7 +467,8 @@ class Component extends DCLogic {
     let last = 0;
     const draw = (t) => {
       this.raf = requestAnimationFrame(draw);
-      if (t - last < 55) return; last = t;
+      if (document.hidden) return;
+      if (t - last < 110) return; last = t;
       for (const ctx of this.ctxs) {
         const img = ctx.createImageData(GW, GH); const d = img.data;
         for (let i = 0; i < d.length; i += 4) { const v = (Math.random() * 255) | 0; d[i]=d[i+1]=d[i+2]=v; d[i+3]=255; }
