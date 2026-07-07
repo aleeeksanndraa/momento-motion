@@ -18,17 +18,18 @@
     "city": "LONDON",
     "soundLabel": "SOUND",
     "sound": ["MJ Remixes", "House", "Tech House"],
-    "residentAdvisorUrl": "https://ra.co/promoters/174470",
+    "residentAdvisorUrl": "https://ra.co/events/2466145",
     "eventbriteUrl": "https://www.eventbrite.com/"
   },
   "upcomingList": [
-    { "title": "Bad in the House", "meta": "FRI 10.07.2026 · PALOMA, LONDON", "image": "assets/poster-mj.jpg", "url": "https://ra.co/promoters/174470" },
+    { "title": "Bad in the House", "meta": "FRI 10.07.2026 · PALOMA, LONDON", "image": "assets/poster-mj.jpg", "url": "https://ra.co/events/2466145" },
     { "title": "Secret Warehouse", "meta": "TBA 2026 · SECRET LOCATION", "image": "", "url": "#" },
     { "title": "Momento Open Air", "meta": "SUMMER 2026 · TBA", "image": "", "url": "#" }
   ],
   "sound": {
     "body": "Rooted in Afro House, Tech House and House, momento.motion blends deep percussion, hypnotic rhythms, warm grooves, melodic tension, and emotionally charged transitions.",
-    "tagline": "FEEL. CONNECT. MOVE."
+    "tagline": "FEEL. CONNECT. MOVE.",
+    "mixUrl": "https://soundcloud.com/momento-motion/mixtape001"
   },
   "artists": {
     "heading": "Resident sound meets selected artists",

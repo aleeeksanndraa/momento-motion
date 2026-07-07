@@ -3,8 +3,8 @@
 Dark, cinematic, music-led website for the momento.motion Afro House / Tech House / House initiative.
 
 Two pages:
-- **Momento Events.dc.html** — public events landing page (hero video, upcoming event, sound, artists, past moments).
-- **Momento EPK.dc.html** — industry-facing electronic press kit.
+- **index.html** — public events landing page (site entry) (hero video, upcoming event, sound, artists, past moments).
+- **epk.html** — industry-facing electronic press kit.
 
 ## Editable content (no code needed)
 
@@ -23,7 +23,7 @@ Change a value, commit, and the site updates. Images referenced in the JSON live
 1. Push this folder to a GitHub repo.
 2. Repo → **Settings → Pages** → Source: `main` branch, root.
 3. The site is served at `https://<user>.github.io/<repo>/`.
-4. Open the Events page: `.../Momento Events.dc.html` (set it as the landing link, or add an `index.html` that redirects).
+4. The site opens at the root — `index.html` is the Events page; the EPK is at `.../epk.html`.
 
 Everything is static (HTML + JSON + assets). The content JSON is loaded at runtime via `fetch()`, which works on GitHub Pages.
 
