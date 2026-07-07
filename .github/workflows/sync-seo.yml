@@ -1,0 +1,33 @@
+name: Sync SEO meta tags from CMS content
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/events.json"
+      - "content/epk.json"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync SEO tags into HTML
+        run: python3 .github/scripts/sync_seo.py
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html epk.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync SEO meta tags from CMS content"
+            git push
+          else
+            echo "No SEO changes to sync"
+          fi

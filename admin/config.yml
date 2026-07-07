@@ -82,6 +82,12 @@ collections:
         label: "Events content"
         file: "content/events.json"
         fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string", hint: "Shown in Google search results and browser tabs. Synced into the site automatically after saving." }
+              - { label: "Meta Description", name: "description", widget: "text", hint: "Shown under the title in Google search results. Aim for under 160 characters." }
           - label: "Hero"
             name: "hero"
             widget: "object"
@@ -156,6 +162,12 @@ collections:
         label: "EPK content"
         file: "content/epk.json"
         fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Page Title", name: "title", widget: "string", hint: "Shown in Google search results and browser tabs. Synced into the site automatically after saving." }
+              - { label: "Meta Description", name: "description", widget: "text", hint: "Shown under the title in Google search results. Aim for under 160 characters." }
           - label: "Hero"
             name: "hero"
             widget: "object"
