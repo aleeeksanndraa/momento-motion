@@ -18,6 +18,7 @@ html, body { margin:0; padding:0; background:#0A0A0B; color:#E8E8EC; font-family
 a { color:#E8E8EC; text-decoration:none; }
 a:hover { color:#B8B8C4; }
 ::selection { background:#3A3A44; color:#F2F2F5; }
+.mm-hscroll::-webkit-scrollbar { display:none; }
 @keyframes mmDrift1 { 0%{transform:translate(-6%,4%) scale(1.15) rotate(0deg)} 50%{transform:translate(8%,-6%) scale(1.35) rotate(8deg)} 100%{transform:translate(-6%,4%) scale(1.15) rotate(0deg)} }
 @keyframes mmDrift2 { 0%{transform:translate(10%,-8%) scale(1.25)} 50%{transform:translate(-8%,10%) scale(1.5)} 100%{transform:translate(10%,-8%) scale(1.25)} }
 @keyframes mmFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
@@ -32,7 +33,7 @@ a:hover { color:#B8B8C4; }
 </sc-if>
 
 <!-- NAV -->
-<header style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px clamp(16px,4vw,48px); background:rgba(10,10,11,0.55); backdrop-filter:blur(16px); border-bottom:1px solid #191920;">
+<header style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px clamp(16px,4vw,48px); background:rgba(10,10,11,0.55); -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px); border-bottom:1px solid #191920;">
   <a href="#top" style="display:flex; align-items:center; gap:12px;">
     <img src="assets/symbol.svg" alt="momento.motion" style="height:30px; display:block;">
   </a>
@@ -56,7 +57,7 @@ a:hover { color:#B8B8C4; }
 
 <!-- MOBILE MENU -->
 <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-  <div style="position:fixed; inset:0; z-index:70; background:rgba(8,8,9,0.96); backdrop-filter:blur(10px); display:flex; flex-direction:column; padding:20px;">
+  <div style="position:fixed; inset:0; z-index:70; background:rgba(8,8,9,0.96); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); display:flex; flex-direction:column; padding:20px;">
     <div style="display:flex; justify-content:space-between; align-items:center;">
       <img src="assets/wordmark-clear.png" alt="MOMENTO" style="height:20px;">
       <button onClick="{{ closeMenu }}" aria-label="Close" style="background:none; border:1px solid #2A2A32; color:#E8E8EC; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; padding:12px 16px; cursor:pointer;">CLOSE</button>
@@ -87,7 +88,7 @@ a:hover { color:#B8B8C4; }
   </video>
   <div style="position:absolute; width:70%; height:80%; left:20%; top:8%; border-radius:50%; background:radial-gradient(circle at 50% 50%, rgba(196,196,200,0.4) 0%, rgba(120,120,126,0.14) 38%, rgba(10,10,11,0) 66%); filter:blur(80px); animation:mmDrift1 26s ease-in-out infinite; mix-blend-mode:screen;"></div>
   <div style="position:absolute; width:55%; height:70%; left:-8%; top:24%; border-radius:50%; background:radial-gradient(circle at 50% 50%, rgba(160,160,166,0.3) 0%, rgba(96,96,102,0.12) 40%, rgba(10,10,11,0) 68%); filter:blur(90px); animation:mmDrift2 34s ease-in-out infinite; mix-blend-mode:screen;"></div>
-  <div style="position:absolute; inset:0; backdrop-filter:blur(7px) saturate(0.4); background:rgba(18,18,20,0.16);"></div>
+  <div style="position:absolute; inset:0; -webkit-backdrop-filter:blur(7px) saturate(0.4); backdrop-filter:blur(7px) saturate(0.4); background:rgba(18,18,20,0.16);"></div>
   <div style="position:absolute; inset:0; opacity:0.05; background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
   <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0.5) 0%, rgba(8,8,10,0.05) 38%, rgba(8,8,10,0.72) 100%);"></div>
 
@@ -105,10 +106,10 @@ a:hover { color:#B8B8C4; }
         <p style="margin:0; font-size:clamp(14px,1.7vw,16px); line-height:1.6; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
         <div style="display:flex; flex-wrap:wrap; gap:12px;">
           <a href="{{ raUrl }}" target="_blank" rel="noopener" style="background:#F2F2F5; color:#0A0A0B; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Get Tickets</a>
-          <a href="epk.html" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; backdrop-filter:blur(4px);" style-hover="border-color:#F2F2F5;">View EPK</a>
+          <a href="epk.html" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px)" style-hover="border-color:#F2F2F5;">View EPK</a>
         </div>
       </div>
-      <div style="border:1px solid #2A2A32; background:rgba(12,12,14,0.5); backdrop-filter:blur(10px); padding:18px 20px; min-width:min(100%,300px); display:flex; flex-direction:column; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em;">
+      <div style="border:1px solid #2A2A32; background:rgba(12,12,14,0.5); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); padding:18px 20px; min-width:min(100%,300px); display:flex; flex-direction:column; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em;">
         <div style="display:flex; justify-content:space-between; gap:16px;"><span style="color:#7C7C8C;">NEXT EVENT</span><span>{{ upTitle }}</span></div>
         <div style="display:flex; justify-content:space-between; gap:16px; border-top:1px solid #20202A; padding-top:10px;"><span style="color:#7C7C8C;">DATE</span><span>{{ upDate }}</span></div>
         <div style="display:flex; justify-content:space-between; gap:16px; border-top:1px solid #20202A; padding-top:10px;"><span style="color:#7C7C8C;">VENUE</span><span>{{ upVenue }}</span></div>
@@ -125,9 +126,9 @@ a:hover { color:#B8B8C4; }
     <p style="margin:0; max-width:34ch; font-size:14px; line-height:1.6; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
     <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:320px;">
       <a href="{{ raUrl }}" target="_blank" rel="noopener" style="background:#F2F2F5; color:#0A0A0B; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;">Get Tickets</a>
-      <a href="epk.html" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; backdrop-filter:blur(4px);">View EPK</a>
+      <a href="epk.html" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px)">View EPK</a>
     </div>
-    <div style="border:1px solid #2A2A32; background:rgba(12,12,14,0.5); backdrop-filter:blur(10px); padding:16px 18px; width:100%; max-width:320px; display:flex; flex-direction:column; gap:9px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-align:left;">
+    <div style="border:1px solid #2A2A32; background:rgba(12,12,14,0.5); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); padding:16px 18px; width:100%; max-width:320px; display:flex; flex-direction:column; gap:9px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-align:left;">
       <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#7C7C8C;">NEXT EVENT</span><span>{{ upTitle }}</span></div>
       <div style="display:flex; justify-content:space-between; gap:12px; border-top:1px solid #20202A; padding-top:9px;"><span style="color:#7C7C8C;">DATE</span><span>{{ upDate }}</span></div>
       <div style="display:flex; justify-content:space-between; gap:12px; border-top:1px solid #20202A; padding-top:9px;"><span style="color:#7C7C8C;">VENUE</span><span>{{ upVenue }}</span></div>
@@ -197,7 +198,7 @@ a:hover { color:#B8B8C4; }
     </div>
     <span style="flex:1; height:1px; background:#191920;"></span>
   </div>
-  <div style="display:flex; gap:16px; overflow-x:auto; padding:clamp(20px,3vh,32px) clamp(16px,4vw,48px); scroll-snap-type:x mandatory; scrollbar-width:none;">
+  <div class="mm-hscroll" style="display:flex; gap:16px; overflow-x:auto; padding:clamp(20px,3vh,32px) clamp(16px,4vw,48px); scroll-snap-type:x mandatory; scrollbar-width:none;">
     <sc-for list="{{ upcomingList }}" as="ev" hint-placeholder-count="3">
       <a href="{{ ev.url }}" target="_blank" rel="noopener" style="scroll-snap-align:start; flex:0 0 auto; width:min(78vw,320px); aspect-ratio:3/4; border:1px solid #26262E; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; gap:6px; padding:20px; box-sizing:border-box; background:radial-gradient(120% 100% at 60% 25%, rgba(170,170,176,0.22) 0%, rgba(70,70,76,0.12) 44%, #101013 78%);">
         <sc-if value="{{ ev.image }}" hint-placeholder-val="{{ false }}">
@@ -230,7 +231,7 @@ a:hover { color:#B8B8C4; }
       <div style="position:absolute; width:40%; height:40%; border-radius:50%; background:radial-gradient(circle, rgba(190,190,196,0.5), rgba(190,190,196,0) 70%); filter:blur(16px); opacity:{{ glowOpacity }}; transition:opacity 0.4s ease;"></div>
       <canvas class="mm-eq" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></canvas>
       <img src="assets/symbol.svg" alt="" style="position:relative; width:20%; opacity:0.92;">
-      <button onClick="{{ toggleAudio }}" aria-label="Play mix" style="position:absolute; bottom:-2%; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:9px; background:rgba(12,12,14,0.72); backdrop-filter:blur(8px); border:1px solid #2A2A32; color:#E8E8EC; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; padding:12px 18px; cursor:pointer; white-space:nowrap;" style-hover="border-color:#F2F2F5;">{{ audioLabel }}</button>
+      <button onClick="{{ toggleAudio }}" aria-label="Play mix" style="position:absolute; bottom:-2%; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:9px; background:rgba(12,12,14,0.72); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); border:1px solid #2A2A32; color:#E8E8EC; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; padding:12px 18px; cursor:pointer; white-space:nowrap;" style-hover="border-color:#F2F2F5;">{{ audioLabel }}</button>
       <sc-if value="{{ scEmbed }}" hint-placeholder-val="{{ false }}">
         <iframe class="mm-sc" title="momento.motion mix" src="{{ scEmbed }}" allow="autoplay" style="position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; border:0;"></iframe>
       </sc-if>
@@ -265,7 +266,7 @@ a:hover { color:#B8B8C4; }
     </div>
     <a href="{{ instagramUrl }}" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#E8E8EC; border-bottom:1px solid #6A6A74; padding-bottom:4px;" style-hover="color:#B8B8C4;">VIEW GALLERY ↗</a>
   </div>
-  <div style="display:flex; gap:16px; overflow-x:auto; padding:clamp(24px,4vh,40px) clamp(16px,4vw,48px); scroll-snap-type:x mandatory; scrollbar-width:none;">
+  <div class="mm-hscroll" style="display:flex; gap:16px; overflow-x:auto; padding:clamp(24px,4vh,40px) clamp(16px,4vw,48px); scroll-snap-type:x mandatory; scrollbar-width:none;">
     <sc-for list="{{ pastEvents }}" as="ev" hint-placeholder-count="5">
       <div style="scroll-snap-align:start; flex:0 0 auto; width:min(78vw,340px); aspect-ratio:3/4; border:1px solid #26262E; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; gap:6px; padding:20px; box-sizing:border-box; background:radial-gradient(120% 100% at 60% 25%, rgba(170,170,176,0.22) 0%, rgba(70,70,76,0.12) 44%, #101013 78%);">
         <sc-if value="{{ ev.image }}" hint-placeholder-val="{{ false }}">
