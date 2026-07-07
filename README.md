@@ -31,13 +31,16 @@ Everything is static (HTML + JSON + assets). The content JSON is loaded at runti
 
 ## Optional: Decap CMS (client-friendly editing UI)
 
-A ready Decap CMS setup is in **`/admin/`** so a non-technical client can edit the JSON through a web form.
+A ready Decap CMS setup is in **`/admin/`** so a non-technical client can edit the JSON through a web form. `backend.repo` in `admin/config.yml` is already set to `aleeeksanndraa/momento-motion`.
 
-1. Edit `admin/config.yml` → set `backend.repo` to `your-user/your-repo`.
-2. Choose an auth method:
-   - **GitHub OAuth** via a small OAuth proxy (e.g. a free Cloudflare Worker / Netlify function), or
-   - **Netlify Identity + Git Gateway** if hosting the admin on Netlify.
-3. Visit `.../admin/` to log in and edit **Site & Links**, **Events Page**, and **EPK Page**. Saves commit back to the repo and GitHub Pages redeploys.
+Auth is handled by **[DecapBridge](https://decapbridge.com)** (Netlify Identity is deprecated, and GitHub Pages can't run its own OAuth handshake):
+
+1. Sign up at decapbridge.com and add a new Site, pointing it at this repo (`aleeeksanndraa/momento-motion`, branch `main`).
+2. Generate a GitHub personal access token (repo scope) and paste it into the DecapBridge dashboard when it asks for git access — do this directly on their site, never share the token elsewhere.
+3. Pick an auth type (Classic password login, or PKCE for Google/Microsoft SSO).
+4. DecapBridge shows a generated `backend:` block for `config.yml` (name/base_url/auth_endpoint). Copy those exact values into `admin/config.yml`, replacing the placeholder `base_url`.
+5. Invite collaborators by email from the DecapBridge dashboard.
+6. Visit `.../admin/` to log in and edit **Site & Links**, **Events Page**, and **EPK Page**. Saves commit back to the repo and GitHub Pages redeploys.
 
 ## Assets
 

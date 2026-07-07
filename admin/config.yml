@@ -2,14 +2,15 @@
 # Edit content lives in /content/*.json. After the client saves, Decap commits
 # to the Git repo and GitHub Pages redeploys automatically.
 #
-# 1) Set backend.repo to "GITHUB_USER/REPO".
-# 2) Enable auth: either use Netlify Identity/Git Gateway, or GitHub OAuth via a
-#    small OAuth proxy. See README.md for the two supported paths.
+# Auth is handled by DecapBridge (https://decapbridge.com) since the site is
+# static on GitHub Pages. See README.md for the DecapBridge setup steps.
 
 backend:
   name: github
-  repo: your-user/momento-motion   # <-- CHANGE to your GitHub repo
+  repo: aleeeksanndraa/momento-motion
   branch: main
+  base_url: https://api.decapbridge.com  # <-- confirm against your DecapBridge site settings
+  auth_endpoint: auth
 
 # Where uploaded images are stored / served from
 media_folder: "assets/uploads"
