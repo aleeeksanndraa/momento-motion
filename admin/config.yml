@@ -229,6 +229,7 @@ collections:
               - { label: "Role", name: "role", widget: "string" }
               - { label: "Bio", name: "bio", widget: "text" }
               - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image focus point", name: "focus", widget: "string", required: false, hint: "CSS object-position, e.g. \"50% 50%\" (center), \"50% 20%\" (higher up). Adjust if a face gets cropped oddly." }
           - label: "Contact"
             name: "contact"
             widget: "object"

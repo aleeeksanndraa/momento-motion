@@ -234,9 +234,9 @@ a:hover { color:#B8B8C4; }
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:16px;">
       <sc-for list="{{ team }}" as="member" hint-placeholder-count="4">
         <div style="border:1px solid #26262E; background:#101013; padding:22px; display:flex; flex-direction:column; gap:14px;">
-          <div style="width:100%; aspect-ratio:1; background:radial-gradient(90% 80% at 60% 30%, rgba(150,150,156,0.16) 0%, rgba(50,50,56,0.1) 45%, #0E0E11 85%); display:grid; place-items:center; overflow:hidden;">
+          <div style="width:100%; aspect-ratio:1; background:radial-gradient(90% 80% at 60% 30%, rgba(150,150,156,0.16) 0%, rgba(50,50,56,0.1) 45%, #0E0E11 85%); display:grid; place-items:center; overflow:hidden; position:relative;">
             <sc-if value="{{ member.image }}" hint-placeholder-val="{{ false }}">
-              <img src="{{ member.image }}" alt="{{ member.name }}" style="width:100%; height:100%; object-fit:cover;">
+              <img src="{{ member.image }}" alt="{{ member.name }}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ member.focus }};">
             </sc-if>
             <sc-if value="{{ member.noImage }}" hint-placeholder-val="{{ true }}">
               <span style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.2em; color:#5A5A64;">[ PORTRAIT ]</span>

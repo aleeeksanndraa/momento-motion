@@ -127,25 +127,29 @@
       "name": "David Wong",
       "role": "CO-FOUNDER / DJ CREW",
       "bio": "Co-founder and resident DJ, shaping the sound and energy of every momento.motion night.",
-      "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg"
+      "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
+      "focus": "50% 50%"
     },
     {
       "name": "Harry Reuben-Hunting",
       "role": "CO-FOUNDER / DJ CREW",
       "bio": "Co-founder and resident DJ, driving the direction and feel of the dancefloor.",
-      "image": "assets/uploads/harry-reuben-hunting.jpg"
+      "image": "assets/uploads/harry-reuben-hunting.jpg",
+      "focus": "50% 50%"
     },
     {
       "name": "Gabriel Bandman",
       "role": "MARKETING DIRECTOR",
       "bio": "Leads marketing and audience growth, bringing momento.motion's story to new rooms and cities.",
-      "image": "assets/uploads/gabriel-bandman.jpg"
+      "image": "assets/uploads/gabriel-bandman.jpg",
+      "focus": "50% 50%"
     },
     {
       "name": "Aleksandra Slahova",
       "role": "CREATIVE / VISUALS",
       "bio": "Shapes the visual language — motion, grain, light, and brand worlds.",
-      "image": "assets/uploads/aleksandra-slahova.jpg"
+      "image": "assets/uploads/aleksandra-slahova.jpg",
+      "focus": "50% 50%"
     }
   ],
   "contact": {
