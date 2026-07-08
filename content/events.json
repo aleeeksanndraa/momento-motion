@@ -24,8 +24,8 @@
   "moreDates": { "number": "02", "title": "FUTURE EVENTS" },
   "upcomingList": [
     { "title": "Bad in the House", "meta": "FRI 10.07.2026 · PALOMA, LONDON", "image": "assets/poster-mj.jpg", "url": "https://ra.co/events/2466145" },
-    { "title": "Secret Warehouse", "meta": "TBA 2026 · SECRET LOCATION", "image": "", "url": "#" },
-    { "title": "Momento Open Air", "meta": "SUMMER 2026 · TBA", "image": "", "url": "#" }
+    { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" },
+    { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" }
   ],
   "sound": {
     "body": "Rooted in Afro House, Tech House and House, momento.motion blends deep percussion, hypnotic rhythms, warm grooves, melodic tension, and emotionally charged transitions.",
@@ -42,7 +42,6 @@
     { "title": "Momento & Friends", "meta": "D8V! & WONK · DEAR DARLING · 04 JUN", "image": "assets/poster-friends.jpg", "type": "poster" },
     { "title": "Momento x Givasso", "meta": "GIVASSO · 14 MAR", "image": "assets/uploads/momento-givasso-14-03.jpg", "type": "poster" },
     { "title": "Maison Close Mayfair", "meta": "MAISON CLOSE, MAYFAIR · 26 FEB", "image": "assets/uploads/momento-maison-close-26-02.jpg", "type": "poster" },
-    { "title": "Momento 54", "meta": "CEES · JULIIUS · CLUB GALLERY, LONDON · 19 FEB", "image": "assets/uploads/momento-club-gallery-19-02.jpg", "type": "poster" },
-    { "title": "Aftermovie", "meta": "", "image": "", "type": "video" }
+    { "title": "Momento 54", "meta": "CEES · JULIIUS · CLUB GALLERY, LONDON · 19 FEB", "image": "assets/uploads/momento-club-gallery-19-02.jpg", "type": "poster" }
   ]
 }

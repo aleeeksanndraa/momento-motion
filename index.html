@@ -289,7 +289,9 @@ a:hover { color:#B8B8C4; }
         <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 42%, rgba(8,8,10,0.55) 68%, rgba(8,8,10,0.9) 100%); pointer-events:none;"></div>
         <span style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; color:#C7C7D0;">{{ ev.meta }}</span>
         <span style="position:relative; font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; color:#F2F2F5;">{{ ev.title }}</span>
-        <span style="position:relative; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#F2F2F5; border-bottom:1px solid #6A6A74; align-self:flex-start; padding-bottom:3px;">TICKETS ↗</span>
+        <sc-if value="{{ ev.url }}" hint-placeholder-val="{{ true }}">
+          <span style="position:relative; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#F2F2F5; border-bottom:1px solid #6A6A74; align-self:flex-start; padding-bottom:3px;">TICKETS ↗</span>
+        </sc-if>
       </a>
     </sc-for>
   </div>
