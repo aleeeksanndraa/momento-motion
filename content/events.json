@@ -40,9 +40,9 @@
   },
   "pastEvents": [
     { "title": "Momento & Friends", "meta": "D8V! & WONK · DEAR DARLING · 04 JUN", "image": "assets/poster-friends.jpg", "type": "poster" },
-    { "title": "Past Event 02", "meta": "DJ BOOTH / MOTION BLUR", "image": "", "type": "photo" },
-    { "title": "Crowd Energy", "meta": "HANDS UP / HAZE", "image": "", "type": "photo" },
-    { "title": "Artist Moment", "meta": "MONOCHROME PORTRAIT", "image": "", "type": "photo" },
+    { "title": "Momento x Givasso", "meta": "GIVASSO · 14 MAR", "image": "assets/uploads/momento-givasso-14-03.jpg", "type": "poster" },
+    { "title": "Maison Close Mayfair", "meta": "MAISON CLOSE, MAYFAIR · 26 FEB", "image": "assets/uploads/momento-maison-close-26-02.jpg", "type": "poster" },
+    { "title": "Momento 54", "meta": "CEES · JULIIUS · CLUB GALLERY, LONDON · 19 FEB", "image": "assets/uploads/momento-club-gallery-19-02.jpg", "type": "poster" },
     { "title": "Aftermovie", "meta": "", "image": "", "type": "video" }
   ]
 }
