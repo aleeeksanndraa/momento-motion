@@ -97,25 +97,13 @@
       "url": "#"
     },
     {
-      "code": "M-05 / PRINT",
-      "title": "Past Event Posters",
-      "icon": "↗︎",
-      "url": "#"
-    },
-    {
-      "code": "M-06 / AUDIO",
+      "code": "M-05 / AUDIO",
       "title": "Mixes / Radio / SoundCloud",
       "icon": "▶︎",
       "url": "https://soundcloud.com/momento-motion"
     },
     {
-      "code": "M-07 / PRESS",
-      "title": "Press Images",
-      "icon": "↗︎",
-      "url": "#"
-    },
-    {
-      "code": "M-08 / PDF",
+      "code": "M-06 / PDF",
       "title": "Download PDF EPK",
       "icon": "↓︎",
       "url": "#",
