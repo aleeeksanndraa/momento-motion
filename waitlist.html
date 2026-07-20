@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>momento.motion - Join the Waitlist</title>
+<meta name="description" content="Be first to know when momento.motion announces new Afro House, Tech House and House events in London. Join the waitlist for early access before tickets go public.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://momento.w8v.org/waitlist.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Momento Motion">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://momento.w8v.org/waitlist.html">
+<meta property="og:title" content="momento.motion - Join the Waitlist">
+<meta property="og:description" content="Be first to know when momento.motion announces new events in London. Join the waitlist for early access before tickets go public.">
+<meta property="og:image" content="https://momento.w8v.org/assets/wordmark-clear.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="670">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="momento.motion - Join the Waitlist">
+<meta name="twitter:description" content="Be first to know when momento.motion announces new events in London. Join the waitlist for early access before tickets go public.">
+<meta name="twitter:image" content="https://momento.w8v.org/assets/wordmark-clear.png">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html, body { margin:0; padding:0; background:#0A0A0B; color:#E8E8EC; font-family:'Archivo',Helvetica,sans-serif; -webkit-font-smoothing:antialiased; }
+a { color:#E8E8EC; text-decoration:none; }
+a:hover { color:#B8B8C4; }
+::selection { background:#3A3A44; color:#F2F2F5; }
+@keyframes mmEqBar { 0%,100%{transform:scaleY(0.18)} 50%{transform:scaleY(1)} }
+input::placeholder { color:#5A5A64; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Momento Motion",
+  "alternateName": "momento.motion",
+  "url": "https://momento.w8v.org/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Momento Motion",
+  "alternateName": "momento.motion",
+  "url": "https://momento.w8v.org/",
+  "logo": "https://momento.w8v.org/assets/wordmark-clear.png",
+  "email": "bookings@momento.motion",
+  "sameAs": [
+    "https://www.instagram.com/momento.motion/",
+    "https://soundcloud.com/momento-motion",
+    "https://ra.co/promoters/174470"
+  ]
+}
+</script>
+</helmet>
+
+<sc-if value="{{ grainOn }}" hint-placeholder-val="{{ true }}">
+  <canvas class="mm-grain" style="position:fixed; inset:0; width:100%; height:100%; z-index:60; opacity:0.09; mix-blend-mode:overlay; pointer-events:none;"></canvas>
+</sc-if>
+
+<!-- LOADER -->
+<div style="position:fixed; inset:0; z-index:200; background:#0A0A0B; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:32px; transition:opacity 0.9s ease, transform 0.9s ease, filter 0.9s ease; opacity:{{ loaderOpacity }}; visibility:{{ loaderVis }}; pointer-events:{{ loaderPointer }}; transform:{{ loaderTransform }}; filter:{{ loaderBlur }};">
+  <div style="display:flex; align-items:flex-end; gap:6px; height:56px;">
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.9s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.2s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.6s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.35s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.75s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.1s;"></span>
+    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.5s;"></span>
+  </div>
+  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.34em; color:#7C7C8C;">SOUND IN MOTION</div>
+</div>
+
+<!-- NAV -->
+<header style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px clamp(16px,4vw,48px); background:rgba(10,10,11,0.55); -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px); border-bottom:1px solid #191920;">
+  <a href="index.html" style="display:flex; align-items:center; gap:12px;">
+    <img src="assets/symbol.svg" alt="momento.motion" style="height:30px; display:block;">
+  </a>
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
+    <nav style="display:flex; align-items:center; gap:clamp(18px,2.6vw,36px); font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
+      <a href="index.html#events" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Events</a>
+      <a href="index.html#sound" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Sound</a>
+      <a href="epk.html" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">EPK</a>
+      <a href="waitlist.html" style="color:#F2F2F5;">Waitlist</a>
+      <a href="epk.html#contact" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Contact</a>
+    </nav>
+  </sc-if>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ true }}">
+    <button onClick="{{ toggleMenu }}" aria-label="Menu" style="background:none; border:1px solid #2A2A32; padding:10px 12px; cursor:pointer; display:flex; flex-direction:column; gap:5px; min-height:44px; justify-content:center;">
+      <span style="display:block; width:22px; height:2px; background:#E8E8EC;"></span>
+      <span style="display:block; width:22px; height:2px; background:#8A8A96;"></span>
+    </button>
+  </sc-if>
+</header>
+
+<!-- MOBILE MENU -->
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed; inset:0; z-index:70; background:rgba(8,8,9,0.96); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); display:flex; flex-direction:column; padding:20px;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <img src="assets/wordmark-clear.png" alt="MOMENTO" style="height:20px;">
+      <button onClick="{{ closeMenu }}" aria-label="Close" style="background:none; border:1px solid #2A2A32; color:#E8E8EC; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; padding:12px 16px; cursor:pointer;">CLOSE</button>
+    </div>
+    <nav style="display:flex; flex-direction:column; gap:6px; margin-top:11vh;">
+      <a href="index.html#events" onClick="{{ closeMenu }}" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Events</a>
+      <a href="index.html#sound" onClick="{{ closeMenu }}" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Sound</a>
+      <a href="epk.html" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase; color:#9A9AA6;">EPK</a>
+      <a href="waitlist.html" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Waitlist</a>
+      <a href="epk.html#contact" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Contact</a>
+    </nav>
+    <div style="display:flex; flex-wrap:wrap; gap:18px; margin-top:32px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em;">
+      <sc-for list="{{ social }}" as="s" hint-placeholder-count="3">
+        <a href="{{ s.url }}" target="_blank" rel="noopener" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">{{ s.labelUp }} ↗</a>
+      </sc-for>
+    </div>
+  </div>
+</sc-if>
+
+<main style="overflow-x:hidden; transition:opacity 0.9s ease, transform 0.9s ease; opacity:{{ pageOpacity }}; transform:{{ pageTransform }};">
+
+<h1 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">momento.motion - Join the Waitlist</h1>
+
+<!-- WAITLIST -->
+<section data-screen-label="Waitlist" style="position:relative; min-height:100svh; display:flex; align-items:center; padding:clamp(120px,18vh,180px) clamp(16px,4vw,48px) clamp(72px,10vh,120px); box-sizing:border-box; overflow:hidden;">
+  <img src="assets/symbol.svg" alt="" style="position:absolute; right:-8%; top:-6%; width:min(60vw,520px); opacity:0.05; pointer-events:none;">
+  <div style="max-width:640px; margin:0 auto; width:100%; display:flex; flex-direction:column; gap:clamp(28px,4vh,40px); position:relative;">
+    <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
+      <span style="color:#C7C7D0;">M/</span><span>/ WAITLIST</span><span style="flex:1; height:1px; background:#191920;"></span>
+    </div>
+    <h2 style="margin:0; font-size:clamp(40px,7vw,80px); font-weight:900; line-height:0.98; letter-spacing:-0.03em; text-transform:uppercase;">Join the Waitlist</h2>
+    <p style="margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.7; color:#A0A0AC; text-wrap:pretty;">Be first to know when momento.motion announces a new night. Leave your details below and we'll reach out before lineups and tickets go public.</p>
+
+    <sc-if value="{{ wlStatus }}" hint-placeholder-val="{{ '' }}">
+      <div style="border:1px solid #26262E; background:#101013; padding:24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.06em; line-height:1.6; color:{{ wlStatusColor }};">{{ wlStatusText }}</div>
+    </sc-if>
+
+    <sc-if value="{{ wlShowForm }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submitWaitlist }}" style="display:flex; flex-direction:column; gap:18px;">
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Full Name</label>
+          <input type="text" required value="{{ wlName }}" onInput="{{ setWlName }}" placeholder="Your name" style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Email</label>
+          <input type="email" required value="{{ wlEmail }}" onInput="{{ setWlEmail }}" placeholder="you@email.com" style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Phone Number</label>
+          <input type="tel" required value="{{ wlPhone }}" onInput="{{ setWlPhone }}" placeholder="+44 ..." style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
+        </div>
+        <button type="submit" disabled="{{ wlSubmitting }}" style="margin-top:8px; background:#F2F2F5; color:#0A0A0B; border:0; padding:17px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; cursor:pointer;" style-hover="background:#B8B8C4;">{{ wlSubmitLabel }}</button>
+      </form>
+    </sc-if>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer data-screen-label="Footer" style="border-top:1px solid #191920; padding:clamp(56px,9vh,96px) clamp(16px,4vw,48px) clamp(96px,14vh,120px); background:#08080A;">
+  <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(40px,6vh,64px);">
+    <div style="position:relative; display:inline-block; width:min(52vw,300px);">
+      <img src="assets/wordmark-clear.png" alt="MOMENTO" style="width:100%; display:block; opacity:0.32;">
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:32px;">
+      <div style="display:flex; flex-direction:column; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em; color:#7C7C8C;">
+        <span>MOMENTO.MOTION</span>
+        <span>{{ genresUp }}</span>
+        <span>EVENTS &amp; PRODUCTION</span>
+      </div>
+      <nav style="display:flex; flex-direction:column; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em;">
+        <sc-for list="{{ social }}" as="s" hint-placeholder-count="3">
+          <a href="{{ s.url }}" target="_blank" rel="noopener" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">{{ s.labelUp }} ↗</a>
+        </sc-for>
+      </nav>
+      <nav style="display:flex; flex-direction:column; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em;">
+        <a href="index.html" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">EVENTS</a>
+        <a href="epk.html" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">EPK</a>
+        <a href="epk.html#contact" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">CONTACT</a>
+      </nav>
+    </div>
+    <div style="border-top:1px solid #191920; padding-top:20px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#5A5A64;">
+      <span>{{ legalCopyright }}</span>
+      <span>{{ legalCredit }}</span>
+    </div>
+  </div>
+</footer>
+
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;grain&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Atmosphere&quot; }
+}">
+class Component extends DCLogic {
+  state = { isMobile: true, menuOpen: false, site: null, loading: true, wlName: '', wlEmail: '', wlPhone: '', wlSubmitting: false, wlStatus: '' };
+
+  async componentDidMount() {
+    this.mq = window.matchMedia('(max-width: 900px)');
+    this.upd = () => this.setState({ isMobile: this.mq.matches, menuOpen: this.mq.matches ? this.state.menuOpen : false });
+    this.mq.addEventListener('change', this.upd);
+    this.upd();
+    this.startGrain();
+    try {
+      const site = await fetch('content/site.json').then(r => r.json());
+      this.setState({ site });
+    } catch (e) { console.warn('content load failed', e); }
+    this.loadT = setTimeout(() => this.setState({ loading: false }), 900);
+  }
+
+  startGrain() {
+    const GW = 640, GH = 400;
+    this.ctxs = Array.from(document.querySelectorAll('canvas.mm-grain')).map(c => { c.width = GW; c.height = GH; return c.getContext('2d'); });
+    if (!this.ctxs.length) return;
+    let last = 0;
+    const draw = (t) => {
+      this.raf = requestAnimationFrame(draw);
+      if (document.hidden) return;
+      if (t - last < 110) return; last = t;
+      for (const ctx of this.ctxs) {
+        const img = ctx.createImageData(GW, GH); const d = img.data;
+        for (let i = 0; i < d.length; i += 4) { const v = (Math.random() * 255) | 0; d[i]=d[i+1]=d[i+2]=v; d[i+3]=255; }
+        ctx.putImageData(img, 0, 0);
+      }
+    };
+    this.raf = requestAnimationFrame(draw);
+  }
+
+  componentWillUnmount() {
+    if (this.mq) this.mq.removeEventListener('change', this.upd);
+    if (this.raf) cancelAnimationFrame(this.raf);
+  }
+
+  async submitWaitlist(ev) {
+    ev.preventDefault();
+    const site = this.state.site || {};
+    const formUrl = site.waitlistFormUrl || '';
+    if (!formUrl) {
+      this.setState({ wlStatus: 'error' });
+      return;
+    }
+    this.setState({ wlSubmitting: true });
+    try {
+      const body = new URLSearchParams({
+        name: this.state.wlName,
+        email: this.state.wlEmail,
+        phone: this.state.wlPhone,
+      });
+      await fetch(formUrl, { method: 'POST', mode: 'no-cors', body });
+      this.setState({ wlSubmitting: false, wlStatus: 'success', wlName: '', wlEmail: '', wlPhone: '' });
+    } catch (e) {
+      console.warn('waitlist submit failed', e);
+      this.setState({ wlSubmitting: false, wlStatus: 'error' });
+    }
+  }
+
+  renderVals() {
+    const site = this.state.site || {};
+    const social = (site.social || []).map(s => ({ ...s, labelUp: (s.label || '').toUpperCase() }));
+    const genres = (site.brand && site.brand.genres) || '';
+    return {
+      isMobile: this.state.isMobile,
+      isDesktop: !this.state.isMobile,
+      menuOpen: this.state.menuOpen && this.state.isMobile,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      grainOn: this.props.grain ?? true,
+      social,
+      genresUp: genres.toUpperCase(),
+      loaderOpacity: this.state.loading ? 1 : 0,
+      loaderVis: this.state.loading ? 'visible' : 'hidden',
+      loaderPointer: this.state.loading ? 'auto' : 'none',
+      loaderTransform: this.state.loading ? 'scale(1)' : 'scale(1.1)',
+      loaderBlur: this.state.loading ? 'blur(0px)' : 'blur(12px)',
+      pageOpacity: this.state.loading ? 0 : 1,
+      pageTransform: this.state.loading ? 'translateY(14px)' : 'translateY(0)',
+      legalCopyright: (site.legal && site.legal.copyright) || '',
+      legalCredit: (site.legal && site.legal.credit) || '',
+      wlName: this.state.wlName,
+      wlEmail: this.state.wlEmail,
+      wlPhone: this.state.wlPhone,
+      setWlName: (e) => this.setState({ wlName: e.target.value }),
+      setWlEmail: (e) => this.setState({ wlEmail: e.target.value }),
+      setWlPhone: (e) => this.setState({ wlPhone: e.target.value }),
+      submitWaitlist: (e) => this.submitWaitlist(e),
+      wlSubmitting: this.state.wlSubmitting,
+      wlSubmitLabel: this.state.wlSubmitting ? 'JOINING...' : 'JOIN THE WAITLIST',
+      wlShowForm: this.state.wlStatus !== 'success',
+      wlStatus: this.state.wlStatus,
+      wlStatusColor: this.state.wlStatus === 'success' ? '#B8E8C4' : '#E8B8B8',
+      wlStatusText: this.state.wlStatus === 'success'
+        ? "You're on the list. We'll be in touch before the next announcement."
+        : 'Something went wrong submitting the form - please try again, or DM us on Instagram.',
+    };
+  }
+}
+</script>
+</body>
+</html>

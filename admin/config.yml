@@ -59,6 +59,7 @@ collections:
             fields:
               - { label: "Resident Advisor", name: "residentAdvisor", widget: "string" }
               - { label: "Eventbrite", name: "eventbrite", widget: "string" }
+          - { label: "Waitlist Form URL", name: "waitlistFormUrl", widget: "string", required: false, hint: "The Google Apps Script Web App URL from the waitlist setup. Leave blank until deployed." }
           - label: "Contact"
             name: "contact"
             widget: "object"
