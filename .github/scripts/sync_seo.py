@@ -18,18 +18,20 @@ PAGES = [
 ]
 
 TAG_PATTERNS = [
-    (r"(<title>).*?(</title>)", "title", None),
-    (r'(<meta name="description" content=")[^"]*(")', "description", None),
-    (r'(<meta property="og:title" content=")[^"]*(")', "title", None),
-    (r'(<meta property="og:description" content=")[^"]*(")', "description", None),
-    (r'(<meta name="twitter:title" content=")[^"]*(")', "title", None),
-    (r'(<meta name="twitter:description" content=")[^"]*(")', "description", None),
+    (r"(<title>).*?(</title>)", "title"),
+    (r'(<meta name="description" content=")[^"]*(")', "description"),
+    (r'(<meta property="og:title" content=")[^"]*(")', "title"),
+    (r'(<meta property="og:description" content=")[^"]*(")', "ogDescription"),
+    (r'(<meta name="twitter:title" content=")[^"]*(")', "title"),
+    (r'(<meta name="twitter:description" content=")[^"]*(")', "ogDescription"),
 ]
 
 
 def sync_file(html_path, seo):
     title = (seo.get("title") or "").strip()
     description = (seo.get("description") or "").strip()
+    # ogDescription is optional - falls back to the plain meta description if not set.
+    og_description = (seo.get("ogDescription") or "").strip() or description
     if not title or not description:
         print(f"  skip {html_path}: seo.title or seo.description missing/empty")
         return False
@@ -38,8 +40,8 @@ def sync_file(html_path, seo):
         html = f.read()
 
     original = html
-    values = {"title": title, "description": description}
-    for pattern, field, _ in TAG_PATTERNS:
+    values = {"title": title, "description": description, "ogDescription": og_description}
+    for pattern, field in TAG_PATTERNS:
         value = values[field]
         html = re.sub(pattern, lambda m: m.group(1) + value + m.group(2), html, count=1)
 

@@ -91,6 +91,7 @@ collections:
             fields:
               - { label: "Page Title", name: "title", widget: "string", hint: "Shown in Google search results and browser tabs. Synced into the site automatically after saving." }
               - { label: "Meta Description", name: "description", widget: "text", hint: "Shown under the title in Google search results. Aim for under 160 characters." }
+              - { label: "Social Share Description", name: "ogDescription", widget: "text", required: false, hint: "Shown when this page is shared on Instagram, WhatsApp, Slack, etc. Optional - falls back to Meta Description if left blank." }
           - label: "EPK Page (epk.html)"
             name: "epk"
             widget: "object"
