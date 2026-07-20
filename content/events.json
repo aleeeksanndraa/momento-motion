@@ -9,21 +9,21 @@
     "body": "Every momento.motion event is mapped with intention - from the opening mood to the final release. The sound moves through rhythm, emotion, tension, connection, and collective energy."
   },
   "upcoming": {
-    "tag": "MOMENTO.MOTION 001 - LONDON",
-    "poster": "assets/poster-mj.jpg",
-    "title": "Bad in the House",
-    "date": "FRIDAY 10.07.2026",
-    "time": "22:30 - LATE",
-    "venue": "PALOMA",
+    "tag": "MOMENTO.MOTION 002 - LONDON",
+    "poster": "",
+    "title": "After Kloud",
+    "date": "SUNDAY 09.08.2026",
+    "time": "22:00 - 02:00",
+    "venue": "NIGHTTALES",
     "city": "LONDON",
     "soundLabel": "SOUND",
-    "sound": ["MJ Remixes", "House", "Tech House"],
-    "residentAdvisorUrl": "https://ra.co/events/2466145",
-    "eventbriteUrl": "https://www.eventbrite.com/"
+    "sound": ["Keinemusik Afterparty"],
+    "residentAdvisorUrl": "#",
+    "eventbriteUrl": "#"
   },
   "moreDates": { "number": "02", "title": "FUTURE EVENTS" },
   "upcomingList": [
-    { "title": "Bad in the House", "meta": "FRI 10.07.2026 · PALOMA, LONDON", "image": "assets/poster-mj.jpg", "url": "https://ra.co/events/2466145" },
+    { "title": "After Kloud", "meta": "SUN 09.08.2026 · NIGHTTALES, LONDON", "image": "", "url": "#" },
     { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" },
     { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" }
   ],
@@ -39,6 +39,7 @@
     "tags": ["RESIDENT SETS", "B2B COLLABORATIONS", "EMERGING DJS", "SPECIAL GUESTS"]
   },
   "pastEvents": [
+    { "title": "Bad in the House", "meta": "MJ REMIXES · PALOMA, LONDON · 10 JUL", "image": "assets/poster-mj.jpg", "type": "poster" },
     { "title": "Momento & Friends", "meta": "D8V! & WONK · DEAR DARLING · 04 JUN", "image": "assets/poster-friends.jpg", "type": "poster" },
     { "title": "Momento x Givasso", "meta": "GIVASSO · 14 MAR", "image": "assets/uploads/momento-givasso-14-03.jpg", "type": "poster" },
     { "title": "Maison Close Mayfair", "meta": "MAISON CLOSE, MAYFAIR · 26 FEB", "image": "assets/uploads/momento-maison-close-26-02.jpg", "type": "poster" },
