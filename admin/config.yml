@@ -188,7 +188,6 @@ collections:
             fields:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Subtext", name: "subtext", widget: "text" }
-              - { label: "EPK PDF", name: "epkPdf", widget: "file" }
           - label: "Quick facts"
             name: "facts"
             widget: "list"

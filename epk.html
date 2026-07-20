@@ -11,20 +11,20 @@
 <title>momento.motion - Electronic Press Kit (EPK)</title>
 <meta name="description" content="Electronic press kit for momento.motion - Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://momento.w8v.org/epk.html">
+<link rel="canonical" href="https://momentomotion.co.uk/epk.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Momento Motion">
 <meta property="og:locale" content="en_GB">
-<meta property="og:url" content="https://momento.w8v.org/epk.html">
+<meta property="og:url" content="https://momentomotion.co.uk/epk.html">
 <meta property="og:title" content="momento.motion - Electronic Press Kit (EPK)">
 <meta property="og:description" content="Electronic press kit for momento.motion - Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
-<meta property="og:image" content="https://momento.w8v.org/assets/wordmark-clear.png">
+<meta property="og:image" content="https://momentomotion.co.uk/assets/wordmark-clear.png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="670">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="momento.motion - Electronic Press Kit (EPK)">
 <meta name="twitter:description" content="Electronic press kit for momento.motion - Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
-<meta name="twitter:image" content="https://momento.w8v.org/assets/wordmark-clear.png">
+<meta name="twitter:image" content="https://momentomotion.co.uk/assets/wordmark-clear.png">
 <meta name="theme-color" content="#0A0A0B">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +45,7 @@ a:hover { color:#B8B8C4; }
   "@type": "WebSite",
   "name": "Momento Motion",
   "alternateName": "momento.motion",
-  "url": "https://momento.w8v.org/"
+  "url": "https://momentomotion.co.uk/"
 }
 </script>
 <script type="application/ld+json">
@@ -54,8 +54,8 @@ a:hover { color:#B8B8C4; }
   "@type": "Organization",
   "name": "Momento Motion",
   "alternateName": "momento.motion",
-  "url": "https://momento.w8v.org/",
-  "logo": "https://momento.w8v.org/assets/wordmark-clear.png",
+  "url": "https://momentomotion.co.uk/",
+  "logo": "https://momentomotion.co.uk/assets/wordmark-clear.png",
   "email": "bookings@momento.motion",
   "sameAs": [
     "https://www.instagram.com/momento.motion/",
@@ -145,13 +145,12 @@ a:hover { color:#B8B8C4; }
   <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0.55) 0%, rgba(8,8,10,0.2) 40%, rgba(8,8,10,0.8) 100%);"></div>
   <img src="assets/symbol.svg" alt="" style="position:absolute; right:-6%; top:8%; width:min(50vw,440px); opacity:0.08; animation:mmFloat 10s ease-in-out infinite; pointer-events:none;">
 
-  <div style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:120px clamp(16px,4vw,48px) clamp(36px,6vh,64px);">
-    <div style="max-width:1400px; margin:0 auto; width:100%; display:flex; flex-direction:column; gap:clamp(24px,4vh,40px);">
+  <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; text-align:center; padding:120px clamp(16px,4vw,48px) clamp(36px,6vh,64px);">
+    <div style="max-width:900px; width:100%; display:flex; flex-direction:column; align-items:center; gap:clamp(24px,4vh,40px);">
       <div style="font-family:'IBM Plex Mono',monospace; font-size:clamp(10px,1.4vw,12px); letter-spacing:0.24em; color:#C7C7D0; mix-blend-mode:difference;">{{ heroEyebrow }}</div>
       <h1 style="margin:0; font-size:clamp(30px,9vw,120px); font-weight:900; line-height:0.95; letter-spacing:-0.03em; text-transform:uppercase; mix-blend-mode:difference; color:#F2F2F5; overflow-wrap:break-word;">Momento.<wbr>motion<br><span style="font-weight:300; font-size:0.5em; letter-spacing:0; text-transform:none;">Electronic Press Kit</span></h1>
-      <p style="margin:0; max-width:640px; font-size:clamp(15px,2vw,18px); line-height:1.7; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
-      <div style="display:flex; flex-wrap:wrap; gap:12px;">
-        <a href="{{ epkPdf }}" target="_blank" rel="noopener" style="background:#F2F2F5; color:#0A0A0B; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Download EPK ↓</a>
+      <p style="margin:0 auto; max-width:640px; font-size:clamp(15px,2vw,18px); line-height:1.7; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:12px;">
         <a href="#contact" style="border:1px solid #4A4A54; color:#F2F2F5; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);" style-hover="border-color:#F2F2F5;">Contact / Bookings</a>
       </div>
     </div>
@@ -402,7 +401,6 @@ class Component extends DCLogic {
       social,
       heroEyebrow: hero.eyebrow || '',
       heroSubtext: hero.subtext || '',
-      epkPdf: hero.epkPdf || '#',
       facts: epk.facts || [],
       aboutHeading: about.heading || '',
       aboutBody: about.body || [],

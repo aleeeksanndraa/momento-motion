@@ -1,8 +1,7 @@
 {
   "hero": {
     "eyebrow": "FOR VENUES / PARTNERS / ARTISTS / PRESS - 2026",
-    "subtext": "momento.motion is an Afro House, Tech House and House music initiative, event organiser, and production company creating immersive sound-led experiences through curated DJ journeys, resident artists, B2B collaborations, and hand-selected talent.",
-    "epkPdf": "#"
+    "subtext": "momento.motion is an Afro House, Tech House and House music initiative, event organiser, and production company creating immersive sound-led experiences through curated DJ journeys, resident artists, B2B collaborations, and hand-selected talent."
   },
   "facts": [
     {
@@ -73,41 +72,28 @@
   ],
   "media": [
     {
-      "code": "M-01 / VIDEO",
-      "title": "Event Aftermovie",
-      "icon": "▶︎",
-      "url": "#"
-    },
-    {
-      "code": "M-02 / PHOTO",
+      "code": "M-01 / PHOTO",
       "title": "Photo Gallery",
       "icon": "↗︎",
-      "url": "#"
+      "url": "https://drive.google.com/drive/folders/1ynbxkiQsPmb_akOCmh17eP5P0i5yst71"
     },
     {
-      "code": "M-03 / BRAND",
+      "code": "M-02 / BRAND",
       "title": "Logo Assets",
       "icon": "↓︎",
       "url": "https://drive.google.com/drive/folders/1fa-V-syz112AsHTsSadF09LC4vnfX-Wn?usp=sharing"
     },
     {
-      "code": "M-04 / PHOTO",
+      "code": "M-03 / PHOTO",
       "title": "Artist Images",
       "icon": "↗︎",
       "url": "#"
     },
     {
-      "code": "M-05 / AUDIO",
+      "code": "M-04 / AUDIO",
       "title": "Mixes / Radio / SoundCloud",
       "icon": "▶︎",
       "url": "https://soundcloud.com/momento-motion"
-    },
-    {
-      "code": "M-06 / PDF",
-      "title": "Download PDF EPK",
-      "icon": "↓︎",
-      "url": "#",
-      "highlight": true
     }
   ],
   "team": [
