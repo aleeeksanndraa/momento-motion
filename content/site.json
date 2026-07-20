@@ -5,6 +5,7 @@
   },
   "social": [
     { "label": "Instagram", "url": "https://www.instagram.com/momento.motion/" },
+    { "label": "TikTok", "url": "https://www.tiktok.com/@momento.motion" },
     { "label": "SoundCloud", "url": "https://soundcloud.com/momento-motion" },
     { "label": "Resident Advisor", "url": "https://ra.co/promoters/174470" }
   ],
@@ -15,6 +16,7 @@
   "contact": {
     "email": "bookings@momento.motion",
     "instagram": "https://www.instagram.com/momento.motion/",
+    "tiktok": "https://www.tiktok.com/@momento.motion",
     "residentAdvisor": "https://ra.co/promoters/174470",
     "eventbrite": "https://www.eventbrite.com/",
     "soundcloud": "https://soundcloud.com/momento-motion"

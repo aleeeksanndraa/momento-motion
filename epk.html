@@ -8,22 +8,22 @@
 <body>
 <x-dc>
 <helmet>
-<title>momento.motion — Electronic Press Kit (EPK)</title>
-<meta name="description" content="Electronic press kit for momento.motion — Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
+<title>momento.motion - Electronic Press Kit (EPK)</title>
+<meta name="description" content="Electronic press kit for momento.motion - Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://momento.w8v.org/epk.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Momento Motion">
 <meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://momento.w8v.org/epk.html">
-<meta property="og:title" content="momento.motion — Electronic Press Kit (EPK)">
-<meta property="og:description" content="Electronic press kit for momento.motion — Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
+<meta property="og:title" content="momento.motion - Electronic Press Kit (EPK)">
+<meta property="og:description" content="Electronic press kit for momento.motion - Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
 <meta property="og:image" content="https://momento.w8v.org/assets/wordmark-clear.png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="670">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="momento.motion — Electronic Press Kit (EPK)">
-<meta name="twitter:description" content="Electronic press kit for momento.motion — Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
+<meta name="twitter:title" content="momento.motion - Electronic Press Kit (EPK)">
+<meta name="twitter:description" content="Electronic press kit for momento.motion - Afro House, Tech House and House events and production, based in London. Bookings, media, and artist info for venues and press.">
 <meta name="twitter:image" content="https://momento.w8v.org/assets/wordmark-clear.png">
 <meta name="theme-color" content="#0A0A0B">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -126,7 +126,7 @@ a:hover { color:#B8B8C4; }
         <a href="{{ s.url }}" target="_blank" rel="noopener" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">{{ s.labelUp }} ↗</a>
       </sc-for>
     </div>
-    <div style="margin-top:24px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#7C7C8C;">ELECTRONIC PRESS KIT — 2026</div>
+    <div style="margin-top:24px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#7C7C8C;">ELECTRONIC PRESS KIT - 2026</div>
   </div>
 </sc-if>
 
@@ -275,6 +275,7 @@ a:hover { color:#B8B8C4; }
     <div style="display:flex; flex-wrap:wrap; gap:12px;">
       <a href="{{ mailUrl }}" style="background:#F2F2F5; color:#0A0A0B; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Email</a>
       <a href="{{ contactInstagram }}" target="_blank" rel="noopener" style="border:1px solid #4A4A54; color:#F2F2F5; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Instagram ↗</a>
+      <a href="{{ contactTikTok }}" target="_blank" rel="noopener" style="border:1px solid #4A4A54; color:#F2F2F5; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">TikTok ↗</a>
       <a href="{{ contactRa }}" target="_blank" rel="noopener" style="border:1px solid #4A4A54; color:#F2F2F5; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Resident Advisor ↗</a>
       <a href="{{ contactEb }}" target="_blank" rel="noopener" style="border:1px solid #4A4A54; color:#F2F2F5; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Eventbrite ↗</a>
       <a href="{{ contactSc }}" target="_blank" rel="noopener" style="border:1px solid #4A4A54; color:#F2F2F5; padding:16px 28px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">SoundCloud ↗</a>
@@ -411,6 +412,7 @@ class Component extends DCLogic {
       contactBody: contact.body || '',
       mailUrl: sc.email ? ('mailto:' + sc.email) : '#',
       contactInstagram: sc.instagram || '#',
+      contactTikTok: sc.tiktok || '#',
       contactRa: sc.residentAdvisor || '#',
       contactEb: sc.eventbrite || '#',
       contactSc: sc.soundcloud || '#',

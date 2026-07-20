@@ -1,6 +1,6 @@
 {
   "hero": {
-    "eyebrow": "FOR VENUES / PARTNERS / ARTISTS / PRESS — 2026",
+    "eyebrow": "FOR VENUES / PARTNERS / ARTISTS / PRESS - 2026",
     "subtext": "momento.motion is an Afro House, Tech House and House music initiative, event organiser, and production company creating immersive sound-led experiences through curated DJ journeys, resident artists, B2B collaborations, and hand-selected talent.",
     "epkPdf": "#"
   },
@@ -27,7 +27,7 @@
     },
     {
       "label": "COMPANY",
-      "value": "W8V LTD — created by SVG Group Limited"
+      "value": "W8V LTD - created by SVG Group Limited"
     }
   ],
   "about": {
@@ -51,7 +51,7 @@
       "title": "Sound Direction",
       "body": [
         "Rooted in Afro House, Tech House and House, blending deep percussion, hypnotic rhythm, warm grooves, melodic tension, and emotionally charged transitions.",
-        "Our sound is sophisticated, immersive, and movement-driven — designed for people who do not just attend events, but experience music fully."
+        "Our sound is sophisticated, immersive, and movement-driven - designed for people who do not just attend events, but experience music fully."
       ]
     },
     {
@@ -67,7 +67,7 @@
       "title": "Production",
       "body": [
         "momento.motion also operates as a production company, creating music-led events, artist showcases, cultural experiences, and curated nightlife concepts.",
-        "From sound direction and artist curation to atmosphere, programming, and event production — built with intention, quality, and emotional impact."
+        "From sound direction and artist curation to atmosphere, programming, and event production - built with intention, quality, and emotional impact."
       ]
     }
   ],
@@ -135,7 +135,7 @@
     {
       "name": "Aleksandra Slahova",
       "role": "CREATIVE / VISUALS",
-      "bio": "Shapes the visual language — motion, grain, light, and brand worlds.",
+      "bio": "Shapes the visual language - motion, grain, light, and brand worlds.",
       "image": "assets/uploads/aleksandra-slahova.jpg",
       "focus": "50% 50%"
     }
