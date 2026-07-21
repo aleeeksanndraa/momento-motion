@@ -165,6 +165,15 @@ collections:
               - { label: "Body 1", name: "body1", widget: "text" }
               - { label: "Body 2", name: "body2", widget: "text" }
               - { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
+              - label: "Resident / Secret Guest Photos"
+                name: "residents"
+                widget: "list"
+                hint: "Leave Photo blank for a mystery/secret guest card (e.g. a surprise B2B revealed on the night)."
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Photo", name: "image", widget: "image", required: false }
+                  - { label: "Photo focus point", name: "focus", widget: "string", required: false, hint: "CSS object-position, e.g. \"50% 25%\"" }
           - label: "Past events"
             name: "pastEvents"
             widget: "list"
@@ -199,6 +208,14 @@ collections:
             widget: "object"
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body paragraphs", name: "body", widget: "list", field: { label: "Paragraph", name: "p", widget: "text" } }
+          - label: "Founder"
+            name: "founder"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo focus point", name: "focus", widget: "string", required: false, hint: "CSS object-position, e.g. \"50% 25%\" (higher up). Adjust if the face gets cropped oddly." }
               - { label: "Body paragraphs", name: "body", widget: "list", field: { label: "Paragraph", name: "p", widget: "text" } }
           - label: "Philosophy"
             name: "philosophy"

@@ -186,12 +186,32 @@ a:hover { color:#B8B8C4; }
   </div>
 </section>
 
+<!-- FOUNDER -->
+<section data-screen-label="Founder" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
+  <div style="max-width:1400px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(32px,5vw,64px); align-items:center;">
+    <div style="width:100%; aspect-ratio:4/5; overflow:hidden; border:1px solid #26262E; background:#101013;">
+      <img src="{{ founderImage }}" alt="{{ founderName }} - momento.motion founder" style="width:100%; height:100%; object-fit:cover; object-position:{{ founderFocus }};">
+    </div>
+    <div style="display:flex; flex-direction:column; gap:clamp(24px,4vh,40px);">
+      <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
+        <span style="color:#C7C7D0;">03</span><span>/ FOUNDER</span><span style="flex:1; height:1px; background:#191920;"></span>
+      </div>
+      <h2 style="margin:0; font-size:clamp(32px,5.6vw,72px); font-weight:800; line-height:1; letter-spacing:-0.025em; text-transform:uppercase;">{{ founderHeading }}</h2>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <sc-for list="{{ founderBody }}" as="para" hint-placeholder-count="3">
+          <p style="margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.75; color:#A0A0AC; text-wrap:pretty;">{{ para }}</p>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PHILOSOPHY -->
-<section data-screen-label="Philosophy" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); position:relative; overflow:hidden; background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
+<section data-screen-label="Philosophy" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); position:relative; overflow:hidden;">
   <img src="assets/symbol.svg" alt="" style="position:absolute; left:-6%; bottom:-14%; width:min(50vw,440px); opacity:0.06; pointer-events:none;">
   <div style="max-width:1400px; margin:0 auto; position:relative; display:flex; flex-direction:column; gap:clamp(28px,4vh,48px);">
     <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">03</span><span>/ PHILOSOPHY</span><span style="flex:1; height:1px; background:#191920;"></span>
+      <span style="color:#C7C7D0;">04</span><span>/ PHILOSOPHY</span><span style="flex:1; height:1px; background:#191920;"></span>
     </div>
     <h2 style="margin:0; font-size:clamp(32px,6vw,80px); font-weight:800; line-height:1.02; letter-spacing:-0.025em; text-transform:uppercase; max-width:16ch; text-wrap:pretty;">{{ philoHeading }}</h2>
     <div style="max-width:620px; align-self:flex-end; display:flex; flex-direction:column; gap:20px;">
@@ -221,7 +241,7 @@ a:hover { color:#B8B8C4; }
 <section id="media" data-screen-label="Media Archive" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
   <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(28px,4vh,48px);">
     <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">07</span><span>/ MEDIA ARCHIVE</span><span style="flex:1; height:1px; background:#191920;"></span>
+      <span style="color:#C7C7D0;">08</span><span>/ MEDIA ARCHIVE</span><span style="flex:1; height:1px; background:#191920;"></span>
     </div>
     <h2 style="margin:0; font-size:clamp(32px,5.6vw,72px); font-weight:800; line-height:1; letter-spacing:-0.025em; text-transform:uppercase;">Media</h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:1px; background:#20202A; border:1px solid #20202A;">
@@ -239,7 +259,7 @@ a:hover { color:#B8B8C4; }
 <section id="team" data-screen-label="Team" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px);">
   <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(28px,4vh,48px);">
     <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">08</span><span>/ TEAM</span><span style="flex:1; height:1px; background:#191920;"></span>
+      <span style="color:#C7C7D0;">09</span><span>/ TEAM</span><span style="flex:1; height:1px; background:#191920;"></span>
     </div>
     <h2 style="margin:0; font-size:clamp(32px,5.6vw,72px); font-weight:800; line-height:1; letter-spacing:-0.025em; text-transform:uppercase;">Team</h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:16px;">
@@ -269,7 +289,7 @@ a:hover { color:#B8B8C4; }
   <img src="assets/symbol.svg" alt="" style="position:absolute; right:-10%; bottom:-20%; width:min(70vw,600px); opacity:0.06; pointer-events:none;">
   <div style="max-width:1400px; margin:0 auto; position:relative; display:flex; flex-direction:column; gap:clamp(28px,4vh,48px);">
     <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">09</span><span>/ CONTACT</span><span style="flex:1; height:1px; background:#191920;"></span>
+      <span style="color:#C7C7D0;">10</span><span>/ CONTACT</span><span style="flex:1; height:1px; background:#191920;"></span>
     </div>
     <h2 style="margin:0; font-size:clamp(36px,7vw,96px); font-weight:900; line-height:0.98; letter-spacing:-0.03em; text-transform:uppercase;">Contact / Bookings</h2>
     <p style="margin:0; max-width:620px; font-size:clamp(15px,1.9vw,17px); line-height:1.75; color:#A0A0AC; text-wrap:pretty;">{{ contactBody }}</p>
@@ -376,6 +396,7 @@ class Component extends DCLogic {
     const epk = this.state.epk || {};
     const hero = epk.hero || {};
     const about = epk.about || {};
+    const founder = epk.founder || {};
     const philo = epk.philosophy || {};
     const contact = epk.contact || {};
     const sc = site.contact || {};
@@ -404,6 +425,11 @@ class Component extends DCLogic {
       facts: epk.facts || [],
       aboutHeading: about.heading || '',
       aboutBody: about.body || [],
+      founderName: 'Harry',
+      founderImage: founder.image || '',
+      founderFocus: founder.focus || '50% 50%',
+      founderHeading: founder.heading || '',
+      founderBody: founder.body || [],
       philoHeading: philo.heading || '',
       philoBody: philo.body || [],
       pillars: epk.pillars || [],

@@ -37,6 +37,16 @@
       "With a refined approach to sound, atmosphere, and production, momento.motion is building a new space for Afro House culture and music-led connection."
     ]
   },
+  "founder": {
+    "heading": "Who founded momento",
+    "image": "assets/uploads/harry-reuben-hunting.jpg",
+    "focus": "50% 25%",
+    "body": [
+      "Meet Harry, a 20 year old who realised events and nightlife wasn't what it could be.",
+      "Momento is about bringing back the culture to events and reimagining London nightlife.",
+      "Creating a space for the people who are here for the music. It doesn't matter who you are, what car you drive, what clothes you wear. Music is for everyone."
+    ]
+  },
   "philosophy": {
     "heading": "We create moments through music",
     "body": [
@@ -46,7 +56,7 @@
   },
   "pillars": [
     {
-      "index": "04 / SOUND DIRECTION",
+      "index": "05 / SOUND DIRECTION",
       "title": "Sound Direction",
       "body": [
         "Rooted in Afro House, Tech House and House, blending deep percussion, hypnotic rhythm, warm grooves, melodic tension, and emotionally charged transitions.",
@@ -54,7 +64,7 @@
       ]
     },
     {
-      "index": "05 / CURATION",
+      "index": "06 / CURATION",
       "title": "Artist Curation / B2B Format",
       "body": [
         "A resident artist forms the core thread of the sound, alongside hand-selected emerging DJs, B2B collaborations, and occasional special guest performers.",
@@ -62,7 +72,7 @@
       ]
     },
     {
-      "index": "06 / PRODUCTION",
+      "index": "07 / PRODUCTION",
       "title": "Production",
       "body": [
         "momento.motion also operates as a production company, creating music-led events, artist showcases, cultural experiences, and curated nightlife concepts.",

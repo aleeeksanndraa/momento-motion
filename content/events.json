@@ -21,7 +21,7 @@
     "residentAdvisorUrl": "#",
     "eventbriteUrl": "#"
   },
-  "moreDates": { "number": "02", "title": "FUTURE EVENTS" },
+  "moreDates": { "number": "01", "title": "FUTURE EVENTS" },
   "upcomingList": [
     { "title": "After Kloud", "meta": "SUN 09.08.2026 · NIGHTTALES, LONDON", "image": "", "url": "#" },
     { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" },
@@ -36,7 +36,12 @@
     "heading": "Resident sound meets selected artists",
     "body1": "momento.motion features resident-led sets, B2B collaborations, emerging DJs, and occasional special guest performers from the Afro House, Tech House and House scene.",
     "body2": "Each artist is chosen for their sound, taste, emotional range, and ability to move the room with intention.",
-    "tags": ["RESIDENT SETS", "B2B COLLABORATIONS", "EMERGING DJS", "SPECIAL GUESTS"]
+    "tags": ["RESIDENT SETS", "B2B COLLABORATIONS", "EMERGING DJS", "SPECIAL GUESTS"],
+    "residents": [
+      { "name": "Harry", "role": "RESIDENT DJ", "image": "assets/uploads/harry-reuben-hunting.jpg", "focus": "50% 25%" },
+      { "name": "David", "role": "RESIDENT DJ", "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg", "focus": "50% 50%" },
+      { "name": "???", "role": "SECRET GUEST - REVEALED ON THE NIGHT", "image": "", "focus": "50% 50%" }
+    ]
   },
   "pastEvents": [
     { "title": "Bad in the House", "meta": "MJ REMIXES · PALOMA, LONDON · 10 JUL", "image": "assets/poster-mj.jpg", "type": "poster" },
