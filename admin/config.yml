@@ -225,11 +225,11 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Body paragraphs", name: "body", widget: "list", field: { label: "Paragraph", name: "p", widget: "text" } }
+          - { label: "Sound & Production Heading", name: "pillarsHeading", widget: "string" }
           - label: "Pillars"
             name: "pillars"
             widget: "list"
             fields:
-              - { label: "Index", name: "index", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Body paragraphs", name: "body", widget: "list", field: { label: "Paragraph", name: "p", widget: "text" } }
           - label: "Media archive"
