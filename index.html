@@ -183,6 +183,9 @@ a:hover { color:#B8B8C4; }
 
   <div style="position:absolute; top:96px; left:clamp(16px,4vw,48px); font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#C7C7D0;">M/ ●● 01</div>
   <div style="position:absolute; top:96px; right:clamp(16px,4vw,48px); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#C7C7D0; text-align:right;">LONDON</div>
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute; top:50%; right:24px; transform:translateY(-50%); font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.3em; color:#7C7C8C; writing-mode:vertical-rl; opacity:0.7; pointer-events:none;">AFRO HOUSE &mdash; TECH HOUSE &mdash; HOUSE</div>
+  </sc-if>
 
   <!-- DESKTOP -->
   <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
@@ -297,7 +300,8 @@ a:hover { color:#B8B8C4; }
 </section>
 
 <!-- PHILOSOPHY -->
-<section data-screen-label="Philosophy" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); display:flex; flex-direction:column; gap:clamp(32px,5vh,56px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+<section data-screen-label="Philosophy" style="position:relative; overflow:hidden; padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); display:flex; flex-direction:column; gap:clamp(32px,5vh,56px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
+  <div style="position:absolute; right:clamp(-24px,-2vw,0px); top:8%; font-size:clamp(140px,26vw,400px); font-weight:900; line-height:0.8; color:rgba(242,242,245,0.035); pointer-events:none; user-select:none;">02</div>
   <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
     <span style="color:#C7C7D0;">02</span><span>/ PHILOSOPHY</span><span style="flex:1; height:1px; background:#191920;"></span>
   </div>
@@ -332,8 +336,9 @@ a:hover { color:#B8B8C4; }
 </section>
 
 <!-- ARTISTS -->
-<section id="artists" data-screen-label="Artists" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
-  <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(32px,5vh,56px);">
+<section id="artists" data-screen-label="Artists" style="position:relative; overflow:hidden; padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
+  <div style="position:absolute; left:clamp(-24px,-2vw,0px); top:6%; font-size:clamp(140px,26vw,400px); font-weight:900; line-height:0.8; color:rgba(242,242,245,0.035); pointer-events:none; user-select:none;">04</div>
+  <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(32px,5vh,56px); position:relative;">
     <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
       <span style="color:#C7C7D0;">04</span><span>/ ARTISTS</span><span style="flex:1; height:1px; background:#191920;"></span>
     </div>
