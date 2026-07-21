@@ -130,7 +130,7 @@ a:hover { color:#B8B8C4; }
       <a href="#sound" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Sound</a>
       <a href="#artists" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Artists</a>
       <a href="epk.html" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">EPK</a>
-      <a href="waitlist.html" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Waitlist</a>
+      <a href="#waitlist" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Waitlist</a>
       <a href="epk.html#contact" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Contact</a>
       <a href="{{ raUrl }}" target="_blank" rel="noopener" style="border:1px solid #4A4A54; color:#F2F2F5; padding:10px 20px;" style-hover="background:#F2F2F5; color:#0A0A0B;">Get Tickets</a>
     </nav>
@@ -155,7 +155,7 @@ a:hover { color:#B8B8C4; }
       <a href="#sound" onClick="{{ closeMenu }}" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Sound</a>
       <a href="#artists" onClick="{{ closeMenu }}" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Artists</a>
       <a href="epk.html" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase; color:#9A9AA6;">EPK</a>
-      <a href="waitlist.html" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase; color:#9A9AA6;">Waitlist</a>
+      <a href="#waitlist" onClick="{{ closeMenu }}" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase; color:#9A9AA6;">Waitlist</a>
       <a href="epk.html#contact" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Contact</a>
     </nav>
     <div style="display:flex; flex-wrap:wrap; gap:18px; margin-top:32px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em;">
@@ -375,6 +375,39 @@ a:hover { color:#B8B8C4; }
   </div>
 </section>
 
+<!-- WAITLIST -->
+<section id="waitlist" data-screen-label="Waitlist" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
+  <div style="max-width:640px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(28px,4vh,40px);">
+    <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
+      <span style="color:#C7C7D0;">06</span><span>/ WAITLIST</span><span style="flex:1; height:1px; background:#191920;"></span>
+    </div>
+    <h2 style="margin:0; font-size:clamp(34px,6vw,64px); font-weight:800; line-height:1.02; letter-spacing:-0.025em; text-transform:uppercase;">Join the Waitlist</h2>
+    <p style="margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.7; color:#A0A0AC; text-wrap:pretty;">Be first to know when momento.motion announces a new night. Leave your details below and we'll reach out before lineups and tickets go public.</p>
+
+    <sc-if value="{{ wlStatus }}" hint-placeholder-val="{{ '' }}">
+      <div style="border:1px solid #26262E; background:#101013; padding:24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.06em; line-height:1.6; color:{{ wlStatusColor }};">{{ wlStatusText }}</div>
+    </sc-if>
+
+    <sc-if value="{{ wlShowForm }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submitWaitlist }}" style="display:flex; flex-direction:column; gap:18px;">
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Full Name</label>
+          <input type="text" required value="{{ wlName }}" onInput="{{ setWlName }}" placeholder="Your name" style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Email</label>
+          <input type="email" required value="{{ wlEmail }}" onInput="{{ setWlEmail }}" placeholder="you@email.com" style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Phone Number</label>
+          <input type="tel" required value="{{ wlPhone }}" onInput="{{ setWlPhone }}" placeholder="+44 ..." style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
+        </div>
+        <button type="submit" disabled="{{ wlSubmitting }}" style="margin-top:8px; background:#F2F2F5; color:#0A0A0B; border:0; padding:17px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; cursor:pointer;" style-hover="background:#B8B8C4;">{{ wlSubmitLabel }}</button>
+      </form>
+    </sc-if>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer data-screen-label="Footer" style="border-top:1px solid #191920; padding:clamp(56px,9vh,96px) clamp(16px,4vw,48px) clamp(96px,14vh,120px); background:#08080A;">
   <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(40px,6vh,64px);">
@@ -419,7 +452,7 @@ a:hover { color:#B8B8C4; }
   &quot;marquee&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Atmosphere&quot; }
 }">
 class Component extends DCLogic {
-  state = { isMobile: true, menuOpen: false, site: null, ev: null, ctaShown: false, playing: false, audioOn: false, loading: true };
+  state = { isMobile: true, menuOpen: false, site: null, ev: null, ctaShown: false, playing: false, audioOn: false, loading: true, wlName: '', wlEmail: '', wlPhone: '', wlSubmitting: false, wlStatus: '' };
 
   async componentDidMount() {
     this.mq = window.matchMedia('(max-width: 900px)');
@@ -577,6 +610,29 @@ class Component extends DCLogic {
     if (this.widget) this.widget.pause();
   }
 
+  async submitWaitlist(ev) {
+    ev.preventDefault();
+    const site = this.state.site || {};
+    const formUrl = site.waitlistFormUrl || '';
+    if (!formUrl) {
+      this.setState({ wlStatus: 'error' });
+      return;
+    }
+    this.setState({ wlSubmitting: true });
+    try {
+      const body = new URLSearchParams({
+        name: this.state.wlName,
+        email: this.state.wlEmail,
+        phone: this.state.wlPhone,
+      });
+      await fetch(formUrl, { method: 'POST', mode: 'no-cors', body });
+      this.setState({ wlSubmitting: false, wlStatus: 'success', wlName: '', wlEmail: '', wlPhone: '' });
+    } catch (e) {
+      console.warn('waitlist submit failed', e);
+      this.setState({ wlSubmitting: false, wlStatus: 'error' });
+    }
+  }
+
   renderVals() {
     const site = this.state.site || {};
     const ev = this.state.ev || {};
@@ -647,6 +703,21 @@ class Component extends DCLogic {
       moreDatesTitle: (ev.moreDates && ev.moreDates.title) || 'FUTURE EVENTS',
       legalCopyright: (site.legal && site.legal.copyright) || '',
       legalCredit: (site.legal && site.legal.credit) || '',
+      wlName: this.state.wlName,
+      wlEmail: this.state.wlEmail,
+      wlPhone: this.state.wlPhone,
+      setWlName: (e) => this.setState({ wlName: e.target.value }),
+      setWlEmail: (e) => this.setState({ wlEmail: e.target.value }),
+      setWlPhone: (e) => this.setState({ wlPhone: e.target.value }),
+      submitWaitlist: (e) => this.submitWaitlist(e),
+      wlSubmitting: this.state.wlSubmitting,
+      wlSubmitLabel: this.state.wlSubmitting ? 'JOINING...' : 'JOIN THE WAITLIST',
+      wlShowForm: this.state.wlStatus !== 'success',
+      wlStatus: this.state.wlStatus,
+      wlStatusColor: this.state.wlStatus === 'success' ? '#B8E8C4' : '#E8B8B8',
+      wlStatusText: this.state.wlStatus === 'success'
+        ? "You're on the list. We'll be in touch before the next announcement."
+        : 'Something went wrong submitting the form - please try again, or DM us on Instagram.',
     };
   }
 }
