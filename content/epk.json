@@ -41,6 +41,7 @@
     "heading": "Who founded momento",
     "image": "assets/uploads/harry-reuben-hunting.jpg",
     "focus": "50% 25%",
+    "instagram": "https://www.instagram.com/hreubenhunting/",
     "body": [
       "Meet Harry, a 20 year old who realised events and nightlife wasn't what it could be.",
       "Momento is about bringing back the culture to events and reimagining London nightlife.",
@@ -112,28 +113,32 @@
       "role": "CO-FOUNDER / DJ CREW",
       "bio": "Co-founder and resident DJ, shaping the sound and energy of every momento.motion night.",
       "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
-      "focus": "50% 50%"
+      "focus": "50% 50%",
+      "instagram": "https://www.instagram.com/d8vofficial/"
     },
     {
       "name": "Harry Reuben-Hunting",
       "role": "CO-FOUNDER / DJ CREW",
       "bio": "Co-founder and resident DJ, driving the direction and feel of the dancefloor.",
       "image": "assets/uploads/harry-reuben-hunting.jpg",
-      "focus": "50% 50%"
+      "focus": "50% 50%",
+      "instagram": "https://www.instagram.com/hreubenhunting/"
     },
     {
       "name": "Gabriel Bandman",
       "role": "MARKETING DIRECTOR",
       "bio": "Leads marketing and audience growth, bringing momento.motion's story to new rooms and cities.",
       "image": "assets/uploads/gabriel-bandman.jpg",
-      "focus": "50% 50%"
+      "focus": "50% 50%",
+      "instagram": "https://www.instagram.com/gabriel_bandman/"
     },
     {
       "name": "Aleksandra Slahova",
       "role": "CREATIVE / VISUALS",
       "bio": "Shapes the visual language - motion, grain, light, and brand worlds.",
       "image": "assets/uploads/aleksandra-slahova.jpg",
-      "focus": "50% 50%"
+      "focus": "50% 50%",
+      "instagram": "https://www.instagram.com/aleeeksanndraa/"
     }
   ],
   "contact": {

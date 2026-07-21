@@ -38,9 +38,9 @@
     "body2": "Each artist is chosen for their sound, taste, emotional range, and ability to move the room with intention.",
     "tags": ["RESIDENT SETS", "B2B COLLABORATIONS", "EMERGING DJS", "SPECIAL GUESTS"],
     "residents": [
-      { "name": "Harry", "role": "RESIDENT DJ", "image": "assets/uploads/harry-reuben-hunting.jpg", "focus": "50% 25%" },
-      { "name": "David", "role": "RESIDENT DJ", "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg", "focus": "50% 50%" },
-      { "name": "???", "role": "SECRET GUEST - REVEALED ON THE NIGHT", "image": "", "focus": "50% 50%" }
+      { "name": "Harry", "role": "RESIDENT DJ", "image": "assets/uploads/harry-reuben-hunting.jpg", "focus": "50% 25%", "instagram": "https://www.instagram.com/hreubenhunting/" },
+      { "name": "David", "role": "RESIDENT DJ", "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg", "focus": "50% 50%", "instagram": "https://www.instagram.com/d8vofficial/" },
+      { "name": "???", "role": "SECRET GUEST - REVEALED ON THE NIGHT", "image": "", "focus": "50% 50%", "instagram": "" }
     ]
   },
   "pastEvents": [

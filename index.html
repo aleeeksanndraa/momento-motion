@@ -349,7 +349,7 @@ a:hover { color:#B8B8C4; }
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:16px;">
       <sc-for list="{{ residents }}" as="r" hint-placeholder-count="3">
-        <div style="aspect-ratio:3/4; border:1px solid #26262E; overflow:hidden; position:relative; background:radial-gradient(120% 100% at 50% 30%, rgba(60,60,68,0.3) 0%, #101013 70%);">
+        <a href="{{ r.instagramHref }}" target="_blank" rel="noopener" aria-label="{{ r.name }} on Instagram" style="aspect-ratio:3/4; border:1px solid #26262E; overflow:hidden; position:relative; display:block; background:radial-gradient(120% 100% at 50% 30%, rgba(60,60,68,0.3) 0%, #101013 70%);">
           <sc-if value="{{ r.image }}" hint-placeholder-val="{{ true }}">
             <img src="{{ r.image }}" alt="{{ r.name }} - {{ r.role }}, momento.motion" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ r.focus }};">
           </sc-if>
@@ -357,8 +357,11 @@ a:hover { color:#B8B8C4; }
           <div style="position:absolute; left:16px; right:16px; bottom:14px;">
             <div style="font-size:16px; font-weight:800; text-transform:uppercase; color:#F2F2F5;">{{ r.name }}</div>
             <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; color:#C7C7D0;">{{ r.role }}</div>
+            <sc-if value="{{ r.instagram }}" hint-placeholder-val="{{ true }}">
+              <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.14em; color:#8A8A96;">INSTAGRAM ↗</div>
+            </sc-if>
           </div>
-        </div>
+        </a>
       </sc-for>
     </div>
   </div>
@@ -657,6 +660,10 @@ class Component extends DCLogic {
       metaTag: p.meta ? ('[ ' + p.meta + ' ]') : (p.type === 'video' ? '[ ▶ AFTERMOVIE ]' : ''),
       showPlaceholder: !p.image,
     }));
+    const residentsList = ((ev.artists && ev.artists.residents) || []).map(r => ({
+      ...r,
+      instagramHref: r.instagram || '#',
+    }));
     return {
       isMobile: this.state.isMobile,
       isDesktop: !this.state.isMobile,
@@ -709,7 +716,7 @@ class Component extends DCLogic {
       artistsBody1: (ev.artists && ev.artists.body1) || '',
       artistsBody2: (ev.artists && ev.artists.body2) || '',
       artistsTags: (ev.artists && ev.artists.tags) || [],
-      residents: (ev.artists && ev.artists.residents) || [],
+      residents: residentsList,
       pastEvents: past,
       upcomingList: ev.upcomingList || [],
       moreDatesNum: (ev.moreDates && ev.moreDates.number) || '02',

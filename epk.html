@@ -197,9 +197,11 @@ a:hover { color:#B8B8C4; }
 <!-- FOUNDER -->
 <section data-screen-label="Founder" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
   <div style="max-width:1400px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(32px,5vw,64px); align-items:center;">
-    <div style="width:100%; aspect-ratio:4/5; overflow:hidden; border:1px solid #26262E; background:#101013;">
+    <a href="{{ founderInstagram }}" target="_blank" rel="noopener" aria-label="{{ founderName }} on Instagram" style="display:block; position:relative; width:100%; aspect-ratio:4/5; overflow:hidden; border:1px solid #26262E; background:#101013;">
       <img src="{{ founderImage }}" alt="{{ founderName }} - momento.motion founder" style="width:100%; height:100%; object-fit:cover; object-position:{{ founderFocus }};">
-    </div>
+      <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 62%, rgba(8,8,10,0.82) 100%);"></div>
+      <span style="position:absolute; left:16px; bottom:14px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#E8E8EC;">INSTAGRAM ↗</span>
+    </a>
     <div style="display:flex; flex-direction:column; gap:clamp(24px,4vh,40px);">
       <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
         <span style="color:#C7C7D0;">03</span><span>/ FOUNDER</span><span style="flex:1; height:1px; background:#191920;"></span>
@@ -273,14 +275,16 @@ a:hover { color:#B8B8C4; }
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:16px;">
       <sc-for list="{{ team }}" as="member" hint-placeholder-count="4">
         <div style="border:1px solid #26262E; background:#101013; padding:22px; display:flex; flex-direction:column; gap:14px;">
-          <div style="width:100%; aspect-ratio:1; background:radial-gradient(90% 80% at 60% 30%, rgba(150,150,156,0.16) 0%, rgba(50,50,56,0.1) 45%, #0E0E11 85%); display:grid; place-items:center; overflow:hidden; position:relative;">
+          <a href="{{ member.instagram }}" target="_blank" rel="noopener" aria-label="{{ member.name }} on Instagram" style="width:100%; aspect-ratio:1; background:radial-gradient(90% 80% at 60% 30%, rgba(150,150,156,0.16) 0%, rgba(50,50,56,0.1) 45%, #0E0E11 85%); display:block; overflow:hidden; position:relative;">
             <sc-if value="{{ member.image }}" hint-placeholder-val="{{ false }}">
               <img src="{{ member.image }}" alt="{{ member.name }}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ member.focus }};">
             </sc-if>
             <sc-if value="{{ member.noImage }}" hint-placeholder-val="{{ true }}">
-              <span style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.2em; color:#5A5A64;">[ PORTRAIT ]</span>
+              <span style="position:absolute; inset:0; display:grid; place-items:center; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.2em; color:#5A5A64;">[ PORTRAIT ]</span>
             </sc-if>
-          </div>
+            <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 62%, rgba(8,8,10,0.82) 100%);"></div>
+            <span style="position:absolute; left:12px; bottom:10px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#E8E8EC;">INSTAGRAM ↗</span>
+          </a>
           <div style="display:flex; flex-direction:column; gap:6px;">
             <span style="font-size:18px; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em;">{{ member.name }}</span>
             <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#C7C7D0;">{{ member.role }}</span>
@@ -436,6 +440,7 @@ class Component extends DCLogic {
       founderName: 'Harry',
       founderImage: founder.image || '',
       founderFocus: founder.focus || '50% 50%',
+      founderInstagram: founder.instagram || '#',
       founderHeading: founder.heading || '',
       founderBody: founder.body || [],
       philoHeading: philo.heading || '',
