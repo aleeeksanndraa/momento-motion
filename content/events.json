@@ -14,7 +14,7 @@
     "title": "After Kloud",
     "date": "SUNDAY 09.08.2026",
     "time": "22:00 - 02:00",
-    "venue": "NIGHTTALES",
+    "venue": "TBA",
     "city": "LONDON",
     "soundLabel": "SOUND",
     "sound": ["Keinemusik Afterparty"],
@@ -23,7 +23,7 @@
   },
   "moreDates": { "number": "01", "title": "FUTURE EVENTS" },
   "upcomingList": [
-    { "title": "After Kloud", "meta": "SUN 09.08.2026 · NIGHTTALES, LONDON", "image": "", "url": "#" },
+    { "title": "After Kloud", "meta": "SUN 09.08.2026 · VENUE TBA, LONDON", "image": "", "url": "#" },
     { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" },
     { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" }
   ],
