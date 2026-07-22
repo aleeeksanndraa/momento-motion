@@ -252,7 +252,7 @@ a:hover { color:#B8B8C4; }
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); border:1px solid #26262E;">
       <div style="position:relative; overflow:hidden; min-height:420px; background:#000;">
         <sc-if value="{{ upPoster }}" hint-placeholder-val="{{ false }}">
-          <img src="{{ upPoster }}" alt="{{ upTitle }} - momento.motion Afro House / Tech House event poster, London" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <img src="{{ upPoster }}" alt="{{ upTitle }} - momento.motion Afro House / Tech House event poster, London" style="width:100%; height:100%; object-fit:contain; display:block;">
         </sc-if>
         <div style="position:absolute; top:0; left:0; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#F2F2F5; padding:14px 16px; background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0));">{{ upTag }}</div>
       </div>
