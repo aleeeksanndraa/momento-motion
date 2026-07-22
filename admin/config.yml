@@ -59,6 +59,7 @@ collections:
             fields:
               - { label: "Resident Advisor", name: "residentAdvisor", widget: "string" }
               - { label: "Eventbrite", name: "eventbrite", widget: "string" }
+              - { label: "Bubbl", name: "bubbl", widget: "string", required: false, hint: "Bubbl community page link, e.g. https://bubbl.so/communities/MOMENTO" }
           - { label: "Waitlist Form URL", name: "waitlistFormUrl", widget: "string", required: false, hint: "The Google Apps Script Web App URL from the waitlist setup. Leave blank until deployed." }
           - label: "Contact"
             name: "contact"
@@ -136,6 +137,7 @@ collections:
               - { label: "Sound / genres", name: "sound", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
               - { label: "Resident Advisor URL", name: "residentAdvisorUrl", widget: "string" }
               - { label: "Eventbrite URL", name: "eventbriteUrl", widget: "string" }
+              - { label: "Entry URL", name: "entryUrl", widget: "string", required: false, hint: "This event's ticket page on Entry (app.entry-os.com) - specific to each event." }
           - label: "Future Events — Section Label"
             name: "moreDates"
             widget: "object"

@@ -19,7 +19,8 @@
     "soundLabel": "LINE UP",
     "sound": ["Haz b2b D8V!", "Loki", "Gallagher", "HOOPSFM"],
     "residentAdvisorUrl": "#",
-    "eventbriteUrl": "#"
+    "eventbriteUrl": "#",
+    "entryUrl": "https://app.entry-os.com/en-GB/events/1292562"
   },
   "moreDates": { "number": "01", "title": "FUTURE EVENTS" },
   "upcomingList": [

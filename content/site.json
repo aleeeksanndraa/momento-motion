@@ -11,7 +11,8 @@
   ],
   "ticketLinks": {
     "residentAdvisor": "https://ra.co/promoters/174470",
-    "eventbrite": "https://www.eventbrite.co.uk/o/121516590209"
+    "eventbrite": "https://www.eventbrite.co.uk/o/121516590209",
+    "bubbl": "https://bubbl.so/communities/MOMENTO"
   },
   "waitlistFormUrl": "https://script.google.com/macros/s/AKfycbzVSpOozVH5872y2LYxjWCCV7MqqypKLXyq7FTzGS6dJVAz6qwNsClSXiJ7OOH1ISyI/exec",
   "contact": {
