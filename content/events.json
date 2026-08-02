@@ -12,7 +12,7 @@
     "soundLabel": "LINE UP",
     "city": "LONDON",
     "poster": "assets/uploads/chatgpt-image-aug-1-2026-07_07_20-pm.png",
-    "time": "22:00 - 02:00",
+    "time": "22:00 - 03:00+",
     "date": "SUNDAY 09.08.2026",
     "sound": [
       "Haz b2b D8V!",
@@ -31,14 +31,7 @@
     "number": "01",
     "title": "FUTURE EVENTS"
   },
-  "upcomingList": [
-    {
-      "title": "After Kloud",
-      "meta": "SUN 09.08.2026 · EGG LDN, LONDON",
-      "image": "assets/poster-after-kloud.jpg",
-      "url": "#"
-    }
-  ],
+  "upcomingList": [],
   "sound": {
     "body": "Rooted in Afro House, Tech House and House, momento.motion blends deep percussion, hypnotic rhythms, warm grooves, melodic tension, and emotionally charged transitions.",
     "tagline": "FEEL. CONNECT. MOVE.",
