@@ -9,24 +9,35 @@
     "body": "Every momento.motion event is mapped with intention - from the opening mood to the final release. The sound moves through rhythm, emotion, tension, connection, and collective energy."
   },
   "upcoming": {
-    "tag": "MOMENTO.MOTION 002 - LONDON",
-    "poster": "assets/poster-after-kloud.jpg",
-    "title": "After Kloud [Official Unofficial Keinemusik Afterparty]",
-    "date": "SUNDAY 09.08.2026",
-    "time": "22:00 - 02:00",
-    "venue": "EGG LDN - CLUB ROOM",
-    "city": "LONDON",
     "soundLabel": "LINE UP",
-    "sound": ["Haz b2b D8V!", "Loki", "Gallagher", "HOOPSFM"],
-    "residentAdvisorUrl": "#",
-    "eventbriteUrl": "#",
-    "entryUrl": "https://app.entry-os.com/en-GB/events/1292562"
+    "city": "LONDON",
+    "poster": "assets/uploads/chatgpt-image-aug-1-2026-07_07_20-pm.png",
+    "time": "22:00 - 02:00",
+    "date": "SUNDAY 09.08.2026",
+    "sound": [
+      "Haz b2b D8V!",
+      "Loki",
+      "Gallagher",
+      "HOOPSFM B2B HAYC"
+    ],
+    "venue": "EGG LDN - CLUB ROOM",
+    "title": "After Kloud [Official Unofficial Keinemusik Afterparty]",
+    "tag": "MOMENTO.MOTION 002 - LONDON",
+    "entryUrl": "https://app.entry-os.com/en-GB/events/1292562",
+    "residentAdvisorUrl": "https://ra.co/events/2495857",
+    "eventbriteUrl": "https://www.linesapp.co/event/after-kloud-keinemusik-unofficial-after-party-2026-08-10-egg-london-nightclub-london"
   },
-  "moreDates": { "number": "01", "title": "FUTURE EVENTS" },
+  "moreDates": {
+    "number": "01",
+    "title": "FUTURE EVENTS"
+  },
   "upcomingList": [
-    { "title": "After Kloud", "meta": "SUN 09.08.2026 · EGG LDN, LONDON", "image": "assets/poster-after-kloud.jpg", "url": "#" },
-    { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" },
-    { "title": "TO BE ANNOUNCED", "meta": "", "image": "", "url": "" }
+    {
+      "title": "After Kloud",
+      "meta": "SUN 09.08.2026 · EGG LDN, LONDON",
+      "image": "assets/poster-after-kloud.jpg",
+      "url": "#"
+    }
   ],
   "sound": {
     "body": "Rooted in Afro House, Tech House and House, momento.motion blends deep percussion, hypnotic rhythms, warm grooves, melodic tension, and emotionally charged transitions.",
@@ -37,18 +48,66 @@
     "heading": "Resident sound meets selected artists",
     "body1": "momento.motion features resident-led sets, B2B collaborations, emerging DJs, and occasional special guest performers from the Afro House, Tech House and House scene.",
     "body2": "Each artist is chosen for their sound, taste, emotional range, and ability to move the room with intention.",
-    "tags": ["RESIDENT SETS", "B2B COLLABORATIONS", "EMERGING DJS", "SPECIAL GUESTS"],
+    "tags": [
+      "RESIDENT SETS",
+      "B2B COLLABORATIONS",
+      "EMERGING DJS",
+      "SPECIAL GUESTS"
+    ],
     "residents": [
-      { "name": "Harry", "role": "RESIDENT DJ", "image": "assets/uploads/harry-reuben-hunting.jpg", "focus": "50% 25%", "instagram": "https://www.instagram.com/hreubenhunting/" },
-      { "name": "David", "role": "RESIDENT DJ", "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg", "focus": "50% 50%", "instagram": "https://www.instagram.com/d8vofficial/" },
-      { "name": "???", "role": "SECRET GUEST - REVEALED ON THE NIGHT", "image": "", "focus": "50% 50%", "instagram": "" }
+      {
+        "name": "Harry",
+        "role": "RESIDENT DJ",
+        "image": "assets/uploads/harry-reuben-hunting.jpg",
+        "focus": "50% 25%",
+        "instagram": "https://www.instagram.com/hreubenhunting/"
+      },
+      {
+        "name": "David",
+        "role": "RESIDENT DJ",
+        "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
+        "focus": "50% 50%",
+        "instagram": "https://www.instagram.com/d8vofficial/"
+      },
+      {
+        "name": "???",
+        "role": "SECRET GUEST - REVEALED ON THE NIGHT",
+        "image": "",
+        "focus": "50% 50%",
+        "instagram": ""
+      }
     ]
   },
   "pastEvents": [
-    { "title": "Bad in the House", "meta": "MJ REMIXES · PALOMA, LONDON · 10 JUL", "image": "assets/poster-mj.jpg", "type": "poster" },
-    { "title": "Momento & Friends", "meta": "D8V! & WONK · DEAR DARLING · 04 JUN", "image": "assets/poster-friends.jpg", "type": "poster" },
-    { "title": "Momento x Givasso", "meta": "GIVASSO · 14 MAR", "image": "assets/uploads/momento-givasso-14-03.jpg", "type": "poster" },
-    { "title": "Maison Close Mayfair", "meta": "MAISON CLOSE, MAYFAIR · 26 FEB", "image": "assets/uploads/momento-maison-close-26-02.jpg", "type": "poster" },
-    { "title": "Momento 54", "meta": "CEES · JULIIUS · CLUB GALLERY, LONDON · 19 FEB", "image": "assets/uploads/momento-club-gallery-19-02.jpg", "type": "poster" }
+    {
+      "title": "Bad in the House",
+      "meta": "MJ REMIXES · PALOMA, LONDON · 10 JUL",
+      "image": "assets/poster-mj.jpg",
+      "type": "poster"
+    },
+    {
+      "title": "Momento & Friends",
+      "meta": "D8V! & WONK · DEAR DARLING · 04 JUN",
+      "image": "assets/poster-friends.jpg",
+      "type": "poster"
+    },
+    {
+      "title": "Momento x Givasso",
+      "meta": "GIVASSO · 14 MAR",
+      "image": "assets/uploads/momento-givasso-14-03.jpg",
+      "type": "poster"
+    },
+    {
+      "title": "Maison Close Mayfair",
+      "meta": "MAISON CLOSE, MAYFAIR · 26 FEB",
+      "image": "assets/uploads/momento-maison-close-26-02.jpg",
+      "type": "poster"
+    },
+    {
+      "title": "Momento 54",
+      "meta": "CEES · JULIIUS · CLUB GALLERY, LONDON · 19 FEB",
+      "image": "assets/uploads/momento-club-gallery-19-02.jpg",
+      "type": "poster"
+    }
   ]
 }
