@@ -15,7 +15,7 @@
     "time": "22:00 - 03:00+",
     "date": "SUNDAY 09.08.2026",
     "sound": [
-      "Haz b2b D8V!",
+      "D8V! b2b Haz",
       "Loki",
       "Gallagher",
       "HOOPSFM B2B HAYC"
@@ -49,18 +49,18 @@
     ],
     "residents": [
       {
-        "name": "Harry",
-        "role": "RESIDENT DJ",
-        "image": "assets/uploads/harry-reuben-hunting.jpg",
-        "focus": "50% 25%",
-        "instagram": "https://www.instagram.com/hreubenhunting/"
-      },
-      {
         "name": "David",
         "role": "RESIDENT DJ",
         "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
         "focus": "50% 50%",
         "instagram": "https://www.instagram.com/d8vofficial/"
+      },
+      {
+        "name": "Harry",
+        "role": "RESIDENT DJ",
+        "image": "assets/uploads/harry-reuben-hunting.jpg",
+        "focus": "50% 25%",
+        "instagram": "https://www.instagram.com/hreubenhunting/"
       },
       {
         "name": "???",

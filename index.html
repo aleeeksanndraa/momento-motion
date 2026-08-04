@@ -91,9 +91,9 @@ a:hover { color:#B8B8C4; }
     }
   },
   "image": ["https://momentomotion.co.uk/assets/poster-after-kloud.jpg"],
-  "description": "momento.motion presents After Kloud, the official unofficial Keinemusik afterparty at Egg London - Club Room. Lineup: Haz b2b D8V!, Loki, Gallagher, HOOPSFM.",
+  "description": "momento.motion presents After Kloud, the official unofficial Keinemusik afterparty at Egg London - Club Room. Lineup: D8V! b2b Haz, Loki, Gallagher, HOOPSFM.",
   "performer": [
-    { "@type": "PerformingGroup", "name": "Haz b2b D8V!" },
+    { "@type": "PerformingGroup", "name": "D8V! b2b Haz" },
     { "@type": "PerformingGroup", "name": "Loki" },
     { "@type": "PerformingGroup", "name": "Gallagher" },
     { "@type": "PerformingGroup", "name": "HOOPSFM" }
@@ -641,7 +641,7 @@ class Component extends DCLogic {
   startVideo() {
     const v = document.querySelector('video.mm-hero-video');
     if (!v) return;
-    this.heroVideos = ['assets/hero.mp4', 'assets/hero-2.mp4', 'assets/hero-3.mp4', 'assets/hero-4.mp4', 'assets/hero-5.mp4'];
+    this.heroVideos = ['assets/hero.mp4', 'assets/hero-2.mp4', 'assets/hero-3.mp4', 'assets/hero-4.mp4', 'assets/hero-5.mp4', 'assets/hero-6.mp4', 'assets/hero-7.mp4'];
     this.heroVideoIndex = 0;
     v.muted = true; v.setAttribute('playsinline', '');
     const go = () => v.play().catch(() => {});
