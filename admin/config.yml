@@ -94,7 +94,7 @@ collections:
               - { label: "Page Title", name: "title", widget: "string", hint: "Shown in Google search results and browser tabs. Synced into the site automatically after saving." }
               - { label: "Meta Description", name: "description", widget: "text", hint: "Shown under the title in Google search results. Aim for under 160 characters." }
               - { label: "Social Share Description", name: "ogDescription", widget: "text", required: false, hint: "Shown when this page is shared on Instagram, WhatsApp, Slack, etc. Optional - falls back to Meta Description if left blank." }
-          - label: "EPK Page (epk.html)"
+          - label: "About Us Page (epk.html)"
             name: "epk"
             widget: "object"
             fields:
@@ -186,12 +186,12 @@ collections:
               - { label: "Image", name: "image", widget: "image", required: false }
               - { label: "Type", name: "type", widget: "select", options: ["poster", "photo", "video"] }
 
-  # ---------- EPK PAGE ----------
+  # ---------- ABOUT US PAGE (epk.html) ----------
   - name: "epk"
-    label: "EPK Page"
+    label: "About Us Page"
     files:
       - name: "epk"
-        label: "EPK content"
+        label: "About Us content"
         file: "content/epk.json"
         fields:
           - label: "Hero"
