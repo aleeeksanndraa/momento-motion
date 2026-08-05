@@ -127,7 +127,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Tag", name: "tag", widget: "string" }
-              - { label: "Poster image", name: "poster", widget: "image" }
+              - { label: "Poster (image or video)", name: "poster", widget: "file", hint: "Upload a .jpg/.png poster, or a .mp4 video to autoplay in the poster slot." }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Date", name: "date", widget: "string" }
               - { label: "Time", name: "time", widget: "string" }

@@ -254,7 +254,10 @@ a:hover { color:#B8B8C4; }
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); border:1px solid #26262E;">
       <div style="position:relative; overflow:hidden; min-height:420px; background:#000;">
-        <sc-if value="{{ upPoster }}" hint-placeholder-val="{{ false }}">
+        <sc-if value="{{ upPosterIsVideo }}" hint-placeholder-val="{{ false }}">
+          <video src="{{ upPoster }}" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:contain; display:block;"></video>
+        </sc-if>
+        <sc-if value="{{ upPosterIsImage }}" hint-placeholder-val="{{ false }}">
           <img src="{{ upPoster }}" alt="{{ upTitle }} - momento.motion Afro House / Tech House event poster, London" style="width:100%; height:100%; object-fit:contain; display:block;">
         </sc-if>
         <div style="position:absolute; top:0; left:0; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#F2F2F5; padding:14px 16px; background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0));">{{ upTag }}</div>
@@ -521,7 +524,7 @@ class Component extends DCLogic {
         fetch('content/events.json').then(r => r.json()),
       ]);
       this.setState({ site, ev });
-      setTimeout(() => { this.startEq(); this.tryInitSC(); this.observeSound(); }, 60);
+      setTimeout(() => { this.startEq(); this.tryInitSC(); this.observeSound(); this.startPosterVideo(); }, 60);
     } catch (e) { console.warn('content load failed', e); }
     this.loadT = setTimeout(() => this.setState({ loading: false }), 900);
   }
@@ -656,6 +659,18 @@ class Component extends DCLogic {
     if (v.readyState < 2) v.addEventListener('canplay', go, { once: true });
   }
 
+  startPosterVideo(attempt = 0) {
+    const v = document.querySelector('#events video');
+    if (!v) {
+      if (attempt < 40) setTimeout(() => this.startPosterVideo(attempt + 1), 250);
+      return;
+    }
+    v.muted = true;
+    v.loop = true;
+    v.setAttribute('playsinline', '');
+    v.play().catch(() => {});
+  }
+
   componentWillUnmount() {
     if (this.mq) this.mq.removeEventListener('change', this.upd);
     if (this.raf) cancelAnimationFrame(this.raf);
@@ -745,6 +760,8 @@ class Component extends DCLogic {
       philoBody: (ev.philosophy && ev.philosophy.body) || '',
       upTag: up.tag || '',
       upPoster: up.poster || '',
+      upPosterIsVideo: /\.(mp4|webm|mov)$/i.test(up.poster || ''),
+      upPosterIsImage: !!(up.poster || '') && !/\.(mp4|webm|mov)$/i.test(up.poster || ''),
       upTitle: up.title || '',
       upTitleUp: (up.title || '').toUpperCase(),
       upDate: up.date || '',
