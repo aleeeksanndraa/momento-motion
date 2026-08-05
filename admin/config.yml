@@ -242,6 +242,8 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Icon", name: "icon", widget: "string" }
               - { label: "URL", name: "url", widget: "string" }
+              - { label: "Thumbnail", name: "image", widget: "image", required: false }
+              - { label: "Thumbnail focus point", name: "focus", widget: "string", required: false, hint: "CSS object-position, e.g. \"50% 50%\"" }
               - { label: "Highlight", name: "highlight", widget: "boolean", required: false }
           - label: "Team"
             name: "team"

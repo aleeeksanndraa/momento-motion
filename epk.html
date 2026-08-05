@@ -260,8 +260,12 @@ a:hover { color:#B8B8C4; }
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:1px; background:#20202A; border:1px solid #20202A;">
       <sc-for list="{{ media }}" as="m" hint-placeholder-count="8">
         <a href="{{ m.url }}" target="_blank" rel="noopener" style="background:#101013; aspect-ratio:4/3; padding:20px; display:flex; flex-direction:column; justify-content:space-between; box-sizing:border-box; position:relative; overflow:hidden; transition:background 0.28s ease, transform 0.18s ease, box-shadow 0.28s ease; -webkit-tap-highlight-color:transparent;" style-hover="background:#1B1B22; box-shadow:inset 0 0 0 1px #4A4A54;" style-active="background:#242430; transform:scale(0.975);" style-focus="background:#1B1B22; box-shadow:inset 0 0 0 1px #6A6A74;">
-          <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#7C7C8C;">{{ m.code }}</span>
-          <span style="display:flex; align-items:flex-end; justify-content:space-between; gap:8px;"><span style="font-size:18px; font-weight:700; text-transform:uppercase; color:#E8E8EC;">{{ m.title }}</span><span style="color:#B8B8C4; font-size:15px;">{{ m.icon }}</span></span>
+          <sc-if value="{{ m.image }}" hint-placeholder-val="{{ true }}">
+            <img src="{{ m.image }}" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ m.focus }}; filter:grayscale(1) contrast(1.08) brightness(0.55);">
+          </sc-if>
+          <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0.5) 0%, rgba(8,8,10,0.3) 45%, rgba(8,8,10,0.9) 100%);"></div>
+          <span style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#C7C7D0;">{{ m.code }}</span>
+          <span style="position:relative; display:flex; align-items:flex-end; justify-content:space-between; gap:8px;"><span style="font-size:18px; font-weight:700; text-transform:uppercase; color:#F2F2F5;">{{ m.title }}</span><span style="color:#D0D0D8; font-size:15px;">{{ m.icon }}</span></span>
         </a>
       </sc-for>
     </div>

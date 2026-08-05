@@ -81,19 +81,25 @@
       "code": "M-01 / PHOTO",
       "title": "Photo Gallery",
       "icon": "↗︎",
-      "url": "https://drive.google.com/drive/folders/1ynbxkiQsPmb_akOCmh17eP5P0i5yst71"
+      "url": "https://drive.google.com/drive/folders/1ynbxkiQsPmb_akOCmh17eP5P0i5yst71",
+      "image": "assets/uploads/momento-club-gallery-19-02.jpg",
+      "focus": "50% 40%"
     },
     {
       "code": "M-02 / BRAND",
       "title": "Logo Assets",
       "icon": "↓︎",
-      "url": "https://drive.google.com/drive/folders/1fa-V-syz112AsHTsSadF09LC4vnfX-Wn?usp=sharing"
+      "url": "https://drive.google.com/drive/folders/1fa-V-syz112AsHTsSadF09LC4vnfX-Wn?usp=sharing",
+      "image": "assets/momento-symbol.jpg",
+      "focus": "50% 50%"
     },
     {
       "code": "M-03 / AUDIO",
       "title": "Mixes / Radio / SoundCloud",
       "icon": "▶︎",
-      "url": "https://soundcloud.com/momento-motion"
+      "url": "https://soundcloud.com/momento-motion",
+      "image": "assets/uploads/momento-maison-close-26-02.jpg",
+      "focus": "50% 78%"
     }
   ],
   "team": [
