@@ -8,31 +8,52 @@
     "line2": "It is the journey.",
     "body": "Every momento.motion event is mapped with intention - from the opening mood to the final release. The sound moves through rhythm, emotion, tension, connection, and collective energy."
   },
-  "upcoming": {
-    "soundLabel": "LINE UP",
-    "city": "LONDON",
-    "poster": "assets/poster-after-kloud.mp4",
-    "time": "22:00 - 03:00+",
-    "date": "SUNDAY 09.08.2026",
-    "sound": [
-      "Haz b2b D8V!",
-      "Loki",
-      "Gallagher",
-      "Pei Z",
-      "HOOPSFM B2B HAYC"
-    ],
-    "venue": "EGG LDN - CLUB ROOM",
-    "title": "After Kloud [Official Unofficial Keinemusik Afterparty]",
-    "tag": "MOMENTO.MOTION 002 - LONDON",
-    "entryUrl": "https://app.entry-os.com/en-GB/events/1292562",
-    "residentAdvisorUrl": "https://ra.co/events/2495857",
-    "eventbriteUrl": "https://www.linesapp.co/event/after-kloud-keinemusik-unofficial-after-party-2026-08-10-egg-london-nightclub-london"
-  },
+  "events": [
+    {
+      "soundLabel": "LINE UP",
+      "city": "LONDON",
+      "poster": "assets/poster-after-kloud.mp4",
+      "posterImage": "assets/poster-after-kloud.jpg",
+      "time": "22:00 - 03:00+",
+      "date": "SUNDAY 09.08.2026",
+      "dateISO": "2026-08-09",
+      "sound": [
+        "Haz b2b D8V!",
+        "Loki",
+        "Gallagher",
+        "Pei Z",
+        "HOOPSFM B2B HAYC"
+      ],
+      "venue": "EGG LDN - CLUB ROOM",
+      "title": "After Kloud [Official Unofficial Keinemusik Afterparty]",
+      "tag": "MOMENTO.MOTION 002 - LONDON",
+      "entryUrl": "https://app.entry-os.com/en-GB/events/1292562",
+      "residentAdvisorUrl": "https://ra.co/events/2495857",
+      "eventbriteUrl": "https://www.linesapp.co/event/after-kloud-keinemusik-unofficial-after-party-2026-08-10-egg-london-nightclub-london"
+    },
+    {
+      "soundLabel": "LINE UP",
+      "city": "BARCELONA",
+      "poster": "",
+      "posterImage": "",
+      "time": "TBA",
+      "date": "TBA",
+      "dateISO": "",
+      "sound": [
+        "TBA"
+      ],
+      "venue": "TBA",
+      "title": "momento.motion Barcelona",
+      "tag": "MOMENTO.MOTION 003 - BARCELONA",
+      "entryUrl": "",
+      "residentAdvisorUrl": "",
+      "eventbriteUrl": ""
+    }
+  ],
   "moreDates": {
     "number": "01",
     "title": "FUTURE EVENTS"
   },
-  "upcomingList": [],
   "sound": {
     "body": "Rooted in Afro House, Tech House and House, momento.motion blends deep percussion, hypnotic rhythms, warm grooves, melodic tension, and emotionally charged transitions.",
     "tagline": "FEEL. CONNECT. MOVE.",

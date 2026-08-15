@@ -122,21 +122,24 @@ collections:
               - { label: "Line 1", name: "line1", widget: "string" }
               - { label: "Line 2", name: "line2", widget: "string" }
               - { label: "Body", name: "body", widget: "text" }
-          - label: "Upcoming event"
-            name: "upcoming"
-            widget: "object"
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            hint: "Every event lives here, in any order. The site automatically shows the soonest one as the Upcoming Event, any others still ahead of it as Future Events, and moves anything whose date has passed into Past Moments - no manual reshuffling needed. Leave Date (for sorting) blank for a TBA event; it will stay upcoming until you fill in a real date."
             fields:
               - { label: "Tag", name: "tag", widget: "string" }
-              - { label: "Poster (image or video)", name: "poster", widget: "file", hint: "Upload a .jpg/.png poster, or a .mp4 video to autoplay in the poster slot." }
+              - { label: "Poster (image or video)", name: "poster", widget: "file", required: false, hint: "Upload a .jpg/.png poster, or a .mp4 video to autoplay in the poster slot. Leave blank for a TBA event." }
+              - { label: "Poster fallback image", name: "posterImage", widget: "image", required: false, hint: "Used as the thumbnail once this event moves to Past Moments (and as a fallback if the poster above is a video). Optional." }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Date (display text)", name: "date", widget: "string", hint: "e.g. \"SUNDAY 09.08.2026\" or \"TBA\" - shown on the site as-is." }
+              - { label: "Date (for sorting)", name: "dateISO", widget: "string", required: false, hint: "YYYY-MM-DD, e.g. 2026-08-09. Leave blank for TBA - controls when this event automatically moves to Past Moments." }
               - { label: "Time", name: "time", widget: "string" }
               - { label: "Venue", name: "venue", widget: "string" }
               - { label: "City", name: "city", widget: "string" }
               - { label: "Sound label", name: "soundLabel", widget: "string" }
               - { label: "Sound / genres", name: "sound", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
-              - { label: "Resident Advisor URL", name: "residentAdvisorUrl", widget: "string" }
-              - { label: "Eventbrite URL", name: "eventbriteUrl", widget: "string" }
+              - { label: "Resident Advisor URL", name: "residentAdvisorUrl", widget: "string", required: false }
+              - { label: "Eventbrite URL", name: "eventbriteUrl", widget: "string", required: false }
               - { label: "Entry URL", name: "entryUrl", widget: "string", required: false, hint: "This event's ticket page on Entry (app.entry-os.com) - specific to each event." }
           - label: "Future Events — Section Label"
             name: "moreDates"
@@ -144,14 +147,6 @@ collections:
             fields:
               - { label: "Number", name: "number", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-          - label: "Future Events — Event Cards"
-            name: "upcomingList"
-            widget: "list"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Meta line", name: "meta", widget: "string" }
-              - { label: "Image", name: "image", widget: "image", required: false }
-              - { label: "URL", name: "url", widget: "string" }
           - label: "Sound identity"
             name: "sound"
             widget: "object"

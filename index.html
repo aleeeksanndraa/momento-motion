@@ -69,43 +69,7 @@ a:hover { color:#B8B8C4; }
   ]
 }
 </script>
-<!-- Keep this MusicEvent block in sync by hand with content/events.json "upcoming" whenever that changes via the CMS - the helmet block does not support {{ }} template bindings. -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "MusicEvent",
-  "name": "After Kloud [Official Unofficial Keinemusik Afterparty] - momento.motion",
-  "startDate": "2026-08-09T22:00:00+01:00",
-  "endDate": "2026-08-10T02:00:00+01:00",
-  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-  "eventStatus": "https://schema.org/EventScheduled",
-  "location": {
-    "@type": "Place",
-    "name": "Egg London - Club Room",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "5-13 Vale Royal",
-      "addressLocality": "London",
-      "postalCode": "N7 9AP",
-      "addressCountry": "GB"
-    }
-  },
-  "image": ["https://momentomotion.co.uk/assets/poster-after-kloud.jpg"],
-  "description": "momento.motion presents After Kloud, the official unofficial Keinemusik afterparty at Egg London - Club Room. Lineup: Haz b2b D8V!, Loki, Gallagher, Pei Z, HOOPSFM.",
-  "performer": [
-    { "@type": "PerformingGroup", "name": "Haz b2b D8V!" },
-    { "@type": "PerformingGroup", "name": "Loki" },
-    { "@type": "PerformingGroup", "name": "Gallagher" },
-    { "@type": "PerformingGroup", "name": "Pei Z" },
-    { "@type": "PerformingGroup", "name": "HOOPSFM" }
-  ],
-  "organizer": {
-    "@type": "Organization",
-    "name": "momento.motion",
-    "url": "https://momentomotion.co.uk/"
-  }
-}
-</script>
+<!-- After Kloud has passed, so its MusicEvent block was removed (Google flags past events kept as "EventScheduled"). The next event (Barcelona) has no confirmed date/venue yet - add a fresh MusicEvent block here once those are set. This block is static HTML, not templated, so it needs to be kept in sync by hand each time. -->
 </helmet>
 
 <sc-if value="{{ grainOn }}" hint-placeholder-val="{{ true }}">
@@ -260,6 +224,9 @@ a:hover { color:#B8B8C4; }
         <sc-if value="{{ upPosterIsImage }}" hint-placeholder-val="{{ false }}">
           <img src="{{ upPoster }}" alt="{{ upTitle }} - momento.motion Afro House / Tech House event poster, London" style="width:100%; height:100%; object-fit:contain; display:block;">
         </sc-if>
+        <sc-if value="{{ upPosterMissing }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute; inset:0; display:grid; place-items:center; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#5A5A64;">[ POSTER TBA ]</span>
+        </sc-if>
         <div style="position:absolute; top:0; left:0; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#F2F2F5; padding:14px 16px; background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0));">{{ upTag }}</div>
       </div>
       <div style="border-top:1px solid #26262E; padding:clamp(28px,4vw,48px); display:flex; flex-direction:column; background:#101013;">
@@ -276,7 +243,9 @@ a:hover { color:#B8B8C4; }
         <div style="display:flex; flex-wrap:wrap; gap:12px; padding-top:24px; margin-top:auto;">
           <a href="{{ raUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; background:#F2F2F5; color:#0A0A0B; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Resident Advisor ↗</a>
           <a href="{{ ebUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Eventbrite ↗</a>
-          <a href="{{ entryUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Entry ↗</a>
+          <sc-if value="{{ entryUrl }}" hint-placeholder-val="{{ true }}">
+            <a href="{{ entryUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Entry ↗</a>
+          </sc-if>
           <a href="{{ bubblUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Bubbl ↗</a>
         </div>
       </div>
@@ -707,11 +676,35 @@ class Component extends DCLogic {
   renderVals() {
     const site = this.state.site || {};
     const ev = this.state.ev || {};
-    const up = ev.upcoming || {};
     const t = site.ticketLinks || {};
     const social = (site.social || []).map(s => ({ ...s, labelUp: (s.label || '').toUpperCase() }));
     const genres = (site.brand && site.brand.genres) || '';
-    const past = (ev.pastEvents || []).map(p => ({
+
+    // Events move between Upcoming / Future / Past automatically based on dateISO.
+    // A blank dateISO (TBA) always counts as future, so it never expires on its own.
+    const todayISO = new Date().toISOString().slice(0, 10);
+    const allEvents = ev.events || [];
+    const isFuture = (e) => !e.dateISO || e.dateISO >= todayISO;
+    const futureEvents = allEvents.filter(isFuture).sort((a, b) => {
+      if (!a.dateISO) return 1;
+      if (!b.dateISO) return -1;
+      return a.dateISO < b.dateISO ? -1 : (a.dateISO > b.dateISO ? 1 : 0);
+    });
+    const pastFromEvents = allEvents.filter(e => !isFuture(e)).sort((a, b) => (a.dateISO < b.dateISO ? 1 : -1));
+    const up = futureEvents[0] || {};
+    const restFuture = futureEvents.slice(1).map(e => ({
+      title: e.title || '',
+      meta: [e.date, [e.venue, e.city].filter(Boolean).join(', ')].filter(Boolean).join(' · '),
+      image: !/\.(mp4|webm|mov)$/i.test(e.poster || '') ? (e.poster || e.posterImage || '') : (e.posterImage || ''),
+      url: e.residentAdvisorUrl || e.eventbriteUrl || e.entryUrl || '#',
+    }));
+    const autoPast = pastFromEvents.map(e => ({
+      title: e.title || '',
+      meta: [(e.sound && e.sound[0]) || '', [e.venue, e.city].filter(Boolean).join(', ')].filter(Boolean).join(' · '),
+      image: !/\.(mp4|webm|mov)$/i.test(e.poster || '') ? (e.poster || e.posterImage || '') : (e.posterImage || ''),
+      type: 'poster',
+    }));
+    const past = [...autoPast, ...(ev.pastEvents || [])].map(p => ({
       ...p,
       metaTag: p.meta ? ('[ ' + p.meta + ' ]') : (p.type === 'video' ? '[ ▶ AFTERMOVIE ]' : ''),
       showPlaceholder: !p.image,
@@ -750,7 +743,7 @@ class Component extends DCLogic {
       pageTransform: this.state.loading ? 'translateY(14px)' : 'translateY(0)',
       raUrl: t.residentAdvisor || '#',
       ebUrl: t.eventbrite || '#',
-      entryUrl: up.entryUrl || '#',
+      entryUrl: up.entryUrl || '',
       bubblUrl: t.bubbl || '#',
       instagramUrl: (site.contact && site.contact.instagram) || '#',
       heroLocation: (ev.hero && ev.hero.location) || '',
@@ -762,6 +755,7 @@ class Component extends DCLogic {
       upPoster: up.poster || '',
       upPosterIsVideo: /\.(mp4|webm|mov)$/i.test(up.poster || ''),
       upPosterIsImage: !!(up.poster || '') && !/\.(mp4|webm|mov)$/i.test(up.poster || ''),
+      upPosterMissing: !up.poster,
       upTitle: up.title || '',
       upTitleUp: (up.title || '').toUpperCase(),
       upDate: up.date || '',
@@ -778,7 +772,7 @@ class Component extends DCLogic {
       artistsTags: (ev.artists && ev.artists.tags) || [],
       residents: residentsList,
       pastEvents: past,
-      upcomingList: ev.upcomingList || [],
+      upcomingList: restFuture,
       moreDatesNum: (ev.moreDates && ev.moreDates.number) || '02',
       moreDatesTitle: (ev.moreDates && ev.moreDates.title) || 'FUTURE EVENTS',
       legalCopyright: (site.legal && site.legal.copyright) || '',
