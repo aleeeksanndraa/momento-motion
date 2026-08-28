@@ -13,10 +13,9 @@
       "soundLabel": "LINE UP",
       "city": "LONDON",
       "poster": "assets/poster-after-kloud.mp4",
-      "posterImage": "assets/poster-after-kloud.jpg",
       "time": "22:00 - 03:00+",
+      "posterImage": "assets/poster-after-kloud.jpg",
       "date": "SUNDAY 09.08.2026",
-      "dateISO": "2026-08-09",
       "sound": [
         "Haz b2b D8V!",
         "Loki",
@@ -25,6 +24,7 @@
         "HOOPSFM B2B HAYC"
       ],
       "venue": "EGG LDN - CLUB ROOM",
+      "dateISO": "2026-08-09",
       "title": "After Kloud [Official Unofficial Keinemusik Afterparty]",
       "tag": "MOMENTO.MOTION 002 - LONDON",
       "entryUrl": "https://app.entry-os.com/en-GB/events/1292562",
@@ -35,19 +35,36 @@
       "soundLabel": "LINE UP",
       "city": "BARCELONA",
       "poster": "",
-      "posterImage": "",
       "time": "TBA",
+      "posterImage": "",
       "date": "TBA",
-      "dateISO": "",
       "sound": [
         "TBA"
       ],
       "venue": "TBA",
+      "dateISO": "",
       "title": "momento.motion Barcelona",
       "tag": "MOMENTO.MOTION 003 - BARCELONA",
       "entryUrl": "",
       "residentAdvisorUrl": "",
       "eventbriteUrl": ""
+    },
+    {
+      "soundLabel": "",
+      "city": "LONDON",
+      "poster": "assets/uploads/image.jpeg",
+      "time": "22:00",
+      "date": "SATURDAY 05.09.2026",
+      "sound": [
+        "AFRO HOUSE",
+        "AFRO TECH",
+        "MELODIC HOUSE"
+      ],
+      "venue": "SHOREDITCH (LOCATION TBA ON THE DAY)",
+      "title": "MOMENTO &FRIENDS",
+      "tag": "HOUSE MUSIC",
+      "residentAdvisorUrl": "https://ra.co/events/2522152",
+      "eventbriteUrl": "https://www.eventbrite.co.uk/e/momento-friends-tickets-1998994303774"
     }
   ],
   "moreDates": {
