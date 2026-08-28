@@ -32,6 +32,23 @@
       "eventbriteUrl": "https://www.linesapp.co/event/after-kloud-keinemusik-unofficial-after-party-2026-08-10-egg-london-nightclub-london"
     },
     {
+      "soundLabel": "",
+      "city": "LONDON",
+      "poster": "assets/uploads/image.jpeg",
+      "time": "22:00",
+      "date": "SATURDAY 05.09.2026",
+      "sound": [
+        "AFRO HOUSE",
+        "AFRO TECH",
+        "MELODIC HOUSE"
+      ],
+      "venue": "SHOREDITCH (LOCATION TBA ON THE DAY)",
+      "title": "MOMENTO &FRIENDS",
+      "tag": "MOMENTO &FRIENDS (SHOREDITCH)",
+      "residentAdvisorUrl": "https://ra.co/events/2522152",
+      "eventbriteUrl": "https://www.eventbrite.co.uk/e/momento-friends-tickets-1998994303774"
+    },
+    {
       "soundLabel": "LINE UP",
       "city": "BARCELONA",
       "poster": "",
@@ -48,23 +65,6 @@
       "entryUrl": "",
       "residentAdvisorUrl": "",
       "eventbriteUrl": ""
-    },
-    {
-      "soundLabel": "",
-      "city": "LONDON",
-      "poster": "assets/uploads/image.jpeg",
-      "time": "22:00",
-      "date": "SATURDAY 05.09.2026",
-      "sound": [
-        "AFRO HOUSE",
-        "AFRO TECH",
-        "MELODIC HOUSE"
-      ],
-      "venue": "SHOREDITCH (LOCATION TBA ON THE DAY)",
-      "title": "MOMENTO &FRIENDS",
-      "tag": "HOUSE MUSIC",
-      "residentAdvisorUrl": "https://ra.co/events/2522152",
-      "eventbriteUrl": "https://www.eventbrite.co.uk/e/momento-friends-tickets-1998994303774"
     }
   ],
   "moreDates": {
@@ -88,18 +88,18 @@
     ],
     "residents": [
       {
-        "name": "David",
-        "role": "RESIDENT DJ",
-        "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
-        "focus": "50% 50%",
-        "instagram": "https://www.instagram.com/d8vofficial/"
-      },
-      {
         "name": "Harry",
         "role": "RESIDENT DJ",
         "image": "assets/uploads/harry-reuben-hunting.jpg",
         "focus": "50% 25%",
         "instagram": "https://www.instagram.com/hreubenhunting/"
+      },
+      {
+        "name": "David",
+        "role": "RESIDENT DJ",
+        "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
+        "focus": "50% 50%",
+        "instagram": "https://www.instagram.com/d8vofficial/"
       },
       {
         "name": "???",
