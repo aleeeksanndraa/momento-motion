@@ -1,8 +1,33 @@
 {
-  "hero": {
-    "eyebrow": "FOR VENUES / PARTNERS / ARTISTS / PRESS - 2026",
-    "subtext": "momento.motion is an Afro House, Tech House and House music initiative, event organiser, and production company creating immersive sound-led experiences through curated DJ journeys, resident artists, B2B collaborations, and hand-selected talent."
+  "contact": {
+    "body": "For bookings, partnerships, artist submissions, press, production enquiries, and collaborations, please contact the momento.motion team."
   },
+  "media": [
+    {
+      "code": "M-01 / PHOTO",
+      "title": "Photo Gallery",
+      "icon": "↗︎",
+      "url": "https://drive.google.com/drive/folders/1ynbxkiQsPmb_akOCmh17eP5P0i5yst71",
+      "image": "assets/uploads/momento-club-gallery-19-02.jpg",
+      "focus": "50% 40%"
+    },
+    {
+      "code": "M-02 / BRAND",
+      "title": "Logo Assets",
+      "icon": "↓︎",
+      "url": "https://drive.google.com/drive/folders/1fa-V-syz112AsHTsSadF09LC4vnfX-Wn?usp=sharing",
+      "image": "assets/momento-symbol.jpg",
+      "focus": "50% 50%"
+    },
+    {
+      "code": "M-03 / AUDIO",
+      "title": "Mixes / Radio / SoundCloud",
+      "icon": "▶︎",
+      "url": "https://soundcloud.com/momento-motion",
+      "image": "assets/uploads/momento-maison-close-26-02.jpg",
+      "focus": "50% 78%"
+    }
+  ],
   "facts": [
     {
       "label": "FORMAT",
@@ -27,6 +52,26 @@
     {
       "label": "COMPANY",
       "value": "W8V LTD"
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Sound Direction",
+      "body": [
+        "Rooted in Afro House, Tech House and House - deep percussion, hypnotic rhythm, warm grooves, and melodic tension, built for people who experience music fully."
+      ]
+    },
+    {
+      "title": "Artist Curation / B2B Format",
+      "body": [
+        "A resident artist anchors the sound, alongside hand-selected emerging DJs, B2B collaborations, and occasional special guests, meeting and building a shared journey in real time."
+      ]
+    },
+    {
+      "title": "Production",
+      "body": [
+        "momento.motion also operates as a production company - sound direction, artist curation, atmosphere, and event production, built with intention and emotional impact."
+      ]
     }
   ],
   "about": {
@@ -56,52 +101,10 @@
     ]
   },
   "pillarsHeading": "Sound & Production",
-  "pillars": [
-    {
-      "title": "Sound Direction",
-      "body": [
-        "Rooted in Afro House, Tech House and House - deep percussion, hypnotic rhythm, warm grooves, and melodic tension, built for people who experience music fully."
-      ]
-    },
-    {
-      "title": "Artist Curation / B2B Format",
-      "body": [
-        "A resident artist anchors the sound, alongside hand-selected emerging DJs, B2B collaborations, and occasional special guests, meeting and building a shared journey in real time."
-      ]
-    },
-    {
-      "title": "Production",
-      "body": [
-        "momento.motion also operates as a production company - sound direction, artist curation, atmosphere, and event production, built with intention and emotional impact."
-      ]
-    }
-  ],
-  "media": [
-    {
-      "code": "M-01 / PHOTO",
-      "title": "Photo Gallery",
-      "icon": "↗︎",
-      "url": "https://drive.google.com/drive/folders/1ynbxkiQsPmb_akOCmh17eP5P0i5yst71",
-      "image": "assets/uploads/momento-club-gallery-19-02.jpg",
-      "focus": "50% 40%"
-    },
-    {
-      "code": "M-02 / BRAND",
-      "title": "Logo Assets",
-      "icon": "↓︎",
-      "url": "https://drive.google.com/drive/folders/1fa-V-syz112AsHTsSadF09LC4vnfX-Wn?usp=sharing",
-      "image": "assets/momento-symbol.jpg",
-      "focus": "50% 50%"
-    },
-    {
-      "code": "M-03 / AUDIO",
-      "title": "Mixes / Radio / SoundCloud",
-      "icon": "▶︎",
-      "url": "https://soundcloud.com/momento-motion",
-      "image": "assets/uploads/momento-maison-close-26-02.jpg",
-      "focus": "50% 78%"
-    }
-  ],
+  "hero": {
+    "eyebrow": "FOR VENUES / PARTNERS / ARTISTS / PRESS - 2026",
+    "subtext": "momento.motion is an Afro House, Tech House and House music initiative, event organiser, and production company creating immersive sound-led experiences through curated DJ journeys, resident artists, B2B collaborations, and hand-selected talent."
+  },
   "team": [
     {
       "name": "David Wong",
@@ -126,17 +129,6 @@
       "image": "assets/uploads/gabriel-bandman.jpg",
       "focus": "50% 50%",
       "instagram": "https://www.instagram.com/gabriel_bandman/"
-    },
-    {
-      "name": "Aleksandra Slahova",
-      "role": "CREATIVE / VISUALS",
-      "bio": "Shapes the visual language - motion, grain, light, and brand worlds.",
-      "image": "assets/uploads/aleksandra-slahova.jpg",
-      "focus": "50% 50%",
-      "instagram": "https://www.instagram.com/aleeeksanndraa/"
     }
-  ],
-  "contact": {
-    "body": "For bookings, partnerships, artist submissions, press, production enquiries, and collaborations, please contact the momento.motion team."
-  }
+  ]
 }
