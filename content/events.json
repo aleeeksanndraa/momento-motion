@@ -10,6 +10,18 @@
   },
   "events": [
     {
+      "soundLabel": "AFRO HOUSE ",
+      "city": "LONDON",
+      "time": "22:00",
+      "posterImage": "assets/uploads/img_6927.jpeg",
+      "date": "THURSDAY 17.09.2026",
+      "sound": [],
+      "venue": "SELENE",
+      "title": "MOMENTO PRESENTS: LONDON FASHION WEEK OPENING NIGHT ",
+      "tag": "MOMENTO 003 - LONDON",
+      "residentAdvisorUrl": "https://ra.co/events/2524624"
+    },
+    {
       "soundLabel": "LINE UP",
       "city": "LONDON",
       "poster": "assets/poster-after-kloud.mp4",
@@ -26,28 +38,10 @@
       "venue": "EGG LDN - CLUB ROOM",
       "dateISO": "2026-08-09",
       "title": "After Kloud [Official Unofficial Keinemusik Afterparty]",
-      "tag": "MOMENTO.MOTION 002 - LONDON",
+      "tag": "MOMENTO 002 - LONDON",
       "entryUrl": "https://app.entry-os.com/en-GB/events/1292562",
       "residentAdvisorUrl": "https://ra.co/events/2495857",
       "eventbriteUrl": "https://www.linesapp.co/event/after-kloud-keinemusik-unofficial-after-party-2026-08-10-egg-london-nightclub-london"
-    },
-    {
-      "soundLabel": "LINE UP",
-      "city": "BARCELONA",
-      "poster": "",
-      "time": "TBA",
-      "posterImage": "",
-      "date": "TBA",
-      "sound": [
-        "TBA"
-      ],
-      "venue": "TBA",
-      "dateISO": "",
-      "title": "momento.motion Barcelona",
-      "tag": "MOMENTO.MOTION 003 - BARCELONA",
-      "entryUrl": "",
-      "residentAdvisorUrl": "",
-      "eventbriteUrl": ""
     }
   ],
   "moreDates": {
