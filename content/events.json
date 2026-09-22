@@ -13,10 +13,9 @@
       "soundLabel": "LINE UP",
       "city": "LONDON",
       "poster": "assets/poster-after-kloud.mp4",
-      "posterImage": "assets/poster-after-kloud.jpg",
       "time": "22:00 - 03:00+",
+      "posterImage": "assets/poster-after-kloud.jpg",
       "date": "SUNDAY 09.08.2026",
-      "dateISO": "2026-08-09",
       "sound": [
         "Haz b2b D8V!",
         "Loki",
@@ -25,29 +24,28 @@
         "HOOPSFM B2B HAYC"
       ],
       "venue": "EGG LDN - CLUB ROOM",
+      "dateISO": "2026-08-09",
       "title": "After Kloud [Official Unofficial Keinemusik Afterparty]",
-      "tag": "MOMENTO.MOTION 002 - LONDON",
+      "tag": "MOMENTO 002 - LONDON",
       "entryUrl": "https://app.entry-os.com/en-GB/events/1292562",
       "residentAdvisorUrl": "https://ra.co/events/2495857",
       "eventbriteUrl": "https://www.linesapp.co/event/after-kloud-keinemusik-unofficial-after-party-2026-08-10-egg-london-nightclub-london"
     },
     {
-      "soundLabel": "LINE UP",
-      "city": "BARCELONA",
-      "poster": "",
-      "posterImage": "",
-      "time": "TBA",
-      "date": "TBA",
-      "dateISO": "",
+      "soundLabel": "HOUSE ",
+      "city": "LONDON",
+      "poster": "assets/uploads/img_0439.jpeg",
+      "time": "22:00 - 03:00+AM",
+      "date": "WEDNESDAY 30.09.2026",
       "sound": [
-        "TBA"
+        "AFRO HOUSE ",
+        "AFRO TECH",
+        "HOUSE MUSIC"
       ],
-      "venue": "TBA",
-      "title": "momento.motion Barcelona",
-      "tag": "MOMENTO.MOTION 003 - BARCELONA",
-      "entryUrl": "",
-      "residentAdvisorUrl": "",
-      "eventbriteUrl": ""
+      "venue": "EGG LONDON",
+      "title": "MOMENTO PRESENTS: THE FRESHERS EDITION",
+      "tag": "MOMENTO 004 - FRESHERS EDITION",
+      "residentAdvisorUrl": "https://ra.co/events/2529724"
     }
   ],
   "moreDates": {
@@ -71,18 +69,18 @@
     ],
     "residents": [
       {
-        "name": "David",
-        "role": "RESIDENT DJ",
-        "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
-        "focus": "50% 50%",
-        "instagram": "https://www.instagram.com/d8vofficial/"
-      },
-      {
         "name": "Harry",
         "role": "RESIDENT DJ",
         "image": "assets/uploads/harry-reuben-hunting.jpg",
         "focus": "50% 25%",
         "instagram": "https://www.instagram.com/hreubenhunting/"
+      },
+      {
+        "name": "David",
+        "role": "RESIDENT DJ",
+        "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
+        "focus": "50% 50%",
+        "instagram": "https://www.instagram.com/d8vofficial/"
       },
       {
         "name": "???",
