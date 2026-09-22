@@ -47,6 +47,36 @@
       "title": "MOMENTO PRESENTS: THE FRESHERS EDITION",
       "tag": "MOMENTO 004 - FRESHERS EDITION",
       "residentAdvisorUrl": "https://ra.co/events/2529724"
+    },
+    {
+      "soundLabel": "AFRO HOUSE ",
+      "city": "LONDON",
+      "poster": "assets/uploads/img_0370.jpeg",
+      "time": "22:00",
+      "posterImage": "assets/uploads/img_0370.jpeg",
+      "date": "THURSDAY 17.09.2026",
+      "dateISO": "2026-09-17",
+      "sound": [],
+      "venue": "SELENE",
+      "title": "MOMENTO PRESENTS: LONDON FASHION WEEK OPENING NIGHT ",
+      "tag": "MOMENTO 003 - LONDON FASHION WEEK OPENING NIGHT",
+      "entryUrl": "",
+      "residentAdvisorUrl": "https://ra.co/events/2524624"
+    },
+    {
+      "soundLabel": "House",
+      "city": "Madrid",
+      "poster": "assets/uploads/img_0441.jpeg",
+      "time": "00:00 - 06:00AM",
+      "date": "THURSDAY 10.09.2026",
+      "dateISO": "2026-09-10",
+      "sound": [
+        "AFRO HOUSE"
+      ],
+      "venue": "SAINNT ",
+      "title": "Saint PRESENTS: Momento (GB) with D8V",
+      "tag": "MOMENTO - MADRID ",
+      "residentAdvisorUrl": "https://ra.co/events/2530095"
     }
   ],
   "moreDates": {

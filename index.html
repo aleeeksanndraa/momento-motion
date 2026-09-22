@@ -682,15 +682,22 @@ class Component extends DCLogic {
 
     // Events move between Upcoming / Future / Past automatically based on dateISO.
     // A blank dateISO (TBA) always counts as future, so it never expires on its own.
+    // If the CMS editor forgot to fill in dateISO, fall back to parsing a DD.MM.YYYY
+    // out of the display date text (the format every event has used so far) so the
+    // auto-move still works even when that second field gets skipped.
     const todayISO = new Date().toISOString().slice(0, 10);
-    const allEvents = ev.events || [];
-    const isFuture = (e) => !e.dateISO || e.dateISO >= todayISO;
+    const parseDisplayDate = (s) => {
+      const m = /(\d{2})\.(\d{2})\.(\d{4})/.exec(s || '');
+      return m ? (m[3] + '-' + m[2] + '-' + m[1]) : '';
+    };
+    const allEvents = (ev.events || []).map(e => ({ ...e, effISO: e.dateISO || parseDisplayDate(e.date) }));
+    const isFuture = (e) => !e.effISO || e.effISO >= todayISO;
     const futureEvents = allEvents.filter(isFuture).sort((a, b) => {
-      if (!a.dateISO) return 1;
-      if (!b.dateISO) return -1;
-      return a.dateISO < b.dateISO ? -1 : (a.dateISO > b.dateISO ? 1 : 0);
+      if (!a.effISO) return 1;
+      if (!b.effISO) return -1;
+      return a.effISO < b.effISO ? -1 : (a.effISO > b.effISO ? 1 : 0);
     });
-    const pastFromEvents = allEvents.filter(e => !isFuture(e)).sort((a, b) => (a.dateISO < b.dateISO ? 1 : -1));
+    const pastFromEvents = allEvents.filter(e => !isFuture(e)).sort((a, b) => (a.effISO < b.effISO ? 1 : -1));
     const up = futureEvents[0] || {};
     const restFuture = futureEvents.slice(1).map(e => ({
       title: e.title || '',
