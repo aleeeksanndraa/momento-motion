@@ -37,13 +37,13 @@
       "poster": "assets/uploads/img_0439.jpeg",
       "time": "22:00 - 03:00+AM",
       "date": "WEDNESDAY 30.09.2026",
-      "dateISO": "2026-09-30",
       "sound": [
         "AFRO HOUSE ",
         "AFRO TECH",
         "HOUSE MUSIC"
       ],
       "venue": "EGG LONDON",
+      "dateISO": "2026-09-30",
       "title": "MOMENTO PRESENTS: THE FRESHERS EDITION",
       "tag": "MOMENTO 004 - FRESHERS EDITION",
       "residentAdvisorUrl": "https://ra.co/events/2529724"
@@ -55,9 +55,9 @@
       "time": "22:00",
       "posterImage": "assets/uploads/img_0370.jpeg",
       "date": "THURSDAY 17.09.2026",
-      "dateISO": "2026-09-17",
       "sound": [],
       "venue": "SELENE",
+      "dateISO": "2026-09-17",
       "title": "MOMENTO PRESENTS: LONDON FASHION WEEK OPENING NIGHT ",
       "tag": "MOMENTO 003 - LONDON FASHION WEEK OPENING NIGHT",
       "entryUrl": "",
@@ -69,14 +69,32 @@
       "poster": "assets/uploads/img_0441.jpeg",
       "time": "00:00 - 06:00AM",
       "date": "THURSDAY 10.09.2026",
-      "dateISO": "2026-09-10",
       "sound": [
         "AFRO HOUSE"
       ],
       "venue": "SAINNT ",
+      "dateISO": "2026-09-10",
       "title": "Saint PRESENTS: Momento (GB) with D8V",
       "tag": "MOMENTO - MADRID ",
       "residentAdvisorUrl": "https://ra.co/events/2530095"
+    },
+    {
+      "soundLabel": "HOUSE MUSIC",
+      "city": "London",
+      "poster": "assets/uploads/instagram-post-40.jpg",
+      "time": "23:00-04:30",
+      "date": "22.10.2026",
+      "sound": [
+        "AFRO HOUSE",
+        "AFROTECH",
+        "DEEP HOUSE"
+      ],
+      "venue": "Scotch of st james",
+      "dateISO": "2026-10-22",
+      "title": "MOMENTO PRESENTS: THE LOST TEMPLE",
+      "tag": "MOMENTO PRESENTS: THE LOST TEMPLE",
+      "entryUrl": "https://app.entry-os.com/en-GB/events/1514343",
+      "residentAdvisorUrl": "https://ra.co/events/2555095"
     }
   ],
   "moreDates": {
