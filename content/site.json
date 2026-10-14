@@ -4,19 +4,31 @@
     "descriptor": "Events & Production"
   },
   "social": [
-    { "label": "Instagram", "url": "https://www.instagram.com/momento.motion/" },
-    { "label": "TikTok", "url": "https://www.tiktok.com/@momento.motion" },
-    { "label": "SoundCloud", "url": "https://soundcloud.com/momento-motion" },
-    { "label": "Resident Advisor", "url": "https://ra.co/promoters/174470" }
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/momento.motion/"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@momento.motion"
+    },
+    {
+      "label": "SoundCloud",
+      "url": "https://soundcloud.com/momento-motion"
+    },
+    {
+      "label": "Resident Advisor",
+      "url": "https://ra.co/promoters/174470"
+    }
   ],
   "ticketLinks": {
     "residentAdvisor": "https://ra.co/promoters/174470",
     "eventbrite": "https://www.eventbrite.co.uk/o/121516590209",
-    "bubbl": "https://bubbl.so/communities/MOMENTO"
+    "bubbl": ""
   },
   "waitlistFormUrl": "https://script.google.com/macros/s/AKfycbziV0qYM0JlDtO1_AWQt8RZX1Ro8JXEdS4QD43pxsLEoLqadLwhfOfHimZxtQFFbA2Z/exec",
   "contact": {
-    "email": "bookings@momento.motion",
+    "email": "momento@w8v.org",
     "instagram": "https://www.instagram.com/momento.motion/",
     "tiktok": "https://www.tiktok.com/@momento.motion",
     "residentAdvisor": "https://ra.co/promoters/174470",
@@ -25,6 +37,6 @@
   },
   "legal": {
     "copyright": "© W8V LTD. All rights reserved.",
-    "credit": ""
+    "credit": "MOMENTO.MOTION"
   }
 }
