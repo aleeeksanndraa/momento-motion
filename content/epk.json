@@ -107,20 +107,20 @@
   },
   "team": [
     {
-      "name": "David Wong",
-      "role": "CO-FOUNDER / DJ CREW",
-      "bio": "Co-founder and resident DJ, shaping the sound and energy of every momento.motion night.",
-      "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
-      "focus": "50% 50%",
-      "instagram": "https://www.instagram.com/d8vofficial/"
-    },
-    {
       "name": "Harry Reuben-Hunting",
       "role": "CO-FOUNDER / DJ CREW",
       "bio": "Co-founder and resident DJ, driving the direction and feel of the dancefloor.",
       "image": "assets/uploads/harry-reuben-hunting.jpg",
       "focus": "50% 50%",
       "instagram": "https://www.instagram.com/hreubenhunting/"
+    },
+    {
+      "name": "David Wong",
+      "role": "CO-FOUNDER / DJ CREW",
+      "bio": "Co-founder and resident DJ, shaping the sound and energy of every momento.motion night.",
+      "image": "assets/uploads/729385540_18479470642101493_852127832152351416_n.jpg",
+      "focus": "50% 50%",
+      "instagram": "https://www.instagram.com/d8vofficial/"
     },
     {
       "name": "Gabriel Bandman",
