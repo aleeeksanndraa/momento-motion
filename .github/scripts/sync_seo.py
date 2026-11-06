@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync title/meta-description into index.html and epk.html from content/seo.json.
+"""Sync title/meta-description into index.html from content/seo.json.
 
 The site's <helmet> block can't template meta/link/script tags (they're cloned into
 <head> once, verbatim, by support.js's helmet compile()), so this runs as a CI step
@@ -14,7 +14,6 @@ SEO_JSON = "content/seo.json"
 
 PAGES = [
     ("events", "index.html"),
-    ("epk", "epk.html"),
 ]
 
 TAG_PATTERNS = [
