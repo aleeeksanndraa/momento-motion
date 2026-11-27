@@ -246,10 +246,6 @@ a:hover { color:#B8B8C4; }
         <div style="display:flex; flex-wrap:wrap; gap:12px; padding-top:24px; margin-top:auto;">
           <a href="{{ raUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; background:#F2F2F5; color:#0A0A0B; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Resident Advisor ↗</a>
           <a href="{{ ebUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Eventbrite ↗</a>
-          <sc-if value="{{ entryUrl }}" hint-placeholder-val="{{ true }}">
-            <a href="{{ entryUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Entry ↗</a>
-          </sc-if>
-          <a href="{{ bubblUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Bubbl ↗</a>
         </div>
       </div>
     </div>
@@ -707,7 +703,7 @@ class Component extends DCLogic {
       title: e.title || '',
       meta: [e.date, [e.venue, e.city].filter(Boolean).join(', ')].filter(Boolean).join(' · '),
       image: !/\.(mp4|webm|mov)$/i.test(e.poster || '') ? (e.poster || e.posterImage || '') : (e.posterImage || ''),
-      url: e.residentAdvisorUrl || e.eventbriteUrl || e.entryUrl || '#',
+      url: e.residentAdvisorUrl || e.eventbriteUrl || '#',
     }));
     const autoPast = pastFromEvents.map(e => ({
       title: e.title || '',
@@ -754,8 +750,6 @@ class Component extends DCLogic {
       pageTransform: this.state.loading ? 'translateY(14px)' : 'translateY(0)',
       raUrl: t.residentAdvisor || '#',
       ebUrl: t.eventbrite || '#',
-      entryUrl: up.entryUrl || '',
-      bubblUrl: t.bubbl || '#',
       instagramUrl: (site.contact && site.contact.instagram) || '#',
       heroLocation: (ev.hero && ev.hero.location) || '',
       heroSubtext: (ev.hero && ev.hero.subtext) || '',
