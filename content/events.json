@@ -1,12 +1,53 @@
 {
   "hero": {
-    "location": "LONDON",
-    "subtext": "momento.motion creates music-led events shaped through rhythm, emotion, connection, and movement."
+    "location": "LONDON · MADRID",
+    "subtext": "An independent music and cultural platform creating experiences through sound, people and place.",
+    "headline": "Sound in motion.",
+    "videos": [
+      {
+        "video": "assets/video/closeup.mp4",
+        "poster": "assets/video/closeup.jpg"
+      },
+      {
+        "video": "assets/video/drone-skyline.mp4",
+        "poster": "assets/video/drone-skyline.jpg"
+      },
+      {
+        "video": "assets/video/egg-lasers.mp4",
+        "poster": "assets/video/egg-lasers.jpg"
+      },
+      {
+        "video": "assets/video/arms-up.mp4",
+        "poster": "assets/video/arms-up.jpg"
+      },
+      {
+        "video": "assets/video/blue-hour.mp4",
+        "poster": "assets/video/blue-hour.jpg"
+      },
+      {
+        "video": "assets/video/crowd-dance.mp4",
+        "poster": "assets/video/crowd-dance.jpg"
+      }
+    ]
   },
   "philosophy": {
     "line1": "Music is not background.",
     "line2": "It is the journey.",
-    "body": "Every momento.motion event is mapped with intention - from the opening mood to the final release. The sound moves through rhythm, emotion, tension, connection, and collective energy."
+    "body": "Every momento.motion event is mapped with intention - from the opening mood to the final release. The sound moves through rhythm, emotion, tension, connection, and collective energy.",
+    "pillars": [
+      {
+        "title": "Sound",
+        "body": "Afro House, Tech House and House, curated by our residents and guests."
+      },
+      {
+        "title": "People",
+        "body": "A community that travels with us, from London to Madrid and beyond."
+      },
+      {
+        "title": "Place",
+        "body": "Rooftops, clubs and destinations chosen for how they feel."
+      }
+    ]
   },
   "events": [
     {
@@ -120,7 +161,13 @@
   "sound": {
     "body": "Rooted in Afro House, Tech House and House, momento.motion blends deep percussion, hypnotic rhythms, warm grooves, melodic tension, and emotionally charged transitions.",
     "tagline": "FEEL. CONNECT. MOVE.",
-    "mixUrl": "https://soundcloud.com/momento-motion/mixtape001"
+    "mixUrl": "https://soundcloud.com/momento-motion/mixtape001",
+    "videos": [
+      {
+        "video": "assets/video/booth-pov.mp4",
+        "poster": "assets/video/booth-pov.jpg"
+      }
+    ]
   },
   "artists": {
     "heading": "Resident sound meets selected artists",
@@ -187,5 +234,58 @@
       "image": "assets/uploads/momento-club-gallery-19-02.jpg",
       "type": "poster"
     }
-  ]
+  ],
+  "gallery": {
+    "heading": "From the floor",
+    "items": [
+      {
+        "media": "assets/video/winter99-recap.mp4",
+        "poster": "assets/video/winter99-recap.jpg",
+        "caption": "Winter 99° / recap",
+        "size": "tall"
+      },
+      {
+        "media": "assets/video/egg-redwall.mp4",
+        "poster": "assets/video/egg-redwall.jpg",
+        "caption": "Egg London / D8V! b2b HAZ",
+        "size": "wide"
+      },
+      {
+        "media": "assets/video/night-crowd.mp4",
+        "poster": "assets/video/night-crowd.jpg",
+        "caption": "The floor",
+        "size": "tall"
+      },
+      {
+        "media": "assets/video/egg-booth-portrait.mp4",
+        "poster": "assets/video/egg-booth-portrait.jpg",
+        "caption": "In the booth",
+        "size": "tall"
+      },
+      {
+        "media": "assets/video/blue-hour.mp4",
+        "poster": "assets/video/blue-hour.jpg",
+        "caption": "Rooftop / blue hour",
+        "size": "wide"
+      },
+      {
+        "media": "assets/video/egg-duo.mp4",
+        "poster": "assets/video/egg-duo.jpg",
+        "caption": "Momento x Egg London",
+        "size": "tall"
+      },
+      {
+        "media": "assets/video/arms-up.mp4",
+        "poster": "assets/video/arms-up.jpg",
+        "caption": "Hands up",
+        "size": "wide"
+      },
+      {
+        "media": "assets/video/night-decks.mp4",
+        "poster": "assets/video/night-decks.jpg",
+        "caption": "On the decks",
+        "size": "wide"
+      }
+    ]
+  }
 }

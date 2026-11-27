@@ -112,8 +112,17 @@ collections:
             name: "hero"
             widget: "object"
             fields:
+              - { label: "Headline", name: "headline", widget: "string", required: false, hint: "Big homepage headline, e.g. \"Sound in motion.\"" }
               - { label: "Location", name: "location", widget: "string" }
               - { label: "Subtext", name: "subtext", widget: "text" }
+              - label: "Hero videos"
+                name: "videos"
+                widget: "list"
+                required: false
+                hint: "Full-screen clips on the homepage. They play one after another. Keep each under ~4 MB (.mp4)."
+                fields:
+                  - { label: "Video (.mp4)", name: "video", widget: "file" }
+                  - { label: "Still image (shown while loading)", name: "poster", widget: "image", required: false }
           - label: "Philosophy"
             name: "philosophy"
             widget: "object"
@@ -121,6 +130,13 @@ collections:
               - { label: "Line 1", name: "line1", widget: "string" }
               - { label: "Line 2", name: "line2", widget: "string" }
               - { label: "Body", name: "body", widget: "text" }
+              - label: "Pillars"
+                name: "pillars"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "body", widget: "text" }
           - label: "Events"
             name: "events"
             widget: "list"
@@ -152,6 +168,13 @@ collections:
               - { label: "Body", name: "body", widget: "text" }
               - { label: "Tagline", name: "tagline", widget: "string" }
               - { label: "Mix URL (SoundCloud track/set link)", name: "mixUrl", widget: "string" }
+              - label: "Music section video"
+                name: "videos"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Video (.mp4)", name: "video", widget: "file" }
+                  - { label: "Still image", name: "poster", widget: "image", required: false }
           - label: "Artists"
             name: "artists"
             widget: "object"
@@ -170,6 +193,20 @@ collections:
                   - { label: "Photo", name: "image", widget: "image", required: false }
                   - { label: "Photo focus point", name: "focus", widget: "string", required: false, hint: "CSS object-position, e.g. \"50% 25%\"" }
                   - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+          - label: "From the floor (video and photo gallery)"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                hint: "Short .mp4 clips or photos from Momento nights. Videos play silently on loop."
+                fields:
+                  - { label: "Video or photo", name: "media", widget: "file" }
+                  - { label: "Still image (for videos)", name: "poster", widget: "image", required: false }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+                  - { label: "Shape", name: "size", widget: "select", options: ["square", "tall", "wide"], default: "square" }
           - label: "Past events"
             name: "pastEvents"
             widget: "list"
