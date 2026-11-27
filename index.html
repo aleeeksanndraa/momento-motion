@@ -20,12 +20,12 @@
 <meta name="twitter:title" content="momento.motion - Afro House, Tech House & House Events in London">
 <meta name="twitter:description" content="London-based electronic music events shaped by curated DJs, intimate venues, cinematic visuals and underground dancefloor energy.">
 <meta name="twitter:image" content="https://momentomotion.co.uk/assets/og-image.jpg">
-<meta name="theme-color" content="#111827">
+<meta name="theme-color" content="#E8E4DA">
 <link rel="icon" type="image/png" href="assets/favicon-circle.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,148 +52,128 @@
 }
 </script>
 <!-- After Kloud has passed, so its MusicEvent block was removed (Google flags past events kept as "EventScheduled"). The next event (Barcelona) has no confirmed date/venue yet - add a fresh MusicEvent block here once those are set. This block is static HTML, not templated, so it needs to be kept in sync by hand each time. -->
-<link rel="stylesheet" href="css/site.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/theme.css?v=1">
+<noscript><style>.loader{display:none}body.is-loading{overflow:auto}</style></noscript>
 </head>
-<body>
-<a class="vh" href="#events">Skip to events</a>
+<body class="is-loading">
 
-<header class="nav" id="nav">
-  <a class="nav__brand" href="#top" aria-label="Momento, back to top"><img src="assets/logo-circle.png" alt=""><span>MOMENTO</span></a>
-  <nav class="nav__links mono" aria-label="Main">
-    <a href="#events">Events</a><a href="#philosophy">Philosophy</a><a href="#music">Music</a><a href="#artists">Artists</a><a href="#past">Past Moments</a>
-  </nav>
-  <a class="btn nav__tix" href="#events" data-tix>Tickets</a>
-  <button class="nav__menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
-</header>
-<div class="drawer" id="drawer" aria-hidden="true">
-  <a class="big" href="#events">Events</a><a class="big" href="#philosophy">Philosophy</a><a class="big" href="#music">Music</a><a class="big" href="#artists">Artists</a><a class="big" href="#past">Past Moments</a>
-  <a class="btn btn--solid" href="#events" data-tix style="--fg:#E8E4DA;--bg:#111827">Get tickets</a>
-</div>
-
-<main>
-  <section class="hero t-mid" id="top" aria-label="Momento">
-    <div class="hero__media" id="heroMedia"></div>
-    <div class="hero__inner">
-      <div>
-        <div class="hero__loc mono" id="heroLoc">London · Madrid</div>
-        <h1 class="display" id="heroHeadline">Sound in <em>motion.</em></h1>
-        <p class="lead" id="heroSub">An independent music and cultural platform creating experiences through sound, people and place.</p>
-        <div class="hero__dots" id="heroDots" aria-hidden="true"></div>
-      </div>
-      <a class="next" id="nextCard" href="#events" hidden></a>
-    </div>
-  </section>
-
-  <section class="events t-ivory" id="events">
-    <div class="wrap">
-      <div class="label mono"><b id="eventLabel">Next moment</b><span>Momento presents</span></div>
-      <div class="event" id="event"></div>
-      <div class="future" id="future" hidden>
-        <div class="label mono"><b>Also coming</b></div>
-        <ul class="future__list" id="futureList"></ul>
-      </div>
-    </div>
-  </section>
-
-  <div class="band t-char" aria-hidden="true"><div class="band__track" id="band"></div></div>
-
-  <section class="philo t-olive" id="philosophy">
-    <div class="wrap">
-      <div>
-        <div class="label mono"><b>Philosophy</b></div>
-        <h2 class="h2 rv" id="philoHead">Music is not background. <em>It is the journey.</em></h2>
-      </div>
-      <div class="philo__side">
-        <img class="philo__mark" src="assets/logo-circle.png" alt="">
-        <p class="body" id="philoBody"></p>
-      </div>
-    </div>
-    <div class="wrap"><div class="pillars" id="pillars"></div></div>
-  </section>
-
-  <section class="music t-char" id="music">
-    <div class="wrap">
-      <div class="music__video rv" id="musicVideo"></div>
-      <div>
-        <div class="label mono"><b>Music</b><span>Sound identity</span></div>
-        <h2 class="h2" id="musicHead">Feel. <em>Connect.</em> Move.</h2>
-        <p class="body" id="musicBody"></p>
-        <div class="player" id="player"></div>
-        <div class="genres mono" id="genres"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="floor t-mid" id="floor">
-    <div class="wrap">
-      <div class="floor__head">
-        <h2 class="h2" id="floorHead">From the <em>floor</em></h2>
-        <span class="mono" style="color:var(--mut)">London / Madrid</span>
-      </div>
-      <div class="floor__grid" id="floorGrid"></div>
-    </div>
-  </section>
-
-  <section class="artists t-char" id="artists">
-    <div class="wrap artists__head">
-      <div>
-        <div class="label mono"><b>Artists</b></div>
-        <h2 class="h2" id="artistsHead"></h2>
-      </div>
-      <div>
-        <p class="body" id="artistsBody1"></p>
-        <p class="body" id="artistsBody2"></p>
-        <div class="tags mono" id="artistsTags"></div>
-      </div>
-    </div>
-    <div class="people" id="people"></div>
-  </section>
-
-  <section class="past t-stone" id="past">
-    <div class="wrap">
-      <div class="label mono"><b>Past moments</b><span id="pastCount"></span></div>
-      <h2 class="h2" style="margin-bottom:clamp(36px,5vw,64px)">Where we <em>have been</em></h2>
-      <div class="past__grid" id="pastGrid"></div>
-      <div class="past__more" id="pastMore" hidden><button class="btn" type="button">Show all</button></div>
-    </div>
-  </section>
-
-  <section class="wl t-mid" id="waitlist">
-    <div class="wrap">
-      <div>
-        <div class="label mono"><b>Waitlist</b></div>
-        <h2 class="h2">Be there for the <em>next moment</em></h2>
-        <p class="body" style="margin-top:22px">Be first to know when Momento announces a new night. Leave your details and we will reach out before line-ups and tickets go public.</p>
-      </div>
-      <div>
-        <form id="wlForm" novalidate>
-          <label class="mono">Full name<input name="name" type="text" autocomplete="name" required placeholder="Your name"></label>
-          <label class="mono">Email<input name="email" type="email" autocomplete="email" required placeholder="you@email.com"></label>
-          <label class="mono">Phone number<input name="phone" type="tel" autocomplete="tel" required placeholder="+44"></label>
-          <button class="btn btn--solid" type="submit">Join the waitlist</button>
-        </form>
-        <div class="wl__status" id="wlStatus" hidden role="status"></div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="foot t-mid">
-  <div class="wrap">
-    <div class="foot__top">
-      <p>Underground roots. <em>International culture.</em> Artistic expression.</p>
-      <nav class="mono" id="footSocial" aria-label="Social"></nav>
-      <nav class="mono" aria-label="More">
-        <a href="https://epk.momentomotion.co.uk/">About us / EPK</a>
-        <a href="https://epk.momentomotion.co.uk/#contact">Contact</a>
-        <a href="#waitlist">Waitlist</a>
-      </nav>
-    </div>
-    <img class="foot__mark" src="assets/logo-wordmark.png" alt="MOMENTO">
-    <div class="foot__bottom mono"><span id="legalCopy">© W8V LTD. All rights reserved.</span><span id="legalCredit">MOMENTO.MOTION</span></div>
+  <div class="loader" aria-hidden="true">
+    <img class="loader__mark" src="assets/logo-circle.png" alt="">
+    <div class="loader__count"><span data-loader-count>000</span>%</div>
+    <div class="loader__meta mono">[Momento] Sound in motion</div>
   </div>
-</footer>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label mono"></span></div>
 
-<script src="js/site.js?v=1"></script>
+  <div class="page">
+
+    <!-- HERO -->
+    <header class="hero" data-cursor="Sound" id="top">
+      <video class="hero__video" muted playsinline autoplay preload="auto"></video>
+      <nav class="nav">
+        <a class="nav__logo" href="#top" aria-label="Momento, back to top"><img src="assets/logo-circle.png" alt="Momento"></a>
+        <div class="nav__links mono">
+          <a href="#tickets">Tickets</a><a href="#lineup">Artists</a><a href="#philosophy">Philosophy</a><a href="#music">Music</a><a href="#past">Past moments</a>
+        </div>
+        <a class="nav__home mono" href="#tickets" data-tix>Tickets</a>
+        <button class="sound" type="button" aria-pressed="false" aria-label="Toggle sound">
+          <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="sound__label mono">Sound off</span>
+        </button>
+      </nav>
+      <h1 class="visually-hidden">Momento. Sound in motion.</h1>
+      <p class="hero__kicker" id="heroKicker">Underground<br>roots/<span>International culture. Artistic expression.</span></p>
+      <p class="hero__title" aria-hidden="true" id="heroTitle"><span class="ln">Sound in</span><span class="ln">motion.</span></p>
+      <p class="hero__sub" id="heroSub">An independent music and cultural platform creating experiences through <b>sound, people and place.</b></p>
+      <a class="hero__go" href="#tickets" aria-label="Go to tickets"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="hero__chips" id="heroChips"></div>
+      <div class="hero__tags mono" id="heroTags"></div>
+    </header>
+
+    <!-- TICKETS: the next (or latest) event -->
+    <section class="light tickets" id="tickets" data-sec="tickets" data-tone="ivory">
+      <div class="section-head"><span class="mono" id="tixLabel">Next moment</span><span class="mono" id="tixCity"></span></div>
+      <div class="tix" id="tix"></div>
+      <div class="dates" id="dates" hidden>
+        <div class="section-head"><span class="mono">More dates</span><span class="mono" id="datesCount"></span></div>
+        <ul class="dates__list" id="datesList"></ul>
+      </div>
+    </section>
+
+    <!-- FROM THE FLOOR: moving strip of clips -->
+    <section class="dark reel" id="floor" data-sec="floor" data-tone="stone" aria-label="Clips from Momento nights">
+      <div class="section-head"><span class="mono" id="floorHead">From the floor</span><span class="mono">London / Madrid</span></div>
+      <div class="reel__row"><ul class="reel__track" id="reelA"></ul><ul class="reel__track" aria-hidden="true" id="reelA2"></ul></div>
+      <div class="reel__row reel__row--rev"><ul class="reel__track" id="reelB"></ul><ul class="reel__track" aria-hidden="true" id="reelB2"></ul></div>
+    </section>
+
+    <!-- LINE-UP: residents as big rows with a floating photo -->
+    <section class="dark venues lineup" id="lineup" data-sec="lineup" data-tone="ivory" data-cursor="View">
+      <div class="section-head"><span class="mono">Residents &amp; artists</span><span class="mono" id="lineupTags"></span></div>
+      <h2 class="big reveal lineup__head" id="artistsHead"></h2>
+      <ul class="venues__list" id="lineupList"></ul>
+      <p class="small-text lineup__note" id="artistsBody"></p>
+      <div class="venue-float" aria-hidden="true"><img alt=""><video muted loop playsinline preload="none"></video></div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="light statement" id="philosophy" data-sec="philosophy" data-tone="olive">
+      <div class="statement__top">
+        <img class="spin-mark" src="assets/logo-circle.png" alt="">
+        <p class="mono statement__aside">Philosophy</p>
+      </div>
+      <h2 class="big reveal" id="philoHead"></h2>
+      <p class="small-text statement__text" id="philoBody"></p>
+      <div class="pillars" id="pillars"></div>
+    </section>
+
+    <!-- PAST MOMENTS: every poster in one frame -->
+    <section class="light bring past" id="past" data-sec="past" data-tone="stone" aria-label="Past moments">
+      <h2 class="big big--center reveal">Past <span class="dim">moments</span></h2>
+      <p class="small-text center" id="pastNote">Every night keeps its own artwork. Momento stays the frame around it.</p>
+      <div class="rail" data-rail aria-label="Past event posters, scroll sideways" id="pastRail"></div>
+      <div class="rail-nav mono"><button data-rail-prev aria-label="Previous"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span>Drag / swipe</span><button data-rail-next aria-label="Next"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    </section>
+
+    <!-- MUSIC: collage of clips, sound on to listen -->
+    <section class="dark collage" id="music" data-sec="music" data-tone="ivory" data-cursor="Listen">
+      <figure class="tile t1"><video src="assets/video/egg-lasers.mp4" poster="assets/video/egg-lasers.jpg" muted playsinline preload="metadata" data-pool="assets/video/egg-lasers|assets/video/night-crowd"></video><figcaption class="mono">The floor</figcaption></figure>
+      <figure class="tile t2"><video src="assets/video/egg-booth-portrait.mp4" poster="assets/video/egg-booth-portrait.jpg" muted playsinline preload="metadata" data-pool="assets/video/egg-booth-portrait|assets/video/booth-pov"></video><figcaption class="mono">In the booth</figcaption></figure>
+      <figure class="tile t3"><video src="assets/video/egg-redwall.mp4" poster="assets/video/egg-redwall.jpg" muted playsinline preload="metadata" data-pool="assets/video/egg-redwall|assets/video/egg-duo"></video><figcaption class="mono">D8V! b2b HAZ</figcaption></figure>
+      <figure class="tile t4"><video src="assets/video/crowd-dance.mp4" poster="assets/video/crowd-dance.jpg" muted playsinline preload="metadata" data-pool="assets/video/crowd-dance|assets/video/arms-up"></video><figcaption class="mono">Hands up</figcaption></figure>
+      <figure class="tile t5"><video src="assets/video/blue-hour.mp4" poster="assets/video/blue-hour.jpg" muted playsinline preload="metadata" data-pool="assets/video/blue-hour|assets/video/night-decks"></video><figcaption class="mono">Rooftop / blue hour</figcaption></figure>
+      <div class="collage__center">
+        <img src="assets/logo-circle.png" alt="">
+        <p class="mono" id="musicTag">Feel. Connect. Move.</p>
+      </div>
+      <div class="collage__bottom mono"><span id="musicGenres"></span><a id="mixLink" href="#" target="_blank" rel="noopener">Listen to the mix ↗</a></div>
+    </section>
+
+    <!-- WAITLIST -->
+    <section class="light waitlist" id="waitlist" data-sec="waitlist" data-tone="olive">
+      <h2 class="big reveal">Be there for <span class="pill"><video poster="assets/video/arms-up.jpg" src="assets/video/arms-up.mp4" muted autoplay loop playsinline preload="metadata"></video></span> the <span class="dim">next moment</span></h2>
+      <div class="waitlist__row">
+        <p class="small-text">Be first to know when Momento announces a new night. Leave your details and we will reach out before line-ups and tickets go public.</p>
+        <form class="wl" id="wlForm" novalidate>
+          <input class="mono" name="name" type="text" autocomplete="name" required placeholder="Full name" aria-label="Full name">
+          <input class="mono" name="email" type="email" autocomplete="email" required placeholder="Email" aria-label="Email">
+          <input class="mono" name="phone" type="tel" autocomplete="tel" required placeholder="Phone" aria-label="Phone number">
+          <button class="wl__go mono" type="submit">Join the waitlist <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+        <p class="wl__status mono" id="wlStatus" hidden role="status"></p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" data-sec="footer" data-tone="stone">
+      <div class="footer__socials mono" id="footSocial"></div>
+      <img class="footer__wordmark" src="assets/logo-wordmark.png" alt="Momento">
+      <div class="footer__bottom mono"><span id="legalCopy">© W8V LTD. All rights reserved.</span><span>London / Madrid</span><a href="https://epk.momentomotion.co.uk/">About us / EPK</a><a href="#top">Back to top <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </footer>
+
+  </div>
+
+  <script src="js/content.js?v=1"></script>
 </body>
 </html>
