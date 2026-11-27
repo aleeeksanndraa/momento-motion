@@ -2,12 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>momento.motion - Afro House, Tech House & House Events in London</title>
 <meta name="description" content="momento.motion creates Afro House, Tech House and House music events in London, blending curated DJs, intimate venues, cinematic visuals and underground dancefloor energy.">
 <meta name="robots" content="index, follow">
@@ -18,32 +13,19 @@
 <meta property="og:url" content="https://momentomotion.co.uk/">
 <meta property="og:title" content="momento.motion - Afro House, Tech House & House Events in London">
 <meta property="og:description" content="London-based electronic music events shaped by curated DJs, intimate venues, cinematic visuals and underground dancefloor energy.">
-<meta property="og:image" content="https://momentomotion.co.uk/assets/wordmark-clear.png">
-<meta property="og:image:width" content="1024">
-<meta property="og:image:height" content="670">
+<meta property="og:image" content="https://momentomotion.co.uk/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="momento.motion - Afro House, Tech House & House Events in London">
 <meta name="twitter:description" content="London-based electronic music events shaped by curated DJs, intimate venues, cinematic visuals and underground dancefloor energy.">
-<meta name="twitter:image" content="https://momentomotion.co.uk/assets/wordmark-clear.png">
-<meta name="theme-color" content="#0A0A0B">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta name="twitter:image" content="https://momentomotion.co.uk/assets/og-image.jpg">
+<meta name="theme-color" content="#E8E4DA">
+<link rel="icon" type="image/png" href="assets/favicon-circle.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-html, body { margin:0; padding:0; background:#0A0A0B; color:#E8E8EC; font-family:'Archivo',Helvetica,sans-serif; -webkit-font-smoothing:antialiased; }
-a { color:#E8E8EC; text-decoration:none; }
-a:hover { color:#B8B8C4; }
-::selection { background:#3A3A44; color:#F2F2F5; }
-.mm-hscroll::-webkit-scrollbar { display:none; }
-@keyframes mmDrift1 { 0%{transform:translate(-6%,4%) scale(1.15) rotate(0deg)} 50%{transform:translate(8%,-6%) scale(1.35) rotate(8deg)} 100%{transform:translate(-6%,4%) scale(1.15) rotate(0deg)} }
-@keyframes mmDrift2 { 0%{transform:translate(10%,-8%) scale(1.25)} 50%{transform:translate(-8%,10%) scale(1.5)} 100%{transform:translate(10%,-8%) scale(1.25)} }
-@keyframes mmFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-@keyframes mmMarquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-@keyframes mmSpin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-@keyframes mmEqBar { 0%,100%{transform:scaleY(0.18)} 50%{transform:scaleY(1)} }
-</style>
-<script src="https://w.soundcloud.com/player/api.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,7 +42,7 @@ a:hover { color:#B8B8C4; }
   "name": "Momento Motion",
   "alternateName": "momento.motion",
   "url": "https://momentomotion.co.uk/",
-  "logo": "https://momentomotion.co.uk/assets/wordmark-clear.png",
+  "logo": "https://momentomotion.co.uk/assets/logo-circle.png",
   "email": "bookings@momento.motion",
   "sameAs": [
     "https://www.instagram.com/momento.motion/",
@@ -70,741 +52,128 @@ a:hover { color:#B8B8C4; }
 }
 </script>
 <!-- After Kloud has passed, so its MusicEvent block was removed (Google flags past events kept as "EventScheduled"). The next event (Barcelona) has no confirmed date/venue yet - add a fresh MusicEvent block here once those are set. This block is static HTML, not templated, so it needs to be kept in sync by hand each time. -->
-</helmet>
+<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/theme.css?v=1">
+<noscript><style>.loader{display:none}body.is-loading{overflow:auto}</style></noscript>
+</head>
+<body class="is-loading">
 
-<sc-if value="{{ grainOn }}" hint-placeholder-val="{{ true }}">
-  <canvas class="mm-grain" style="position:fixed; inset:0; width:100%; height:100%; z-index:60; opacity:0.10; mix-blend-mode:overlay; pointer-events:none;"></canvas>
-</sc-if>
-
-<!-- LOADER -->
-<div style="position:fixed; inset:0; z-index:200; background:#0A0A0B; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:32px; transition:opacity 0.9s ease, transform 0.9s ease, filter 0.9s ease; opacity:{{ loaderOpacity }}; visibility:{{ loaderVis }}; pointer-events:{{ loaderPointer }}; transform:{{ loaderTransform }}; filter:{{ loaderBlur }};">
-  <div style="display:flex; align-items:flex-end; gap:6px; height:56px;">
-    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.9s;"></span>
-    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.2s;"></span>
-    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.6s;"></span>
-    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.35s;"></span>
-    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.75s;"></span>
-    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.1s;"></span>
-    <span style="width:6px; height:100%; background:#F2F2F5; transform-origin:bottom; animation:mmEqBar 0.9s ease-in-out infinite; animation-delay:-0.5s;"></span>
+  <div class="loader" aria-hidden="true">
+    <img class="loader__mark" src="assets/logo-circle.png" alt="">
+    <div class="loader__count"><span data-loader-count>000</span>%</div>
+    <div class="loader__meta mono">[Momento] Sound in motion</div>
   </div>
-  <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.34em; color:#7C7C8C;">SOUND IN MOTION</div>
-</div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label mono"></span></div>
 
-<!-- NAV -->
-<header style="position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px clamp(16px,4vw,48px); background:rgba(10,10,11,0.55); -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px); border-bottom:1px solid #191920;">
-  <a href="#top" style="display:flex; align-items:center; gap:12px;">
-    <img src="assets/symbol.svg" alt="momento.motion" style="height:30px; display:block;">
-  </a>
-  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
-    <nav style="display:flex; align-items:center; gap:clamp(18px,2.6vw,36px); font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;">
-      <a href="#events" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Events</a>
-      <a href="#artists" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Artists</a>
-      <a href="https://epk.momentomotion.co.uk/" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">About Us</a>
-      <a href="https://epk.momentomotion.co.uk/" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">EPK</a>
-      <a href="#waitlist" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">Waitlist</a>
-      <a href="https://epk.momentomotion.co.uk/#contact" style="border:1px solid #4A4A54; color:#F2F2F5; padding:10px 20px;" style-hover="background:#F2F2F5; color:#0A0A0B;">Contact</a>
-      <a href="{{ raUrl }}" target="_blank" rel="noopener" style="border:1px solid #4A4A54; color:#F2F2F5; padding:10px 20px;" style-hover="background:#F2F2F5; color:#0A0A0B;">Get Tickets</a>
-    </nav>
-  </sc-if>
-  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ true }}">
-    <button onClick="{{ toggleMenu }}" aria-label="Menu" style="background:none; border:1px solid #2A2A32; padding:10px 12px; cursor:pointer; display:flex; flex-direction:column; gap:5px; min-height:44px; justify-content:center;">
-      <span style="display:block; width:22px; height:2px; background:#E8E8EC;"></span>
-      <span style="display:block; width:22px; height:2px; background:#8A8A96;"></span>
-    </button>
-  </sc-if>
-</header>
+  <div class="page">
 
-<!-- MOBILE MENU -->
-<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-  <div style="position:fixed; inset:0; z-index:70; background:rgba(8,8,9,0.96); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); display:flex; flex-direction:column; padding:20px;">
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-      <img src="assets/wordmark-clear.png" alt="MOMENTO" style="height:20px;">
-      <button onClick="{{ closeMenu }}" aria-label="Close" style="background:none; border:1px solid #2A2A32; color:#E8E8EC; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; padding:12px 16px; cursor:pointer;">CLOSE</button>
-    </div>
-    <nav style="display:flex; flex-direction:column; gap:6px; margin-top:11vh;">
-      <a href="#events" onClick="{{ closeMenu }}" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Events</a>
-      <a href="#artists" onClick="{{ closeMenu }}" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Artists</a>
-      <a href="https://epk.momentomotion.co.uk/" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase; color:#9A9AA6;">About Us</a>
-      <a href="https://epk.momentomotion.co.uk/" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase; color:#9A9AA6;">EPK</a>
-      <a href="#waitlist" onClick="{{ closeMenu }}" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase; color:#9A9AA6;">Waitlist</a>
-      <a href="https://epk.momentomotion.co.uk/#contact" style="font-size:clamp(38px,10vw,64px); font-weight:800; letter-spacing:-0.02em; line-height:1.1; text-transform:uppercase;">Contact</a>
-    </nav>
-    <div style="display:flex; flex-wrap:wrap; gap:18px; margin-top:32px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em;">
-      <sc-for list="{{ social }}" as="s" hint-placeholder-count="3">
-        <a href="{{ s.url }}" target="_blank" rel="noopener" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">{{ s.labelUp }} ↗</a>
-      </sc-for>
-      <a href="{{ ebUrl }}" target="_blank" rel="noopener" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">EVENTBRITE ↗</a>
-    </div>
-    <div style="margin-top:24px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#7C7C8C;">SOUND IN MOTION - {{ genresUp }}</div>
-  </div>
-</sc-if>
-
-<main id="top" style="overflow-x:hidden; transition:opacity 0.9s ease, transform 0.9s ease; opacity:{{ pageOpacity }}; transform:{{ pageTransform }};">
-
-<h1 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">momento.motion - Afro House, Tech House &amp; House Events in London</h1>
-
-<!-- HERO -->
-<section data-screen-label="Hero" style="position:relative; min-height:100svh; overflow:hidden; background:#08080A;">
-  <video class="mm-hero-video" autoplay muted playsinline src="assets/hero.mp4" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:38% 50%; filter:grayscale(1) contrast(1.05) brightness(0.62);"></video>
-  <div style="position:absolute; width:70%; height:80%; left:20%; top:8%; border-radius:50%; background:radial-gradient(circle at 50% 50%, rgba(196,196,200,0.4) 0%, rgba(120,120,126,0.14) 38%, rgba(10,10,11,0) 66%); filter:blur(80px); animation:mmDrift1 26s ease-in-out infinite; mix-blend-mode:screen;"></div>
-  <div style="position:absolute; width:55%; height:70%; left:-8%; top:24%; border-radius:50%; background:radial-gradient(circle at 50% 50%, rgba(160,160,166,0.3) 0%, rgba(96,96,102,0.12) 40%, rgba(10,10,11,0) 68%); filter:blur(90px); animation:mmDrift2 34s ease-in-out infinite; mix-blend-mode:screen;"></div>
-  <div style="position:absolute; inset:0; background:rgba(18,18,20,0.16);"></div>
-  <div style="position:absolute; inset:0; opacity:0.05; background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
-  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0.5) 0%, rgba(8,8,10,0.05) 38%, rgba(8,8,10,0.72) 100%);"></div>
-
-  <div style="position:absolute; top:96px; left:clamp(16px,4vw,48px); font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#C7C7D0;">M/ ●● 01</div>
-  <div style="position:absolute; top:96px; right:clamp(16px,4vw,48px); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#C7C7D0; text-align:right;">LONDON</div>
-  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
-    <div style="position:absolute; top:50%; right:24px; transform:translateY(-50%); font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.3em; color:#7C7C8C; writing-mode:vertical-rl; opacity:0.7; pointer-events:none;">AFRO HOUSE &mdash; TECH HOUSE &mdash; HOUSE</div>
-  </sc-if>
-
-  <!-- DESKTOP -->
-  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
-  <div style="position:absolute; inset:0;">
-    <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px; padding:0 20px;">
-      <img src="assets/wordmark-clear.png" alt="MOMENTO" style="width:min(88vw,760px); animation:mmFloat 9s ease-in-out infinite;">
-    </div>
-    <div style="position:absolute; left:0; right:0; bottom:0; padding:0 clamp(16px,4vw,48px) clamp(32px,5vh,56px); display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px;">
-      <div style="display:flex; flex-direction:column; gap:20px; max-width:460px;">
-        <p style="margin:0; font-size:clamp(14px,1.7vw,16px); line-height:1.6; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
-        <div style="display:flex; flex-wrap:wrap; gap:12px;">
-          <a href="{{ raUrl }}" target="_blank" rel="noopener" style="background:#F2F2F5; color:#0A0A0B; padding:15px 26px; min-width:190px; text-align:center; box-sizing:border-box; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Get Tickets</a>
-          <a href="https://epk.momentomotion.co.uk/" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; min-width:190px; text-align:center; box-sizing:border-box; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);" style-hover="border-color:#F2F2F5;">About Us</a>
+    <!-- HERO -->
+    <header class="hero" data-cursor="Sound" id="top">
+      <video class="hero__video" muted playsinline autoplay preload="auto"></video>
+      <nav class="nav">
+        <a class="nav__logo" href="#top" aria-label="Momento, back to top"><img src="assets/logo-circle.png" alt="Momento"></a>
+        <div class="nav__links mono">
+          <a href="#tickets">Tickets</a><a href="#lineup">Artists</a><a href="#philosophy">Philosophy</a><a href="#music">Music</a><a href="#past">Past moments</a>
         </div>
-      </div>
-      <div style="border:1px solid #2A2A32; background:rgba(12,12,14,0.5); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); padding:18px 20px; min-width:min(100%,300px); display:flex; flex-direction:column; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em;">
-        <div style="display:flex; justify-content:space-between; gap:16px;"><span style="color:#7C7C8C;">NEXT EVENT</span><span style="text-align:right;">{{ upTitle }}</span></div>
-        <div style="display:flex; justify-content:space-between; gap:16px; border-top:1px solid #20202A; padding-top:10px;"><span style="color:#7C7C8C;">DATE</span><span style="text-align:right;">{{ upDate }}</span></div>
-        <div style="display:flex; justify-content:space-between; gap:16px; border-top:1px solid #20202A; padding-top:10px;"><span style="color:#7C7C8C;">VENUE</span><span style="text-align:right;">{{ upVenue }}</span></div>
-        <div style="display:flex; justify-content:space-between; gap:16px; border-top:1px solid #20202A; padding-top:10px;"><span style="color:#7C7C8C;">CITY</span><span style="text-align:right;">{{ upCity }}</span></div>
-      </div>
-    </div>
-  </div>
-  </sc-if>
-
-  <!-- MOBILE (logo lower, everything centered) -->
-  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ true }}">
-  <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:16px; padding:150px 22px 60px; box-sizing:border-box; overflow:hidden;">
-    <img src="assets/wordmark-clear.png" alt="MOMENTO" style="width:min(78vw,460px); margin-bottom:-14px; animation:mmFloat 9s ease-in-out infinite;">
-    <p style="margin:0; max-width:34ch; font-size:14px; line-height:1.6; color:#B8B8C4; text-wrap:pretty;">{{ heroSubtext }}</p>
-    <div style="display:flex; flex-direction:column; gap:10px; width:100%; max-width:320px;">
-      <a href="{{ raUrl }}" target="_blank" rel="noopener" style="background:#F2F2F5; color:#0A0A0B; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500;">Get Tickets</a>
-      <a href="https://epk.momentomotion.co.uk/" style="border:1px solid #4A4A54; color:#F2F2F5; padding:15px 26px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px);">About Us</a>
-    </div>
-    <div style="border:1px solid #2A2A32; background:rgba(12,12,14,0.5); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); padding:16px 18px; width:100%; max-width:320px; box-sizing:border-box; display:flex; flex-direction:column; gap:9px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.08em; text-align:left;">
-      <div style="display:flex; justify-content:space-between; gap:12px;"><span style="color:#7C7C8C;">NEXT EVENT</span><span style="text-align:right;">{{ upTitle }}</span></div>
-      <div style="display:flex; justify-content:space-between; gap:12px; border-top:1px solid #20202A; padding-top:9px;"><span style="color:#7C7C8C;">DATE</span><span style="text-align:right;">{{ upDate }}</span></div>
-      <div style="display:flex; justify-content:space-between; gap:12px; border-top:1px solid #20202A; padding-top:9px;"><span style="color:#7C7C8C;">VENUE</span><span style="text-align:right;">{{ upVenue }}</span></div>
-      <div style="display:flex; justify-content:space-between; gap:12px; border-top:1px solid #20202A; padding-top:9px;"><span style="color:#7C7C8C;">CITY</span><span style="text-align:right;">{{ upCity }}</span></div>
-    </div>
-  </div>
-  </sc-if>
-</section>
-
-<!-- MARQUEE -->
-<sc-if value="{{ marqueeOn }}" hint-placeholder-val="{{ true }}">
-  <div style="border-top:1px solid #191920; border-bottom:1px solid #191920; overflow:hidden; padding:14px 0; background:#0C0C0E;">
-    <div style="display:flex; width:max-content; animation:mmMarquee 26s linear infinite; white-space:nowrap;">
-      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.28em; color:#7C7C8C;">{{ marqueeText }}</span>
-      <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.28em; color:#7C7C8C;">{{ marqueeText }}</span>
-    </div>
-  </div>
-</sc-if>
-
-<!-- UPCOMING EVENT -->
-<section id="events" data-screen-label="Upcoming Event" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
-  <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(32px,5vh,56px);">
-    <h2 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">Upcoming Events</h2>
-    <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">01</span><span>/ UPCOMING EVENT</span><span style="flex:1; height:1px; background:#191920;"></span>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr)); border:1px solid #26262E;">
-      <div style="position:relative; overflow:hidden; min-height:420px; background:#000;">
-        <sc-if value="{{ upPosterIsVideo }}" hint-placeholder-val="{{ false }}">
-          <video src="{{ upPoster }}" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:contain; display:block;"></video>
-        </sc-if>
-        <sc-if value="{{ upPosterIsImage }}" hint-placeholder-val="{{ false }}">
-          <img src="{{ upPoster }}" alt="{{ upTitle }} - momento.motion Afro House / Tech House event poster, London" style="width:100%; height:100%; object-fit:contain; display:block;">
-        </sc-if>
-        <sc-if value="{{ upPosterMissing }}" hint-placeholder-val="{{ false }}">
-          <span style="position:absolute; inset:0; display:grid; place-items:center; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#5A5A64;">[ POSTER TBA ]</span>
-        </sc-if>
-        <div style="position:absolute; top:0; left:0; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#F2F2F5; padding:14px 16px; background:linear-gradient(180deg,rgba(0,0,0,0.5),rgba(0,0,0,0));">{{ upTag }}</div>
-      </div>
-      <div style="border-top:1px solid #26262E; padding:clamp(28px,4vw,48px); display:flex; flex-direction:column; background:#101013;">
-        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid #20202A; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.1em;"><span style="color:#7C7C8C;">EVENT</span><span style="text-align:right;">{{ upTitleUp }}</span></div>
-        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid #20202A; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.1em;"><span style="color:#7C7C8C;">DATE</span><span style="text-align:right;">{{ upDate }}</span></div>
-        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid #20202A; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.1em;"><span style="color:#7C7C8C;">TIME</span><span style="text-align:right;">{{ upTime }}</span></div>
-        <div style="display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px solid #20202A; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.1em;"><span style="color:#7C7C8C;">LOCATION</span><span style="text-align:right;">{{ upVenue }}, {{ upCity }}</span></div>
-        <div style="display:flex; flex-direction:column; gap:10px; padding:18px 0; border-bottom:1px solid #20202A;">
-          <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#8A8A96;">{{ upSoundLabel }}</span>
-          <sc-for list="{{ upSound }}" as="sitem" hint-placeholder-count="3">
-            <span style="font-size:clamp(18px,2.4vw,24px); font-weight:700; text-transform:uppercase; letter-spacing:-0.01em; color:#E8E8EC;">{{ sitem }}</span>
-          </sc-for>
-        </div>
-        <div style="display:flex; flex-wrap:wrap; gap:12px; padding-top:24px; margin-top:auto;">
-          <a href="{{ raUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; background:#F2F2F5; color:#0A0A0B; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; font-weight:500;" style-hover="background:#B8B8C4;">Resident Advisor ↗</a>
-          <a href="{{ ebUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Eventbrite ↗</a>
-          <sc-if value="{{ entryUrl }}" hint-placeholder-val="{{ true }}">
-            <a href="{{ entryUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Entry ↗</a>
-          </sc-if>
-          <a href="{{ bubblUrl }}" target="_blank" rel="noopener" style="flex:1; min-width:180px; text-align:center; border:1px solid #4A4A54; color:#F2F2F5; padding:16px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase;" style-hover="border-color:#F2F2F5;">Bubbl ↗</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MORE UPCOMING DATES -->
-<section data-screen-label="Upcoming Dates" style="padding:0 0 clamp(24px,4vh,40px);">
-  <div style="max-width:1400px; margin:0 auto; padding:0 clamp(16px,4vw,48px); box-sizing:border-box; display:flex; align-items:center; gap:16px;">
-    <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">{{ moreDatesNum }}</span><span>/ {{ moreDatesTitle }}</span>
-    </div>
-    <span style="flex:1; height:1px; background:#191920;"></span>
-  </div>
-  <div class="mm-hscroll" style="display:flex; gap:16px; overflow-x:auto; padding:clamp(20px,3vh,32px) clamp(16px,4vw,48px); scroll-snap-type:x mandatory; scrollbar-width:none;">
-    <sc-for list="{{ upcomingList }}" as="ev" hint-placeholder-count="3">
-      <a href="{{ ev.url }}" target="_blank" rel="noopener" style="scroll-snap-align:start; flex:0 0 auto; width:min(78vw,320px); aspect-ratio:3/4; border:1px solid #26262E; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; gap:6px; padding:20px; box-sizing:border-box; background:radial-gradient(120% 100% at 60% 25%, rgba(170,170,176,0.22) 0%, rgba(70,70,76,0.12) 44%, #101013 78%);">
-        <sc-if value="{{ ev.image }}" hint-placeholder-val="{{ false }}">
-          <img src="{{ ev.image }}" alt="{{ ev.title }} - upcoming momento.motion event in London" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        </sc-if>
-        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 42%, rgba(8,8,10,0.55) 68%, rgba(8,8,10,0.9) 100%); pointer-events:none;"></div>
-        <span style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; color:#C7C7D0;">{{ ev.meta }}</span>
-        <span style="position:relative; font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; color:#F2F2F5;">{{ ev.title }}</span>
-        <sc-if value="{{ ev.url }}" hint-placeholder-val="{{ true }}">
-          <span style="position:relative; margin-top:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; color:#F2F2F5; border-bottom:1px solid #6A6A74; align-self:flex-start; padding-bottom:3px;">TICKETS ↗</span>
-        </sc-if>
-      </a>
-    </sc-for>
-  </div>
-</section>
-
-<!-- PHILOSOPHY -->
-<section data-screen-label="Philosophy" style="position:relative; overflow:hidden; padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); display:flex; flex-direction:column; gap:clamp(32px,5vh,56px); max-width:1400px; margin:0 auto; box-sizing:border-box;">
-  <div style="position:absolute; right:clamp(-24px,-2vw,0px); top:8%; font-size:clamp(140px,26vw,400px); font-weight:900; line-height:0.8; color:rgba(242,242,245,0.035); pointer-events:none; user-select:none;">02</div>
-  <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-    <span style="color:#C7C7D0;">02</span><span>/ PHILOSOPHY</span><span style="flex:1; height:1px; background:#191920;"></span>
-  </div>
-  <h2 style="margin:0; font-size:clamp(34px,7vw,88px); font-weight:800; line-height:1.02; letter-spacing:-0.025em; text-transform:uppercase; max-width:20ch; text-wrap:pretty;">{{ philoLine1 }} <span style="color:#8A8A96;">{{ philoLine2 }}</span></h2>
-  <p style="margin:0; max-width:560px; align-self:flex-end; font-size:clamp(15px,1.9vw,18px); line-height:1.7; color:#A0A0AC; text-wrap:pretty;">{{ philoBody }}</p>
-</section>
-
-<!-- SOUND IDENTITY -->
-<section id="sound" data-screen-label="Sound Identity" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); position:relative; overflow:hidden;">
-  <div style="max-width:1400px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:clamp(40px,6vw,80px); align-items:center;">
-    <div style="display:flex; flex-direction:column; gap:clamp(24px,4vh,40px);">
-      <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-        <span style="color:#C7C7D0;">03</span><span>/ SOUND</span><span style="flex:1; height:1px; background:#191920;"></span>
-      </div>
-      <h2 style="margin:0; font-size:clamp(34px,6vw,72px); font-weight:800; line-height:1; letter-spacing:-0.025em; text-transform:uppercase;">Sound Identity</h2>
-      <p style="margin:0; max-width:520px; font-size:clamp(15px,1.9vw,18px); line-height:1.7; color:#A0A0AC; text-wrap:pretty;">{{ soundBody }}</p>
-      <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.3em; color:#C7C7D0;">{{ soundTagline }}</div>
-    </div>
-    <div style="position:relative; aspect-ratio:1; max-width:480px; margin:0 auto; width:100%; display:grid; place-items:center;">
-      <div style="position:absolute; width:100%; height:100%; border-radius:50%; border:1px solid #26262E;"></div>
-      <div style="position:absolute; width:82%; height:82%; border-radius:50%; border:1px dashed #3A3A44; animation:mmSpin 40s linear infinite;"></div>
-      <div style="position:absolute; width:46%; height:46%; border-radius:50%; border:1px dashed #4A4A54; animation:mmSpin 26s linear infinite reverse;"></div>
-      <div style="position:absolute; width:40%; height:40%; border-radius:50%; background:radial-gradient(circle, rgba(190,190,196,0.5), rgba(190,190,196,0) 70%); filter:blur(16px); opacity:{{ glowOpacity }}; transition:opacity 0.4s ease;"></div>
-      <canvas class="mm-eq" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;"></canvas>
-      <img src="assets/symbol.svg" alt="" style="position:relative; width:20%; opacity:0.92;">
-      <button onClick="{{ toggleAudio }}" aria-label="Play mix" style="position:absolute; bottom:-2%; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:9px; background:rgba(12,12,14,0.72); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); border:1px solid #2A2A32; color:#E8E8EC; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; padding:12px 18px; cursor:pointer; white-space:nowrap;" style-hover="border-color:#F2F2F5;">{{ audioLabel }}</button>
-      <sc-if value="{{ scEmbed }}" hint-placeholder-val="{{ false }}">
-        <iframe class="mm-sc" title="momento.motion mix" src="{{ scEmbed }}" allow="autoplay" style="position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; border:0;"></iframe>
-      </sc-if>
-    </div>
-  </div>
-</section>
-
-<!-- ARTISTS -->
-<section id="artists" data-screen-label="Artists" style="position:relative; overflow:hidden; padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
-  <div style="position:absolute; left:clamp(-24px,-2vw,0px); top:6%; font-size:clamp(140px,26vw,400px); font-weight:900; line-height:0.8; color:rgba(242,242,245,0.035); pointer-events:none; user-select:none;">04</div>
-  <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(32px,5vh,56px); position:relative;">
-    <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">04</span><span>/ ARTISTS</span><span style="flex:1; height:1px; background:#191920;"></span>
-    </div>
-    <h2 style="margin:0; font-size:clamp(32px,5.6vw,68px); font-weight:800; line-height:1.02; letter-spacing:-0.025em; text-transform:uppercase; max-width:18ch; text-wrap:pretty;">{{ artistsHeading }}</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(24px,3vw,48px);">
-      <p style="margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.7; color:#A0A0AC; text-wrap:pretty;">{{ artistsBody1 }}</p>
-      <p style="margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.7; color:#A0A0AC; text-wrap:pretty;">{{ artistsBody2 }}</p>
-    </div>
-    <div style="display:flex; flex-wrap:wrap; gap:10px;">
-      <sc-for list="{{ artistsTags }}" as="tag" hint-placeholder-count="4">
-        <span style="border:1px solid #26262E; padding:10px 18px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.18em; color:#E8E8EC;">{{ tag }}</span>
-      </sc-for>
-    </div>
-    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ false }}">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:16px;">
-        <sc-for list="{{ residents }}" as="r" hint-placeholder-count="3">
-          <a href="{{ r.instagramHref }}" target="_blank" rel="noopener" aria-label="{{ r.name }} on Instagram" style="aspect-ratio:3/4; border:1px solid #26262E; overflow:hidden; position:relative; display:block; background:radial-gradient(120% 100% at 50% 30%, rgba(60,60,68,0.3) 0%, #101013 70%);">
-            <sc-if value="{{ r.image }}" hint-placeholder-val="{{ true }}">
-              <img src="{{ r.image }}" alt="{{ r.name }} - {{ r.role }}, momento.motion" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ r.focus }};">
-            </sc-if>
-            <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 55%, rgba(8,8,10,0.85) 100%);"></div>
-            <div style="position:absolute; left:16px; right:16px; bottom:14px;">
-              <div style="font-size:16px; font-weight:800; text-transform:uppercase; color:#F2F2F5;">{{ r.name }}</div>
-              <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; color:#C7C7D0;">{{ r.role }}</div>
-              <sc-if value="{{ r.instagram }}" hint-placeholder-val="{{ true }}">
-                <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.14em; color:#8A8A96;">INSTAGRAM ↗</div>
-              </sc-if>
-            </div>
-          </a>
-        </sc-for>
-      </div>
-    </sc-if>
-    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ true }}">
-      <div class="mm-hscroll" style="display:flex; gap:14px; overflow-x:auto; margin:0 -16px; padding:0 16px 4px; scroll-snap-type:x mandatory; scrollbar-width:none;">
-        <sc-for list="{{ residents }}" as="r" hint-placeholder-count="3">
-          <a href="{{ r.instagramHref }}" target="_blank" rel="noopener" aria-label="{{ r.name }} on Instagram" style="scroll-snap-align:start; flex:0 0 auto; width:min(46vw,200px); aspect-ratio:3/4; border:1px solid #26262E; overflow:hidden; position:relative; display:block; background:radial-gradient(120% 100% at 50% 30%, rgba(60,60,68,0.3) 0%, #101013 70%);">
-            <sc-if value="{{ r.image }}" hint-placeholder-val="{{ true }}">
-              <img src="{{ r.image }}" alt="{{ r.name }} - {{ r.role }}, momento.motion" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:{{ r.focus }};">
-            </sc-if>
-            <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 55%, rgba(8,8,10,0.85) 100%);"></div>
-            <div style="position:absolute; left:14px; right:14px; bottom:12px;">
-              <div style="font-size:15px; font-weight:800; text-transform:uppercase; color:#F2F2F5;">{{ r.name }}</div>
-              <div style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.14em; color:#C7C7D0;">{{ r.role }}</div>
-              <sc-if value="{{ r.instagram }}" hint-placeholder-val="{{ true }}">
-                <div style="margin-top:4px; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.12em; color:#8A8A96;">INSTAGRAM ↗</div>
-              </sc-if>
-            </div>
-          </a>
-        </sc-for>
-      </div>
-    </sc-if>
-  </div>
-</section>
-
-<!-- PAST MOMENTS -->
-<section data-screen-label="Past Moments" style="padding:clamp(72px,12vh,140px) 0;">
-  <div style="max-width:1400px; margin:0 auto; padding:0 clamp(16px,4vw,48px); box-sizing:border-box; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-    <h2 style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;">Past Moments</h2>
-    <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">05</span><span>/ PAST MOMENTS</span>
-    </div>
-    <a href="{{ instagramUrl }}" target="_blank" rel="noopener" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.16em; color:#E8E8EC; border-bottom:1px solid #6A6A74; padding-bottom:4px;" style-hover="color:#B8B8C4;">VIEW GALLERY ↗</a>
-  </div>
-  <div class="mm-hscroll" style="display:flex; gap:16px; overflow-x:auto; padding:clamp(24px,4vh,40px) clamp(16px,4vw,48px); scroll-snap-type:x mandatory; scrollbar-width:none;">
-    <sc-for list="{{ pastEvents }}" as="ev" hint-placeholder-count="5">
-      <div style="scroll-snap-align:start; flex:0 0 auto; width:min(78vw,340px); aspect-ratio:3/4; border:1px solid #26262E; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; gap:6px; padding:20px; box-sizing:border-box; background:radial-gradient(120% 100% at 60% 25%, rgba(170,170,176,0.22) 0%, rgba(70,70,76,0.12) 44%, #101013 78%);">
-        <sc-if value="{{ ev.image }}" hint-placeholder-val="{{ false }}">
-          <img src="{{ ev.image }}" alt="{{ ev.title }} - underground House music event by momento.motion, London" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        </sc-if>
-        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(8,8,10,0) 42%, rgba(8,8,10,0.55) 68%, rgba(8,8,10,0.9) 100%); pointer-events:none;"></div>
-        <span style="position:relative; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.2em; color:#C7C7D0;">{{ ev.meta }}</span>
-        <span style="position:relative; font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; color:#F2F2F5;">{{ ev.title }}</span>
-      </div>
-    </sc-for>
-  </div>
-</section>
-
-<!-- WAITLIST -->
-<section id="waitlist" data-screen-label="Waitlist" style="padding:clamp(72px,12vh,140px) clamp(16px,4vw,48px); background:#0C0C0E; border-top:1px solid #191920; border-bottom:1px solid #191920;">
-  <div style="max-width:640px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(28px,4vh,40px);">
-    <div style="display:flex; align-items:center; gap:16px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.2em; color:#7C7C8C;">
-      <span style="color:#C7C7D0;">06</span><span>/ WAITLIST</span><span style="flex:1; height:1px; background:#191920;"></span>
-    </div>
-    <h2 style="margin:0; font-size:clamp(34px,6vw,64px); font-weight:800; line-height:1.02; letter-spacing:-0.025em; text-transform:uppercase;">Join the Waitlist</h2>
-    <p style="margin:0; font-size:clamp(15px,1.9vw,17px); line-height:1.7; color:#A0A0AC; text-wrap:pretty;">Be first to know when momento.motion announces a new night. Leave your details below and we'll reach out before line-ups and tickets go public.</p>
-
-    <sc-if value="{{ wlStatus }}" hint-placeholder-val="{{ '' }}">
-      <div style="border:1px solid #26262E; background:#101013; padding:24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.06em; line-height:1.6; color:{{ wlStatusColor }};">{{ wlStatusText }}</div>
-    </sc-if>
-
-    <sc-if value="{{ wlShowForm }}" hint-placeholder-val="{{ true }}">
-      <form onSubmit="{{ submitWaitlist }}" style="display:flex; flex-direction:column; gap:18px;">
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Full Name</label>
-          <input type="text" required value="{{ wlName }}" onInput="{{ setWlName }}" placeholder="Your name" style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
-        </div>
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Email</label>
-          <input type="email" required value="{{ wlEmail }}" onInput="{{ setWlEmail }}" placeholder="you@email.com" style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
-        </div>
-        <div style="display:flex; flex-direction:column; gap:8px;">
-          <label style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:#7C7C8C; text-transform:uppercase;">Phone Number</label>
-          <input type="tel" required value="{{ wlPhone }}" onInput="{{ setWlPhone }}" placeholder="+44 ..." style="background:#101013; border:1px solid #26262E; color:#E8E8EC; padding:15px 16px; font-family:'Archivo',sans-serif; font-size:15px; box-sizing:border-box; outline:none;" style-focus="border-color:#6A6A74;">
-        </div>
-        <button type="submit" disabled="{{ wlSubmitting }}" style="margin-top:8px; background:#F2F2F5; color:#0A0A0B; border:0; padding:17px 24px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:0.14em; text-transform:uppercase; font-weight:500; cursor:pointer;" style-hover="background:#B8B8C4;">{{ wlSubmitLabel }}</button>
-      </form>
-    </sc-if>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer data-screen-label="Footer" style="border-top:1px solid #191920; padding:clamp(56px,9vh,96px) clamp(16px,4vw,48px) clamp(96px,14vh,120px); background:#08080A;">
-  <div style="max-width:1400px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(40px,6vh,64px);">
-    <div style="position:relative; display:inline-block; width:min(52vw,300px);">
-      <img src="assets/wordmark-clear.png" alt="MOMENTO" style="width:100%; display:block; opacity:0.32;">
-      <div style="position:absolute; inset:0; opacity:0.5; mix-blend-mode:overlay; pointer-events:none; background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Cfilter id=%22fn%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%222%22/%3E%3C/filter%3E%3Crect width=%22200%22 height=%22200%22 filter=%22url(%23fn)%22/%3E%3C/svg%3E');"></div>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:32px;">
-      <div style="display:flex; flex-direction:column; gap:8px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em; color:#7C7C8C;">
-        <span>MOMENTO.MOTION</span>
-        <span>{{ genresUp }}</span>
-        <span>EVENTS &amp; PRODUCTION</span>
-      </div>
-      <nav style="display:flex; flex-direction:column; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em;">
-        <sc-for list="{{ social }}" as="s" hint-placeholder-count="3">
-          <a href="{{ s.url }}" target="_blank" rel="noopener" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">{{ s.labelUp }} ↗</a>
-        </sc-for>
-        <a href="{{ ebUrl }}" target="_blank" rel="noopener" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">EVENTBRITE ↗</a>
+        <a class="nav__home mono" href="#tickets" data-tix>Tickets</a>
+        <button class="sound" type="button" aria-pressed="false" aria-label="Toggle sound">
+          <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="sound__label mono">Sound off</span>
+        </button>
       </nav>
-      <nav style="display:flex; flex-direction:column; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.12em;">
-        <a href="https://epk.momentomotion.co.uk/" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">About Us</a>
-        <a href="https://epk.momentomotion.co.uk/" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">EPK</a>
-        <a href="https://epk.momentomotion.co.uk/#contact" style="color:#A0A0AC;" style-hover="color:#F2F2F5;">CONTACT</a>
-      </nav>
-    </div>
-    <div style="border-top:1px solid #191920; padding-top:20px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#5A5A64;">
-      <span>{{ legalCopyright }}</span>
-      <span>{{ legalCredit }}</span>
-    </div>
+      <h1 class="visually-hidden">Momento. Sound in motion.</h1>
+      <p class="hero__kicker" id="heroKicker">Underground<br>roots/<span>International culture. Artistic expression.</span></p>
+      <p class="hero__title" aria-hidden="true" id="heroTitle"><span class="ln">Sound in</span><span class="ln">motion.</span></p>
+      <p class="hero__sub" id="heroSub">An independent music and cultural platform creating experiences through <b>sound, people and place.</b></p>
+      <a class="hero__go" href="#tickets" aria-label="Go to tickets"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="hero__chips" id="heroChips"></div>
+      <div class="hero__tags mono" id="heroTags"></div>
+    </header>
+
+    <!-- TICKETS: the next (or latest) event -->
+    <section class="light tickets" id="tickets" data-sec="tickets" data-tone="ivory">
+      <div class="section-head"><span class="mono" id="tixLabel">Next moment</span><span class="mono" id="tixCity"></span></div>
+      <div class="tix" id="tix"></div>
+      <div class="dates" id="dates" hidden>
+        <div class="section-head"><span class="mono">More dates</span><span class="mono" id="datesCount"></span></div>
+        <ul class="dates__list" id="datesList"></ul>
+      </div>
+    </section>
+
+    <!-- FROM THE FLOOR: moving strip of clips -->
+    <section class="dark reel" id="floor" data-sec="floor" data-tone="stone" aria-label="Clips from Momento nights">
+      <div class="section-head"><span class="mono" id="floorHead">From the floor</span><span class="mono">London / Madrid</span></div>
+      <div class="reel__row"><ul class="reel__track" id="reelA"></ul><ul class="reel__track" aria-hidden="true" id="reelA2"></ul></div>
+      <div class="reel__row reel__row--rev"><ul class="reel__track" id="reelB"></ul><ul class="reel__track" aria-hidden="true" id="reelB2"></ul></div>
+    </section>
+
+    <!-- LINE-UP: residents as big rows with a floating photo -->
+    <section class="dark venues lineup" id="lineup" data-sec="lineup" data-tone="ivory" data-cursor="View">
+      <div class="section-head"><span class="mono">Residents &amp; artists</span><span class="mono" id="lineupTags"></span></div>
+      <h2 class="big reveal lineup__head" id="artistsHead"></h2>
+      <ul class="venues__list" id="lineupList"></ul>
+      <p class="small-text lineup__note" id="artistsBody"></p>
+      <div class="venue-float" aria-hidden="true"><img alt=""><video muted loop playsinline preload="none"></video></div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="light statement" id="philosophy" data-sec="philosophy" data-tone="olive">
+      <div class="statement__top">
+        <img class="spin-mark" src="assets/logo-circle.png" alt="">
+        <p class="mono statement__aside">Philosophy</p>
+      </div>
+      <h2 class="big reveal" id="philoHead"></h2>
+      <p class="small-text statement__text" id="philoBody"></p>
+      <div class="pillars" id="pillars"></div>
+    </section>
+
+    <!-- PAST MOMENTS: every poster in one frame -->
+    <section class="light bring past" id="past" data-sec="past" data-tone="stone" aria-label="Past moments">
+      <h2 class="big big--center reveal">Past <span class="dim">moments</span></h2>
+      <p class="small-text center" id="pastNote">Every night keeps its own artwork. Momento stays the frame around it.</p>
+      <div class="rail" data-rail aria-label="Past event posters, scroll sideways" id="pastRail"></div>
+      <div class="rail-nav mono"><button data-rail-prev aria-label="Previous"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span>Drag / swipe</span><button data-rail-next aria-label="Next"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+    </section>
+
+    <!-- MUSIC: collage of clips, sound on to listen -->
+    <section class="dark collage" id="music" data-sec="music" data-tone="ivory" data-cursor="Listen">
+      <figure class="tile t1"><video src="assets/video/egg-lasers.mp4" poster="assets/video/egg-lasers.jpg" muted playsinline preload="metadata" data-pool="assets/video/egg-lasers|assets/video/night-crowd"></video><figcaption class="mono">The floor</figcaption></figure>
+      <figure class="tile t2"><video src="assets/video/egg-booth-portrait.mp4" poster="assets/video/egg-booth-portrait.jpg" muted playsinline preload="metadata" data-pool="assets/video/egg-booth-portrait|assets/video/booth-pov"></video><figcaption class="mono">In the booth</figcaption></figure>
+      <figure class="tile t3"><video src="assets/video/egg-redwall.mp4" poster="assets/video/egg-redwall.jpg" muted playsinline preload="metadata" data-pool="assets/video/egg-redwall|assets/video/egg-duo"></video><figcaption class="mono">D8V! b2b HAZ</figcaption></figure>
+      <figure class="tile t4"><video src="assets/video/crowd-dance.mp4" poster="assets/video/crowd-dance.jpg" muted playsinline preload="metadata" data-pool="assets/video/crowd-dance|assets/video/arms-up"></video><figcaption class="mono">Hands up</figcaption></figure>
+      <figure class="tile t5"><video src="assets/video/blue-hour.mp4" poster="assets/video/blue-hour.jpg" muted playsinline preload="metadata" data-pool="assets/video/blue-hour|assets/video/night-decks"></video><figcaption class="mono">Rooftop / blue hour</figcaption></figure>
+      <div class="collage__center">
+        <img src="assets/logo-circle.png" alt="">
+        <p class="mono" id="musicTag">Feel. Connect. Move.</p>
+      </div>
+      <div class="collage__bottom mono"><span id="musicGenres"></span><a id="mixLink" href="#" target="_blank" rel="noopener">Listen to the mix ↗</a></div>
+    </section>
+
+    <!-- WAITLIST -->
+    <section class="light waitlist" id="waitlist" data-sec="waitlist" data-tone="olive">
+      <h2 class="big reveal">Be there for <span class="pill"><video poster="assets/video/arms-up.jpg" src="assets/video/arms-up.mp4" muted autoplay loop playsinline preload="metadata"></video></span> the <span class="dim">next moment</span></h2>
+      <div class="waitlist__row">
+        <p class="small-text">Be first to know when Momento announces a new night. Leave your details and we will reach out before line-ups and tickets go public.</p>
+        <form class="wl" id="wlForm" novalidate>
+          <input class="mono" name="name" type="text" autocomplete="name" required placeholder="Full name" aria-label="Full name">
+          <input class="mono" name="email" type="email" autocomplete="email" required placeholder="Email" aria-label="Email">
+          <input class="mono" name="phone" type="tel" autocomplete="tel" required placeholder="Phone" aria-label="Phone number">
+          <button class="wl__go mono" type="submit">Join the waitlist <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8.5 7H17v8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </form>
+        <p class="wl__status mono" id="wlStatus" hidden role="status"></p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" data-sec="footer" data-tone="stone">
+      <div class="footer__socials mono" id="footSocial"></div>
+      <img class="footer__wordmark" src="assets/logo-wordmark.png" alt="Momento">
+      <div class="footer__bottom mono"><span id="legalCopy">© W8V LTD. All rights reserved.</span><span>London / Madrid</span><a href="https://epk.momentomotion.co.uk/">About us / EPK</a><a href="#top">Back to top <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </footer>
+
   </div>
-</footer>
 
-</main>
-
-<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ true }}">
-  <div style="position:fixed; left:0; right:0; bottom:0; z-index:55; padding:12px 16px calc(12px + env(safe-area-inset-bottom)); background:linear-gradient(180deg, rgba(10,10,11,0) 0%, rgba(10,10,11,0.92) 40%); transform:{{ ctaTransform }}; opacity:{{ ctaOpacity }}; transition:transform 0.4s ease, opacity 0.4s ease; pointer-events:{{ ctaPointer }};">
-    <a href="{{ raUrl }}" target="_blank" rel="noopener" style="display:block; text-align:center; background:#F2F2F5; color:#0A0A0B; padding:17px 24px; font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:0.16em; text-transform:uppercase; font-weight:500;">Get Tickets</a>
-  </div>
-</sc-if>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{
-  &quot;grain&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Atmosphere&quot; },
-  &quot;marquee&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Atmosphere&quot; }
-}">
-class Component extends DCLogic {
-  state = { isMobile: true, menuOpen: false, site: null, ev: null, ctaShown: false, playing: false, audioOn: false, loading: true, wlName: '', wlEmail: '', wlPhone: '', wlSubmitting: false, wlStatus: '' };
-
-  async componentDidMount() {
-    this.mq = window.matchMedia('(max-width: 900px)');
-    this.upd = () => this.setState({ isMobile: this.mq.matches, menuOpen: this.mq.matches ? this.state.menuOpen : false });
-    this.mq.addEventListener('change', this.upd);
-    this.upd();
-    this.startGrain();
-    this.startVideo();
-    this.onScroll = () => {
-      const shown = window.scrollY > window.innerHeight * 0.7;
-      if (shown !== this.state.ctaShown) this.setState({ ctaShown: shown });
-    };
-    window.addEventListener('scroll', this.onScroll, { passive: true });
-    this.onScroll();
-    try {
-      const [site, ev] = await Promise.all([
-        fetch('content/site.json').then(r => r.json()),
-        fetch('content/events.json').then(r => r.json()),
-      ]);
-      this.setState({ site, ev });
-      setTimeout(() => { this.startEq(); this.tryInitSC(); this.observeSound(); this.startPosterVideo(); }, 60);
-    } catch (e) { console.warn('content load failed', e); }
-    this.loadT = setTimeout(() => this.setState({ loading: false }), 900);
-  }
-
-  tryInitSC(attempt = 0) {
-    const iframe = document.querySelector('iframe.mm-sc');
-    if (!iframe || !window.SC || !window.SC.Widget) {
-      if (attempt < 40) setTimeout(() => this.tryInitSC(attempt + 1), 250);
-      return;
-    }
-    this.widget = window.SC.Widget(iframe);
-    this.widget.bind(window.SC.Widget.Events.READY, () => {
-      this.widget.getDuration(d => { this.scDur = d || 0; });
-      this.widget.setVolume(85);
-      if (this.pendingPlay) { this.pendingPlay = false; this.playMix(); }
-    });
-    this.widget.bind(window.SC.Widget.Events.PLAY, () => this.setState({ playing: true }));
-    this.widget.bind(window.SC.Widget.Events.PAUSE, () => this.setState({ playing: false }));
-    this.widget.bind(window.SC.Widget.Events.FINISH, () => this.setState({ playing: false }));
-  }
-
-  seekRandom(cb) {
-    if (!this.widget) return cb && cb();
-    const jump = () => { if (this.scDur) this.widget.seekTo(Math.floor((0.05 + Math.random() * 0.75) * this.scDur)); cb && cb(); };
-    if (this.scDur) jump();
-    else this.widget.getDuration(d => { this.scDur = d || 0; jump(); });
-  }
-
-  playMix() {
-    if (!this.widget) { this.pendingPlay = true; return; }
-    this.seekRandom(() => this.widget.play());
-  }
-  pauseMix() { if (this.widget) this.widget.pause(); }
-
-  observeSound() {
-    const sec = document.getElementById('sound');
-    if (!sec) return;
-    this.io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        this.soundInView = e.isIntersecting;
-        if (!this.state.audioOn) return;
-        if (e.isIntersecting) this.playMix(); else this.pauseMix();
-      });
-    }, { threshold: 0.45 });
-    this.io.observe(sec);
-  }
-
-  startEq() {
-    const canvas = document.querySelector('canvas.mm-eq');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    const N = 84;
-    this.bars = new Array(N).fill(0.05);
-    const resize = () => {
-      const r = canvas.getBoundingClientRect();
-      const dpr = window.devicePixelRatio || 1;
-      canvas.width = Math.max(1, r.width * dpr); canvas.height = Math.max(1, r.height * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    };
-    resize();
-    this.eqResize = resize; window.addEventListener('resize', resize);
-    const BPM = 123, beat = 60000 / BPM;
-    const draw = (t) => {
-      this.eqRaf = requestAnimationFrame(draw);
-      if (document.hidden) return;
-      const r = canvas.getBoundingClientRect();
-      const w = r.width, h = r.height, cx = w / 2, cy = h / 2;
-      const R = Math.min(w, h) * 0.30;
-      ctx.clearRect(0, 0, w, h);
-      const playing = this.state.playing;
-      let kick = 0;
-      if (playing) { const ph = (t % beat) / beat; kick = Math.pow(1 - ph, 3); }
-      for (let i = 0; i < N; i++) {
-        const band = i / N;
-        let target;
-        if (playing) {
-          const osc = 0.5 + 0.5 * Math.sin(t * 0.004 * (1 + band * 3) + i * 0.7);
-          const hi = 0.4 + 0.6 * Math.random();
-          target = 0.22 + osc * 0.5 * hi + kick * 0.55 * (1 - band * 0.5);
-        } else {
-          target = 0.05 + 0.035 * (0.5 + 0.5 * Math.sin(t * 0.0016 + i * 0.5));
-        }
-        this.bars[i] += (target - this.bars[i]) * (playing ? 0.28 : 0.12);
-      }
-      ctx.lineWidth = Math.max(2, w * 0.007);
-      ctx.lineCap = 'round';
-      for (let i = 0; i < N; i++) {
-        const a = (i / N) * Math.PI * 2 - Math.PI / 2;
-        const len = R * 0.62 * this.bars[i];
-        const x1 = cx + Math.cos(a) * R, y1 = cy + Math.sin(a) * R;
-        const x2 = cx + Math.cos(a) * (R + len), y2 = cy + Math.sin(a) * (R + len);
-        const lum = playing ? (188 + this.bars[i] * 60) | 0 : 96;
-        ctx.strokeStyle = 'rgba(' + lum + ',' + lum + ',' + (lum + 6) + ',' + (playing ? 0.92 : 0.5) + ')';
-        ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
-      }
-    };
-    this.eqRaf = requestAnimationFrame(draw);
-  }
-
-  startGrain() {
-    const GW = 640, GH = 400;
-    this.ctxs = Array.from(document.querySelectorAll('canvas.mm-grain')).map(c => { c.width = GW; c.height = GH; return c.getContext('2d'); });
-    if (!this.ctxs.length) return;
-    let last = 0;
-    const draw = (t) => {
-      this.raf = requestAnimationFrame(draw);
-      if (document.hidden) return;
-      if (t - last < 110) return; last = t;
-      for (const ctx of this.ctxs) {
-        const img = ctx.createImageData(GW, GH); const d = img.data;
-        for (let i = 0; i < d.length; i += 4) { const v = (Math.random() * 255) | 0; d[i]=d[i+1]=d[i+2]=v; d[i+3]=255; }
-        ctx.putImageData(img, 0, 0);
-      }
-    };
-    this.raf = requestAnimationFrame(draw);
-  }
-
-  startVideo() {
-    const v = document.querySelector('video.mm-hero-video');
-    if (!v) return;
-    this.heroVideos = ['assets/hero.mp4', 'assets/hero-2.mp4', 'assets/hero-3.mp4', 'assets/hero-4.mp4', 'assets/hero-5.mp4', 'assets/hero-6.mp4', 'assets/hero-7.mp4'];
-    this.heroVideoIndex = 0;
-    v.muted = true; v.setAttribute('playsinline', '');
-    const go = () => v.play().catch(() => {});
-    v.addEventListener('ended', () => {
-      this.heroVideoIndex = (this.heroVideoIndex + 1) % this.heroVideos.length;
-      v.src = this.heroVideos[this.heroVideoIndex];
-      v.load();
-      go();
-    });
-    go();
-    if (v.readyState < 2) v.addEventListener('canplay', go, { once: true });
-  }
-
-  startPosterVideo(attempt = 0) {
-    const v = document.querySelector('#events video');
-    if (!v) {
-      if (attempt < 40) setTimeout(() => this.startPosterVideo(attempt + 1), 250);
-      return;
-    }
-    v.muted = true;
-    v.loop = true;
-    v.setAttribute('playsinline', '');
-    v.play().catch(() => {});
-  }
-
-  componentWillUnmount() {
-    if (this.mq) this.mq.removeEventListener('change', this.upd);
-    if (this.raf) cancelAnimationFrame(this.raf);
-    if (this.onScroll) window.removeEventListener('scroll', this.onScroll);
-    if (this.eqRaf) cancelAnimationFrame(this.eqRaf);
-    if (this.eqResize) window.removeEventListener('resize', this.eqResize);
-    if (this.io) this.io.disconnect();
-    if (this.widget) this.widget.pause();
-  }
-
-  async submitWaitlist(ev) {
-    ev.preventDefault();
-    const site = this.state.site || {};
-    const formUrl = site.waitlistFormUrl || '';
-    if (!formUrl) {
-      this.setState({ wlStatus: 'error' });
-      return;
-    }
-    this.setState({ wlSubmitting: true });
-    try {
-      const body = new URLSearchParams({
-        name: this.state.wlName,
-        email: this.state.wlEmail,
-        phone: this.state.wlPhone,
-      });
-      await fetch(formUrl, { method: 'POST', mode: 'no-cors', body });
-      this.setState({ wlSubmitting: false, wlStatus: 'success', wlName: '', wlEmail: '', wlPhone: '' });
-    } catch (e) {
-      console.warn('waitlist submit failed', e);
-      this.setState({ wlSubmitting: false, wlStatus: 'error' });
-    }
-  }
-
-  renderVals() {
-    const site = this.state.site || {};
-    const ev = this.state.ev || {};
-    const t = site.ticketLinks || {};
-    const social = (site.social || []).map(s => ({ ...s, labelUp: (s.label || '').toUpperCase() }));
-    const genres = (site.brand && site.brand.genres) || '';
-
-    // Events move between Upcoming / Future / Past automatically based on dateISO.
-    // A blank dateISO (TBA) always counts as future, so it never expires on its own.
-    // If the CMS editor forgot to fill in dateISO, fall back to parsing a DD.MM.YYYY
-    // out of the display date text (the format every event has used so far) so the
-    // auto-move still works even when that second field gets skipped.
-    const todayISO = new Date().toISOString().slice(0, 10);
-    const parseDisplayDate = (s) => {
-      const m = /(\d{2})\.(\d{2})\.(\d{4})/.exec(s || '');
-      return m ? (m[3] + '-' + m[2] + '-' + m[1]) : '';
-    };
-    const allEvents = (ev.events || []).map(e => ({ ...e, effISO: e.dateISO || parseDisplayDate(e.date) }));
-    const isFuture = (e) => !e.effISO || e.effISO >= todayISO;
-    const futureEvents = allEvents.filter(isFuture).sort((a, b) => {
-      if (!a.effISO) return 1;
-      if (!b.effISO) return -1;
-      return a.effISO < b.effISO ? -1 : (a.effISO > b.effISO ? 1 : 0);
-    });
-    const pastFromEvents = allEvents.filter(e => !isFuture(e)).sort((a, b) => (a.effISO < b.effISO ? 1 : -1));
-    const up = futureEvents[0] || {};
-    const restFuture = futureEvents.slice(1).map(e => ({
-      title: e.title || '',
-      meta: [e.date, [e.venue, e.city].filter(Boolean).join(', ')].filter(Boolean).join(' · '),
-      image: !/\.(mp4|webm|mov)$/i.test(e.poster || '') ? (e.poster || e.posterImage || '') : (e.posterImage || ''),
-      url: e.residentAdvisorUrl || e.eventbriteUrl || e.entryUrl || '#',
-    }));
-    const autoPast = pastFromEvents.map(e => ({
-      title: e.title || '',
-      meta: [(e.sound && e.sound[0]) || '', [e.venue, e.city].filter(Boolean).join(', ')].filter(Boolean).join(' · '),
-      image: !/\.(mp4|webm|mov)$/i.test(e.poster || '') ? (e.poster || e.posterImage || '') : (e.posterImage || ''),
-      type: 'poster',
-    }));
-    const past = [...autoPast, ...(ev.pastEvents || [])].map(p => ({
-      ...p,
-      metaTag: p.meta ? ('[ ' + p.meta + ' ]') : (p.type === 'video' ? '[ ▶ AFTERMOVIE ]' : ''),
-      showPlaceholder: !p.image,
-    }));
-    const residentsList = ((ev.artists && ev.artists.residents) || []).map(r => ({
-      ...r,
-      instagramHref: r.instagram || '#',
-    }));
-    return {
-      isMobile: this.state.isMobile,
-      isDesktop: !this.state.isMobile,
-      menuOpen: this.state.menuOpen && this.state.isMobile,
-      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
-      closeMenu: () => this.setState({ menuOpen: false }),
-      grainOn: this.props.grain ?? true,
-      marqueeOn: this.props.marquee ?? true,
-      social,
-      genresUp: genres.toUpperCase(),
-      marqueeText: 'SOUND IN MOTION\u00A0\u00A0·\u00A0\u00A0' + genres.toUpperCase().split(' / ').join('\u00A0\u00A0·\u00A0\u00A0') + '\u00A0\u00A0·\u00A0\u00A0FEEL. CONNECT. MOVE.\u00A0\u00A0·\u00A0\u00A0MOMENTO.MOTION\u00A0\u00A0·\u00A0\u00A0',
-      scEmbed: (ev.sound && ev.sound.mixUrl) ? ('https://w.soundcloud.com/player/?url=' + encodeURIComponent(ev.sound.mixUrl) + '&auto_play=false&visual=false&hide_related=true&show_comments=false') : '',
-      glowOpacity: this.state.playing ? 1 : 0.35,
-      audioLabel: this.state.playing ? '❚❚  PAUSE MIX' : '▶  PLAY THE MIX',
-      toggleAudio: () => {
-        if (this.state.playing) { this.pauseMix(); }
-        else { this.setState({ audioOn: true }); this.playMix(); }
-      },
-      ctaTransform: this.state.ctaShown ? 'translateY(0)' : 'translateY(120%)',
-      ctaOpacity: this.state.ctaShown ? 1 : 0,
-      ctaPointer: this.state.ctaShown ? 'auto' : 'none',
-      loaderOpacity: this.state.loading ? 1 : 0,
-      loaderVis: this.state.loading ? 'visible' : 'hidden',
-      loaderPointer: this.state.loading ? 'auto' : 'none',
-      loaderTransform: this.state.loading ? 'scale(1)' : 'scale(1.1)',
-      loaderBlur: this.state.loading ? 'blur(0px)' : 'blur(12px)',
-      pageOpacity: this.state.loading ? 0 : 1,
-      pageTransform: this.state.loading ? 'translateY(14px)' : 'translateY(0)',
-      raUrl: t.residentAdvisor || '#',
-      ebUrl: t.eventbrite || '#',
-      entryUrl: up.entryUrl || '',
-      bubblUrl: t.bubbl || '#',
-      instagramUrl: (site.contact && site.contact.instagram) || '#',
-      heroLocation: (ev.hero && ev.hero.location) || '',
-      heroSubtext: (ev.hero && ev.hero.subtext) || '',
-      philoLine1: (ev.philosophy && ev.philosophy.line1) || '',
-      philoLine2: (ev.philosophy && ev.philosophy.line2) || '',
-      philoBody: (ev.philosophy && ev.philosophy.body) || '',
-      upTag: up.tag || '',
-      upPoster: up.poster || '',
-      upPosterIsVideo: /\.(mp4|webm|mov)$/i.test(up.poster || ''),
-      upPosterIsImage: !!(up.poster || '') && !/\.(mp4|webm|mov)$/i.test(up.poster || ''),
-      upPosterMissing: !up.poster,
-      upTitle: up.title || '',
-      upTitleUp: (up.title || '').toUpperCase(),
-      upDate: up.date || '',
-      upTime: up.time || '',
-      upVenue: up.venue || '',
-      upCity: up.city || '',
-      upSoundLabel: up.soundLabel || 'SOUND',
-      upSound: up.sound || [],
-      soundBody: (ev.sound && ev.sound.body) || '',
-      soundTagline: (ev.sound && ev.sound.tagline) || '',
-      artistsHeading: (ev.artists && ev.artists.heading) || '',
-      artistsBody1: (ev.artists && ev.artists.body1) || '',
-      artistsBody2: (ev.artists && ev.artists.body2) || '',
-      artistsTags: (ev.artists && ev.artists.tags) || [],
-      residents: residentsList,
-      pastEvents: past,
-      upcomingList: restFuture,
-      moreDatesNum: (ev.moreDates && ev.moreDates.number) || '02',
-      moreDatesTitle: (ev.moreDates && ev.moreDates.title) || 'FUTURE EVENTS',
-      legalCopyright: (site.legal && site.legal.copyright) || '',
-      legalCredit: (site.legal && site.legal.credit) || '',
-      wlName: this.state.wlName,
-      wlEmail: this.state.wlEmail,
-      wlPhone: this.state.wlPhone,
-      setWlName: (e) => this.setState({ wlName: e.target.value }),
-      setWlEmail: (e) => this.setState({ wlEmail: e.target.value }),
-      setWlPhone: (e) => this.setState({ wlPhone: e.target.value }),
-      submitWaitlist: (e) => this.submitWaitlist(e),
-      wlSubmitting: this.state.wlSubmitting,
-      wlSubmitLabel: this.state.wlSubmitting ? 'JOINING...' : 'JOIN THE WAITLIST',
-      wlShowForm: this.state.wlStatus !== 'success',
-      wlStatus: this.state.wlStatus,
-      wlStatusColor: this.state.wlStatus === 'success' ? '#B8E8C4' : '#E8B8B8',
-      wlStatusText: this.state.wlStatus === 'success'
-        ? "You're on the list. We'll be in touch before the next announcement."
-        : 'Something went wrong submitting the form - please try again, or DM us on Instagram.',
-    };
-  }
-}
-</script>
+  <script src="js/content.js?v=1"></script>
 </body>
 </html>
